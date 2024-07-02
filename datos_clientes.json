@@ -1,0 +1,92 @@
+{
+    "datos_clientes": [
+        {
+            "id": 1,
+            "nombre": "Juan P\u00e9rez",
+            "email": "juan.perez@example.com",
+            "preferencias_viaje": [
+                "Calella",
+                "Matar\u00f3",
+                "Arenys de Mar"
+            ],
+            "inputs": {
+                "Campo de b\u00fasqueda": 5,
+                "Bot\u00f3n de reserva": 3,
+                "Selector de fechas": 2,
+                "Campo de comentarios": 1
+            },
+            "cookies": {
+                "pais": "Espa\u00f1a",
+                "hora": "15:30",
+                "dispositivo": "M\u00f3vil",
+                "compra": false
+            }
+        },
+        {
+            "id": 2,
+            "nombre": "Mar\u00eda Garc\u00eda",
+            "email": "maria.garcia@example.com",
+            "preferencias_viaje": [
+                "Malgrat de Mar",
+                "Canet de Mar",
+                "Sant Pol de Mar"
+            ],
+            "inputs": {
+                "Opciones de pago": 2,
+                "Bot\u00f3n de suscripci\u00f3n a bolet\u00edn": 1,
+                "N\u00famero de personas": 4,
+                "Bot\u00f3n de b\u00fasqueda": 3
+            },
+            "cookies": {
+                "pais": "Espa\u00f1a",
+                "hora": "10:45",
+                "dispositivo": "Ordenador",
+                "compra": true
+            }
+        },
+        {
+            "id": 3,
+            "nombre": "Carlos L\u00f3pez",
+            "email": "carlos.lopez@example.com",
+            "preferencias_viaje": [
+                "Pineda de Mar",
+                "Premi\u00e0 de Mar",
+                "Calella"
+            ],
+            "inputs": {
+                "Checkbox de preferencias": 2,
+                "Campo de b\u00fasqueda": 7,
+                "Bot\u00f3n de enviar formulario": 1,
+                "Campo de comentarios": 2
+            },
+            "cookies": {
+                "pais": "Espa\u00f1a",
+                "hora": "12:15",
+                "dispositivo": "Tableta",
+                "compra": false
+            }
+        },
+        {
+            "id": 4,
+            "nombre": "Ana Mart\u00ednez",
+            "email": "ana.martinez@example.com",
+            "preferencias_viaje": [
+                "Matar\u00f3",
+                "Malgrat de Mar",
+                "Arenys de Mar"
+            ],
+            "inputs": {
+                "Selector de fechas": 3,
+                "N\u00famero de personas": 5,
+                "Bot\u00f3n de reserva": 4,
+                "Campo de b\u00fasqueda": 6
+            },
+            "cookies": {
+                "pais": "Espa\u00f1a",
+                "hora": "18:00",
+                "dispositivo": "Ordenador",
+                "compra": true
+            }
+        }
+    ]
+}

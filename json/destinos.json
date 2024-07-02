@@ -1,0 +1,18 @@
+{
+    "nombre": "Madrid",
+    "aportes_temporada": {
+        "primavera": [
+            0.05,
+            20240401,
+            20240801
+        ],
+        "verano": [
+            0.1,
+            20240401,
+            20240801
+        ]
+    },
+    "eventos_especiales": {
+        "20240505": 0.15
+    }
+}

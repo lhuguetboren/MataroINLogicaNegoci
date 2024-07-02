@@ -1,0 +1,33 @@
+# define Python user-defined exceptions
+class InvalidAgeException(Exception):
+    "Raised when the input value is less than 18"
+    print(Exception)
+    pass
+# define Python user-defined exceptions
+class validAgeException(Exception):
+    "Raised when the input value is more than 18"
+    print(Exception)
+    pass
+# you need to guess this number
+number = 18
+
+try:
+    a =1/0
+except:
+    number = 12
+
+
+try:
+    #input_num = int(input("Enter a number: "))
+    if 15 < number:
+        
+        raise InvalidAgeException
+    if 15 > number:
+        
+        raise validAgeException
+    else:
+        print("Eligible to Vote")
+except InvalidAgeException:
+    print ("menor que 18")
+except validAgeException:
+    print ("mayor que 18")

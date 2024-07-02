@@ -1,0 +1,2 @@
+import diccionarioArchivo
+print(diccionarioArchivo.recuperar_diccionario("alojamientos.json"))

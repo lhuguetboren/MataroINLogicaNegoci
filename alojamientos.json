@@ -1,0 +1,75 @@
+{
+    "hoteles": [
+        {
+            "estrellas": "4",
+            "precio": "100",
+            "habitaciones-disponibles": "120",
+            "poblacion": "Matar\u00f3",
+            "nombre": "Matar\u00f3",
+            "direccion": "Carre Escopeta, numero pum",
+            "telefono": "919701784",
+            "correo": "hmaresme@mataroin.com",
+            "imagen": "../../biblioteca/fotos/poblaciones/img0001.jpg",
+            "servicios": "Piscina, WIFI",
+            "fechas": {
+                "enero": "1,2,3,4,5,6,7",
+                "febrero": "1,2,3,4,5,6,7",
+                "marzo": "1,2,3,4,5,6,7"
+            },
+            "fechaxhabitaciones": {
+                "enero": "120,120,120,120,120,120,120",
+                "febrero": "100,120,120,120,120,120,120",
+                "marzo": "90,120,120,120,120,120,120"
+            },
+            "descripcion": "Hotel en primera linea de playa con excelentes vistas. Reformado el 2023 cuenta con servicios de piscina, restauraci\u00f3n y alquiler de tumbonas"
+        },
+        {
+            "estrellas": "5",
+            "precio": "200",
+            "habitaciones-disponibles": "80",
+            "poblacion": "Barcelona",
+            "nombre": "Barcelona Hotel",
+            "direccion": "Carrer de Barcelona, 1",
+            "telefono": "912345678",
+            "correo": "info@barcelonahotel.com",
+            "imagen": "../../biblioteca/fotos/poblaciones/img0002.jpg",
+            "servicios": "Piscina, WIFI, Spa",
+            "fechas": {
+                "enero": "10,11,12,13,14,15,16",
+                "febrero": "10,11,12,13,14,15,16",
+                "marzo": "10,11,12,13,14,15,16"
+            },
+            "fechaxhabitaciones": {
+                "enero": "80,80,80,80,80,80,80",
+                "febrero": "75,80,80,80,80,80,80",
+                "marzo": "70,80,80,80,80,80,80"
+            },
+            "descripcion": "Hotel de lujo en el centro de Barcelona, con todos los servicios incluidos."
+        }
+    ],
+    "hostales": [
+        {
+            "calidad": "regular",
+            "precio": "100",
+            "habitaciones-disponibles": "120",
+            "poblacion": "Montgat",
+            "nombre": "Montgat",
+            "direccion": "Carre Escopeta, numero pum",
+            "telefono": "919701784",
+            "correo": "hmaresme@mataroin.com",
+            "imagen": "../../biblioteca/fotos/poblaciones/img0001.jpg",
+            "servicios": "Piscina, WIFI",
+            "fechas": {
+                "enero": "1,2,3,4,5,6,7",
+                "febrero": "1,2,3,4,5,6,7",
+                "marzo": "1,2,3,4,5,6,7"
+            },
+            "fechaxhabitaciones": {
+                "enero": "120,120,120,120,120,120,120",
+                "febrero": "100,120,120,120,120,120,120",
+                "marzo": "90,120,120,120,120,120,120"
+            },
+            "descripcion": "Hotel en primera linea de playa con excelentes vistas. Reformado el 2023 cuenta con servicios de piscina, restauraci\u00f3n y alquiler de tumbonas"
+        }
+    ]
+}

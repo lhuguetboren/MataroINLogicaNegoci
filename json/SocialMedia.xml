@@ -1,0 +1,21 @@
+<social_media>
+    <website>
+      <name></name>
+      <url></url>
+      <description></description>
+      <logo></logo>
+      <contact>
+        <email></email>
+        <phone></phone>
+      </contact>
+    </website>
+    <accounts>
+      <account>
+        <platform></platform>
+        <logo></logo>
+        <username></username>
+        <link></link>
+        <followers></followers>
+      </account>
+    </accounts>
+  </social_media>
