@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash, sen
 from werkzeug.utils import secure_filename
 from moviepy.editor import VideoFileClip
 import os
-from login import session, Biblioteca, get_current_time_in_spain, Tag, TagsRelacion
+from clasesb import session, Biblioteca, get_current_time_in_spain, Tag, TagsRelacion
 
 
 # Lista para almacenar los archivos subidos temporalmente
