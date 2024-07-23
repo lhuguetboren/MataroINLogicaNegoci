@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import declarative_base
 from datetime import datetime
 hola que tal dsudfhsuhfisufhsiufhs
+hola
 # Configuración base de SQLAlchemy
 Base = declarative_base()
 
