@@ -8,7 +8,7 @@ from datetime import datetime
 
 # Configuración base de SQLAlchemy
 Base = declarative_base()
-
+sadkjskjfskjdfh
 # Definición de la clase Evento
 class Evento(Base):
     __tablename__ = 'eventos'
