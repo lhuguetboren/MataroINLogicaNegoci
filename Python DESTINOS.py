@@ -1,4 +1,6 @@
 from datetime import date
+ç
+
 import diccionarioArchivo
 class Cliente:
     def __init__(self, nombre, categoria_fidelizacion):
