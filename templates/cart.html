@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Carrito de Compras</h2>
+{% if cart %}
+<table>
+    <tr>
+        <th>Hotel</th>
+        <th>Fecha de Inicio</th>
+        <th>Fecha de Fin</th>
+        <th>Habitaciones</th>
+        <th>Acciones</th>
+    </tr>
+    {% for viaje in cart %}
+    <tr>
+        <td>{{ viaje.hotel }}</td>
+        <td>{{ viaje.fecha_inicio }}</td>
+        <td>{{ viaje.fecha_fin }}</td>
+        <td>{{ viaje.habitaciones }}</td>
+        <td><a href="{{ url_for('remove_from_cart', index=loop.index0) }}">Eliminar</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>El carrito está vacío.</p>
+{% endif %}
+{% endblock %}
