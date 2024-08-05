@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+
+    <div class="main-content">
+<div class="row">
+    <div class="col-lg-1 col-md-1"></div>
+    <!-- Result 3 -->
+    <div class="col-lg-9 col-md-9">
+<h1>Ofertas</h1>
+        <div class="row">
+            <div id="slideshow3" class="col-lg-11 col-md-10"></div>
+            <div class="col-lg-1 col-md-2 text-center">
+                <h5>Siguientes</h5>
+
+                <ul id="slideshow3_thumbs" 
+                class="desoslide-thumbs-vertical list-inline"
+                style="max-height: 600px;overflow-y: hidden;">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1 col-md-1"></div>
+
+</div>
+</div>
+</main>
+{% endblock %}
+{% block content2 %}
+
+<script>
+
+    //funcion de inicio de la página
+    function main() {
+        ListadoImagenes();
+        $.getScript("static/js/app/demo.js", function () {
+            // Código a ejecutar después de que se cargue el script 
+            console.log("cargado");
+
+            setTimeout(function () {
+                $(document).ready(function () {
+                    $('#cargando').fadeOut('slow');
+
+                });
+            }, 2000);
+        }
+        );
+    }
+    setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 1);
+
+    function ListadoImagenes() {
+        let ListaDeImagenes = document.getElementById('slideshow3_thumbs');
+        // let ListaDeImagenes1 = document.getElementById('ListaDeImagenes1');
+        // let ListaDeImagenes2 = document.getElementById('ListaDeImagenes2');
+        // let ListaDeImagenes3 = document.getElementById('ListaDeImagenes3');
+        let ListaDeImagenesLargo = Biblioteca.fotos.foto.length
+        let mostrarImagen = ''
+
+        // console.log  (Biblioteca.fotos.foto[0].id)
+
+        for (let i = 4; i < ListaDeImagenesLargo; i++) {
+            console.log(Biblioteca.fotos.foto[i].filename);
+            mostrarImagen += '<li>' +
+                '<a href="static/' + Biblioteca.fotos.foto[i].filename + '" data-desoslide-index="' + i + '">' +
+                '<img style="width: 200px;" src="static/' + Biblioteca.fotos.foto[i].filename + '" alt="' + Biblioteca.fotos.foto[i].title + '">' +
+                '</a>' +
+                '</li>';
+        }
+        ListaDeImagenes.insertAdjacentHTML('beforeend', mostrarImagen);
+    }
+
+</script>
+{% endblock %}

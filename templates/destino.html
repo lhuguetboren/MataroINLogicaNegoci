@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+
+    <div class="main-content">
+        <div class="carousel-container">
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <ul id="listaPueblos" class="carousel"></ul>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+
+        <div class="info-content">
+            <div class="sub-col"><h1>Mapa</h1></div>
+            <div class="sub-col"><h1>Tiempo y Wiki</h1></div>
+        </div>
+
+    </div>
+</main>
+{% endblock %}
+
+{% block content2 %}
+
+<script>
+    let currentSlide = 0;
+
+    function main() {
+        document.getElementById("nombre").innerHTML = getCookie("username");
+        arrayAULaAccion('listaPueblos', Municipios.pueblo, 'ifsrc');
+
+        setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 2000);
+
+    }
+
+    function arrayAULaAccion(ulc, opciones, accion) {
+        let selectHTML = '';
+        opciones.forEach(opcion => {
+            selectHTML += `
+                    <li class="slide">
+                        <div class="PUEBLO">
+                            <img src="${opcion.trim()}.jpeg" class="img" alt="${opcion.trim()}">
+                            <div class="nombre">${opcion}</div>
+                        </div>
+                    </li>
+                `;
+        });
+        document.getElementById(ulc).innerHTML = selectHTML;
+    }
+
+    function ifsrc(pueblo) {
+        document.getElementById("wikipedia").src = "https://es.wikipedia.org/wiki/" + pueblo;
+        document.getElementById("tituloPueblo").textContent = pueblo;
+    }
+
+    function moveCarousel(direction) {
+        const carousel = document.querySelector('.carousel');
+        const slides = document.querySelectorAll('.slide');
+        const slideWidth = slides[0].offsetWidth + 20; // Including margin
+        currentSlide += direction;
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+        } else if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        const offset = -currentSlide * slideWidth;
+        carousel.style.transform = `translateX(${offset}px)`;
+    }
+
+</script> 
+
+{% endblock %}

@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bibloteca>
+    <fotos>
+        <foto>
+            <id>1</id>
+            <title>Vueling Airlines</title>
+            <description>Imagen de Vueling Airlines</description>
+            <filename>biblioteca/fotos/transportes/vueling-airlines.jpg</filename>
+            <date>Fecha de la foto de Vueling Airlines</date>
+            <tags>
+                <tag>avión</tag>
+                <tag>aerolínea</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>2</id>
+            <title>SNCF</title>
+            <description>Imagen de SNCF</description>
+            <filename>biblioteca/fotos/transportes/sncf.jpg</filename>
+            <date>Fecha de la foto de SNCF</date>
+            <tags>
+                <tag>tren</tag>
+                <tag>ferrocarril</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>3</id>
+            <title>Ryanair</title>
+            <description>Imagen de Ryanair</description>
+            <filename>biblioteca/fotos/transportes/Ryanair.jpg</filename>
+            <date>Fecha de la foto de Ryanair</date>
+            <tags>
+                <tag>avión</tag>
+                <tag>aerolínea</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>4</id>
+            <title>Rodalias</title>
+            <description>Imagen de Rodalias</description>
+            <filename>biblioteca/fotos/transportes/rodalias.webp</filename>
+            <date>Fecha de la foto de Rodalias</date>
+            <tags>
+                <tag>tren</tag>
+                <tag>ferrocarril</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>5</id>
+            <title>Qatar Airways</title>
+            <description>Imagen de Qatar Airways</description>
+            <filename>biblioteca/fotos/transportes/qatar-airways.jpg</filename>
+            <date>Fecha de la foto de Qatar Airways</date>
+            <tags>
+                <tag>avión</tag>
+                <tag>aerolínea</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>6</id>
+            <title>EasyJet</title>
+            <description>Imagen de EasyJet</description>
+            <filename>biblioteca/fotos/transportes/EasyJet.jpg</filename>
+            <date>Fecha de la foto de EasyJet</date>
+            <tags>
+                <tag>avión</tag>
+                <tag>aerolínea</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>7</id>
+            <title>AVE</title>
+            <description>Imagen de AVE</description>
+            <filename>biblioteca/fotos/transportes/ave.jpg</filename>
+            <date>Fecha de la foto de AVE</date>
+            <tags>
+                <tag>tren</tag>
+                <tag>ferrocarril</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>8</id>
+            <title>Alvo</title>
+            <description>Imagen de Alvo</description>
+            <filename>biblioteca/fotos/transportes/alvo.jpeg</filename>
+            <date>Fecha de la foto de Alvo</date>
+            <tags>
+                <tag>autobús</tag>
+                <tag>transporte público</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>9</id>
+            <title>Vilassar de Mar Centro</title>
+            <description>Imagen del centro de Vilassar de Mar</description>
+            <filename>biblioteca/fotos/poblaciones/vilassar de mar centro.jpg</filename>
+            <date>Fecha de la foto del centro de Vilassar de Mar</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>10</id>
+            <title>Premià Centro</title>
+            <description>Imagen del centro de Premià</description>
+            <filename>biblioteca/fotos/poblaciones/premia centro.jpg</filename>
+            <date>Fecha de la foto del centro de Premià</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>11</id>
+            <title>Polideportivo Palafolls</title>
+            <description>Imagen del polideportivo de Palafolls</description>
+            <filename>biblioteca/fotos/poblaciones/polideportivo palafolls.jpg</filename>
+            <date>Fecha de la foto del polideportivo de Palafolls</date>
+            <tags>
+                <tag>polideportivo</tag>
+                <tag>instalaciones deportivas</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>12</id>
+            <title>Mercadillo Centro Santasusana</title>
+            <description>Imagen del mercadillo en el centro de Santasusana</description>
+            <filename>biblioteca/fotos/poblaciones/mercadillo centro santasusana.jpg</filename>
+            <date>Fecha de la foto del mercadillo en el centro de Santasusana</date>
+            <tags>
+                <tag>mercadillo</tag>
+                <tag>pueblo</tag>
+            </tags>
+        </foto>
+
+        <foto>
+            <id>13</id>
+            <title>Mataró 4</title>
+            <description>Imagen de Mataró</description>
+            <filename>biblioteca/fotos/poblaciones/mataro4.jpg</filename>
+            <date>Fecha de la foto de Mataró</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>14</id>
+            <title>Mataró 3</title>
+            <description>Imagen de Mataró</description>
+            <filename>biblioteca/fotos/poblaciones/mataro3.png</filename>
+            <date>Fecha de la foto de Mataró</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>15</id>
+            <title>Mataró 2</title>
+            <description>Imagen de Mataró</description>
+            <filename>biblioteca/fotos/poblaciones/mataro2.jpg</filename>
+            <date>Fecha de la foto de Mataró</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>16</id>
+            <title>Mataró 1</title>
+            <description>Imagen de Mataró</description>
+            <filename>biblioteca/fotos/poblaciones/mataro1.jpg</filename>
+            <date>Fecha de la foto de Mataró</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>17</id>
+            <title>Mataró Parck</title>
+            <description>Imagen del Parck de Mataró</description>
+            <filename>biblioteca/fotos/poblaciones/mataro parck.jpg</filename>
+            <date>Fecha de la foto del Parck de Mataró</date>
+            <tags>
+                <tag>parque</tag>
+                <tag>recreación</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>18</id>
+            <title>El Masnou</title>
+            <description>Imagen de El Masnou</description>
+            <filename>biblioteca/fotos/poblaciones/el masnou.jpg</filename>
+            <date>Fecha de la foto de El Masnou</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>19</id>
+            <title>Centro Blanes</title>
+            <description>Imagen del centro de Blanes</description>
+            <filename>biblioteca/fotos/poblaciones/centro blanes.jpg</filename>
+            <date>Fecha de la foto del centro de Blanes</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>20</id>
+            <title>Centro Arenys de Mar</title>
+            <description>Imagen del centro de Arenys de Mar</description>
+            <filename>biblioteca/fotos/poblaciones/centro arenys de mar.jpg</filename>
+            <date>Fecha de la foto del centro de Arenys de Mar</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>21</id>
+            <title>Casco Antiguo Calella</title>
+            <description>Imagen del casco antiguo de Calella</description>
+            <filename>biblioteca/fotos/poblaciones/casco antiguo calella.jpg</filename>
+            <date>Fecha de la foto del casco antiguo de Calella</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>22</id>
+            <title>Can Comas Pineda de Mar</title>
+            <description>Imagen de Can Comas en Pineda de Mar</description>
+            <filename>biblioteca/fotos/poblaciones/can comas pineda de mar.jpg</filename>
+            <date>Fecha de la foto de Can Comas en Pineda de Mar</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>23</id>
+            <title>Barretina Malgrat de Mar</title>
+            <description>Imagen de la barretina en Malgrat de Mar</description>
+            <filename>biblioteca/fotos/poblaciones/barretina malgrat de mar.jpg</filename>
+            <date>Fecha de la foto de la barretina en Malgrat de Mar</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>24</id>
+            <title>Ayuntamiento Sant Pol de Mar</title>
+            <description>Imagen del ayuntamiento de Sant Pol de Mar</description>
+            <filename>biblioteca/fotos/poblaciones/ayuntamiento sant pol de mar.jpg</filename>
+            <date>Fecha de la foto del ayuntamiento de Sant Pol de Mar</date>
+            <tags>
+                <tag>pueblo</tag>
+                <tag>ciudad</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>25</id>
+            <title>Playa</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/shutterstock_674086747FILEminimizer.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>26</id>
+            <title>Sant Pol</title>
+            <description>Imagen de la playa de Sant Pol</description>
+            <filename>biblioteca/fotos/playas/sant pol.jpg</filename>
+            <date>Fecha de la foto de la playa de Sant Pol</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>27</id>
+            <title>Playas de Calella</title>
+            <description>Imagen de las playas de Calella</description>
+            <filename>biblioteca/fotos/playas/playas-calella-barcelona-2873-2.jpg</filename>
+            <date>Fecha de la foto de las playas de Calella</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>28</id>
+            <title>Platja dels Tres Micos</title>
+            <description>Imagen de la Platja dels Tres Micos</description>
+            <filename>biblioteca/fotos/playas/platja-dels-tres-micos.jpg</filename>
+            <date>Fecha de la foto de la Platja dels Tres Micos</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+
+        <foto>
+            <id>29</id>
+            <title>Platges de Calella</title>
+            <description>Imagen de las Platges de Calella</description>
+            <filename>biblioteca/fotos/playas/Platges-de-Calella-blog-1024x526.jpg</filename>
+            <date>Fecha de la foto de las Platges de Calella</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>30</id>
+            <title>Montgat, Platja de San Juan, Torre de Guaita</title>
+            <description>Imagen de Montgat, Platja de San Juan, Torre de Guaita</description>
+            <filename>biblioteca/fotos/playas/Montgat,Platja de San Juan, Torre de Guaita(12).jpg</filename>
+            <date>Fecha de la foto de Montgat, Platja de San Juan, Torre de Guaita</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>31</id>
+            <title>Mataró</title>
+            <description>Imagen de la playa de Mataró</description>
+            <filename>biblioteca/fotos/playas/mataro.jpg</filename>
+            <date>Fecha de la foto de la playa de Mataró</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>costa</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>32</id>
+            <title>Imagen Grande</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/imagen-grande.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>33</id>
+            <title>Image13</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image13.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>34</id>
+            <title>Image12</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image12.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+
+        <foto>
+            <id>38</id>
+            <title>Image8</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image8.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>39</id>
+            <title>Image7</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image7.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>40</id>
+            <title>Image6</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image6.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+
+        <foto>
+            <id>41</id>
+            <title>Image5</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image5.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>42</id>
+            <title>Image4</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image4.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>43</id>
+            <title>Image3</title>
+            <description>Imagen de una playa</description>
+            <filename>biblioteca/fotos/playas/image3.jpg</filename>
+            <date>Fecha de la foto de la playa</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>verano</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>44</id>
+            <title>Camping Barcelona 1</title>
+            <description>Imagen del camping en Barcelona</description>
+            <filename>biblioteca/fotos/Campings/camping-barcelona-1.jpg</filename>
+            <date>Fecha de la foto del camping en Barcelona</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>45</id>
+            <title>Camping Barcelona 2</title>
+            <description>Imagen del camping en Barcelona</description>
+            <filename>biblioteca/fotos/Campings/camping-barcelona-2.jpg</filename>
+            <date>Fecha de la foto del camping en Barcelona</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>46</id>
+            <title>Camping Barcelona 3</title>
+            <description>Imagen del camping en Barcelona</description>
+            <filename>biblioteca/fotos/Campings/camping-barcelona-3.jpg</filename>
+            <date>Fecha de la foto del camping en Barcelona</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>47</id>
+            <title>Camping Barcelona 4</title>
+            <description>Imagen del camping en Barcelona</description>
+            <filename>biblioteca/fotos/Campings/camping-barcelona-4.jpg</filename>
+            <date>Fecha de la foto del camping en Barcelona</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>48</id>
+            <title>Camping Barcelona 5</title>
+            <description>Imagen del camping en Barcelona</description>
+            <filename>biblioteca/fotos/Campings/camping-barcelona-5.jpg</filename>
+            <date>Fecha de la foto del camping en Barcelona</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>49</id>
+            <title>Camping Touring 1</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-1.webp</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>50</id>
+            <title>Camping Touring 2</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-2.jpg</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>51</id>
+            <title>Camping Touring 3</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-3.jpg</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>52</id>
+            <title>Camping Touring 4</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-4.webp</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>53</id>
+            <title>Camping Touring 5</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-5.jpg</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>54</id>
+            <title>Camping Touring 6</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-6.jpg</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+        <foto>
+            <id>55</id>
+            <title>Camping Touring 7</title>
+            <description>Imagen del camping Touring</description>
+            <filename>biblioteca/fotos/Campings/camping-touring-7.jpg</filename>
+            <date>Fecha de la foto del camping Touring</date>
+            <tags>
+                <tag>camping</tag>
+                <tag>vacaciones</tag>
+            </tags>
+        </foto>
+
+    </fotos>
+    <videos>
+        <video>
+            <id>1</id>
+            <title>Mataró</title>
+            <description>El paisaje del Maresme</description>
+            <url>/Biblioteca/Videos/MATARÓ.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Sol</tag>
+            </tags>
+        </video>
+        <video>
+            <id>2</id>
+            <title>Mataró</title>
+            <description>Fiesta Major de la Ciudad "Les Santes"</description>
+            <url>/Biblioteca/Videos/LesSantes.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Fiesta</tag>
+                <tag>Diversion</tag>
+            </tags>
+        </video>
+        <video>
+            <id>3</id>
+            <title>Pineda de Mar</title>
+            <description>Pueblo de viejos</description>
+            <url>/Biblioteca/Videos/PinedaDeMar.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Jubilados</tag>
+                <tag>Montaña</tag>
+            </tags>
+        </video>
+        <video>
+            <id>4</id>
+            <title>Canet de Mar</title>
+            <description>f</description>
+            <url>/Biblioteca/Videos/CANETDEMAR.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Costa Maresme</tag>
+                <tag>Canet Rock</tag>
+            </tags>
+        </video>
+        <video>
+            <id>5</id>
+            <title>Arenys de Mar</title>
+            <description>dddf</description>
+            <url>/Biblioteca/Videos/Arenysdemar.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Sol</tag>
+                <tag>Montaña</tag>
+            </tags>
+        </video>
+        <video>
+            <id>6</id>
+            <title>Vilassar de Mar</title>
+            <description>ddddghth</description>
+            <url>/Biblioteca/Videos/Vilassardemar.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Sant Juan</tag>
+                <tag>Espinaler</tag>
+                <tag>Bad Gyal</tag>
+                <tag>Muskka</tag>
+            </tags>
+        </video>
+        <video>
+            <id>7</id>
+            <title>Calella</title>
+            <description>wegfdjet</description>
+            <url>/Biblioteca/Videos/Calella.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+                <tag>Turismo</tag>
+                <tag>Desfase</tag>
+            </tags>
+        </video>
+        <video>
+            <id>8</id>
+            <title>Blanes</title>
+            <description>w5y6ieyw6uw</description>
+            <url>/Biblioteca/Videos/Blanes.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Playa</tag>
+            </tags>
+        </video>
+        <video>
+            <id>9</id>
+            <title>Malgrat de Mar</title>
+            <description>wtutkw5yeiwu</description>
+            <url>/biblioteca/Videos/MalgratdeMar.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Sol</tag>
+                <tag>Playa</tag>
+            </tags>
+        </video>
+        <video>
+            <id>10</id>
+            <title>Premia de Mar</title>
+            <description>rthlld</description>
+            <url>/Biblioteca/Videos/PREMIÀDEMAR.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>playa</tag>
+                <tag>Puerto</tag>
+                <tag>Illa fantasia</tag>
+                <tag>Piratas</tag>
+            </tags>
+        </video>
+        <video>
+            <id>11</id>
+            <title>Sant Pol de Mar</title>
+            <description>klsdvhl</description>
+            <url>/Biblioteca/Videos/SANTPOLDEMAR.mp4</url>
+            <duration>60</duration>
+            <date>03/05/2024</date>
+            <tags>
+                <tag>Pescadores</tag>
+            </tags>
+        </video>
+    </videos>
+    <folletos>
+        <folleto>
+            <numero>1</numero>
+            <contenido>
+                <titulo></titulo>
+                <texto></texto>
+                <imagen></imagen>
+                <formato></formato>
+                <date></date>
+                <filename></filename>
+            </contenido>
+        </folleto>
+    </folletos>
+</bibloteca>

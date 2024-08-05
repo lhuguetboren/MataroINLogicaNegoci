@@ -1,0 +1,20 @@
+{
+    "hotel": [
+        {
+            "id": 1,
+            "tipo": "hotel",
+            "nombre": "Hotel Maresme",
+            "password": "Maresme",
+            "primeraConexion": "",
+            "ultimaConexion": ""
+        },
+        {
+            "id": 2,
+            "tipo": "hotel",
+            "nombre": "Hotel Playa",
+            "password": "Playa",
+            "primeraConexion": "",
+            "ultimaConexion": ""
+        }
+    ]
+}

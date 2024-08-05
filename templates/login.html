@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<main>
+<form
+    action="javascript:validarClaves(document.getElementById('username').value,document.getElementById('password').value);">
+    <h1 id="inic">Inicia Sesión</h1>
+    <input id="username" placeholder="Usuario" maxlength="8" style="border-radius: 15px;clear:both;width:80%;" />
+    <br>
+    <input type="password" placeholder="Contraseña" id="password" type="text" style="border-radius: 15px;width:80%;" />
+    <br>
+
+    <input type="submit" value="Login" style="border-radius: 25px;" />
+    <hr>
+
+</form>
+</main>
+{% endblock %}
+{% block content2 %}
+
+<script>
+
+    function main() {
+
+        setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 2000);
+
+    }
+
+
+</script>
+
+{% endblock %}

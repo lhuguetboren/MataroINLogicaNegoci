@@ -1,0 +1,37 @@
+<root>
+<formulario>
+    <campos>
+        <nombre>Nombre del Cliente</nombre>
+    <direccion>Dirección del Cliente</direccion>
+    <pais>País del Cliente</pais>
+    <telefono>Número de Teléfono del Cliente</telefono>
+    <texto>Texto del Formulario</texto>
+    </campos>
+<contactos>
+    <nombre>Nombre del Cliente</nombre>
+    <direccion>Dirección del Cliente</direccion>
+    <pais>País del Cliente</pais>
+    <telefono>Número de Teléfono del Cliente</telefono>
+    <texto>Texto del Formulario</texto>
+    <fecha></fecha>
+    <respondido></respondido>
+
+    </contactos>
+</formulario>    
+
+<atencioncliente> 
+        <nombre>Nombre del Encargado de Atención al Cliente</nombre>
+        <direccion>Dirección del Encargado de Atención al Cliente</direccion>
+        <nombreCliente></nombreCliente>
+        <pregunta></pregunta>
+        <respuesta></respuesta>
+        <medio>
+            <correo>Correo del Encargado de Atención al Cliente</correo>
+            <telefono>Correo del Encargado de Atención al Cliente</telefono>
+            <whatsapp>Correo del Encargado de Atención al Cliente</whatsapp>
+
+
+        </medio>
+ 
+    </atencioncliente>
+</root>

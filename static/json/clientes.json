@@ -1,0 +1,22 @@
+{
+    "cliente": [
+        {
+            "id_cliente": 1,
+            "nombre": "Albert Holland",
+            "correo": "abc",
+            "telefono": "",
+            "direccion": "",
+            "usuario": "Albert",
+            "password": "holland"
+        },
+        {
+            "id_cliente": 2,
+            "nombre": "Karl Denmark",
+            "correo": "",
+            "telefono": "",
+            "direccion": "",
+            "usuario": "Karl",
+            "password": "Denmark"
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+<clientes>
+	<cliente>
+		<id>1</id>
+		<nombre>Albert Holland</nombre>
+        <correo>abc</correo>
+        <telefono></telefono>
+        <direccion></direccion>
+        <usuario>Albert</usuario>
+        <password>holland</password>
+    </cliente>
+    <cliente>
+		<id>2</id>
+		<nombre>Karl Denmark</nombre>
+        <correo></correo>
+        <telefono></telefono>
+        <direccion></direccion>
+        <usuario>Karl</usuario>
+        <password>Denmark</password>
+    </cliente>
+</clientes>

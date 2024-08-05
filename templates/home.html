@@ -1,0 +1,428 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Contenido principal -->
+<main>
+    <!-- Sección de presentación con imágenes cambiantes y formulario de búsqueda -->
+
+    <section class="presentacion">
+        <row>
+            <div class="img-fluid" id="presentacion">
+                <form id="search-form" class="form-group">
+                    <div class="row">
+                        <label for="destino">Destino:</label>
+                        <select id="destino">
+                        </select>
+                        <label for="hotel">Nombre del hotel:</label>
+                        <input type="text" id="nombreA" name="hotel" class="search-input"
+                            placeholder="Nombre del hotel">
+
+                            <div class="selector" id="selector">
+                                <div style="width:50%;float:left">
+                                                            <label for="startDate">Fecha Llegada:</label>
+                        <input type="text" id="startDate" name="startDate">
+                        </div>
+                        <div style="width:50%;float:left">
+                        <label for="endDate">Fecha Salida:</label>
+                        <input type="text" id="endDate" name="endDate">
+</div>
+                        </div>
+                        <div class="price-range">Precio: <span id="price-values"></span> €</div>
+                        <div id="price-slider"></div>
+
+                        <div class="selector" id="selector">
+                            <div class="rating" style="width:30%;float:left"> Estrellas :<br>
+                                <span class="star" data-value="1">&#9733;</span>
+                                <span class="star" data-value="2">&#9733;</span>
+                                <span class="star" data-value="3">&#9733;</span>
+                                <span class="star" data-value="4">&#9733;</span>
+                                <span class="star" data-value="5">&#9733;</span>
+                            </div>
+                            <div style="width:20%;float:left">
+                                <label for="person-count">Personas:</label>
+                                <input type="number" id="person-count" value="1">
+                            </div>
+                            <div style="width:20%;float:left">
+                                <label for="room-count">Habitaciones:</label>
+                                <input type="number" id="room-count" value="1">
+                            </div>
+                        </div>
+
+                        <button type="submit" style="width: 100%;margin:10px; border-radius: 20px;">Buscar</button>
+                        <button type="button" style="width: 96%;margin-left: 12px;border-radius: 20px;margin-top: -6px;"
+                            onclick="resetSearchForm()">Borrar
+                            criterios
+                            de búsqueda</button>
+                    </div>
+                </form>
+            </div>
+        </row>
+    </section>
+
+    <section id="resultados">
+        <div id="loadingIndicator">
+            <img src="static/imagenes/cargando.gif" alt="Cargando...">
+        </div>
+        <div id="results"></div>
+        <div id="pagination"></div>
+    </section>
+
+
+
+    <!-- Sección de destinos -->
+    <section class="destinos">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Destinos Populares</h1>
+            </div>
+            <!-- Destino 1 -->
+            <div class="col-sm-3 destino">
+                <img class="img-fluid imagenesHome"
+                    src="static/Biblioteca/fotos/playas/05-calas-sant-pol-de-mar-costa-barcelona-maresme-sumus-hotels-group.jpg"
+                    alt="Chania">
+
+                <p>Descripción del destino 1.</p>
+                <!-- Iconos -->
+                <div class="iconos">
+                    <i class="fas fa-map-marker-alt icono"></i>
+                    <i class="fas fa-bed icono"></i>
+                    <i class="fas fa-utensils icono"></i>
+                </div>
+
+            </div>
+            <!-- Destino 2 -->
+            <div class="col-sm-3 destino">
+                <img class="img-fluid imagenesHome" src="static/Biblioteca/fotos/poblaciones/el masnou.jpg"
+                    alt="Chania">
+                <p>Descripción del destino 2.</p>
+                <div class="iconos">
+                    <i class="fas fa-map-marker-alt icono"></i>
+                    <i class="fas fa-bed icono"></i>
+                    <i class="fas fa-utensils icono"></i>
+                </div>
+            </div>
+            <!-- Destino 3 -->
+            <div class="col-sm-3 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/campings/camping-barcelona-3.jpg" alt="Chania">
+                <p>Descripción del destino 3.</p>
+                <div class="iconos">
+                    <i class="fas fa-map-marker-alt icono"></i>
+                    <i class="fas fa-bed icono"></i>
+                    <i class="fas fa-utensils icono"></i>
+                </div>
+            </div>
+            <!-- Destino 1 -->
+            <div class="col-sm-3 destino">
+                <h3>Otros destinos</h3>
+                <!-- Iconos -->
+                <div>
+                    <a class="btn" style="margin:3px;" href="videos.html"><i
+                            class="fas fa-map-marker-alt icono"></i>&nbsp;&nbsp;Todas las poblaciones</a>
+                    <a class="btn" style="margin:3px;" href="videos.html"><i
+                            class="fas fa-bed icono"></i>&nbsp;&nbsp;Todos los alojamientos</a>
+                    <a class="btn" style="margin:3px;" href="videos.html"><i
+                            class="fas fa-utensils icono"></i>&nbsp;&nbsp;Todos los restaurantes</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Sección de ofertas -->
+    <section id="ofertas">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Ofertas/Escapadas</h1>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Destino 1 -->
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" src="static/Biblioteca/fotos/playas/image1.jpg" alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;" src="static/Biblioteca/fotos/playas/image10.jpg"
+                    alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;" src="static/Biblioteca/fotos/playas/image2.jpg"
+                    alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;" src="static/Biblioteca/fotos/playas/image6.jpg"
+                    alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;" src="static/Biblioteca/fotos/playas/image7.jpg"
+                    alt="Chania">
+
+            </div>
+
+            <div class="col-sm-2 destino">
+                <!-- Iconos -->
+                <a class="btn " style="margin:3px;" href="videos.html"><i
+                        class="fas fa-map-marker-alt icono"></i>&nbsp;&nbsp;Otras playas</a>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/poblaciones/ayuntamiento sant pol de mar.jpg" alt="Chania">
+
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/poblaciones/barretina malgrat de mar.jpg" alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/poblaciones/can comas pineda de mar.jpg" alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/poblaciones/casco antiguo calella.jpg" alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <img class="img-fluid" style="width:100%;height:80%;"
+                    src="static/Biblioteca/fotos/poblaciones/centro arenys de mar.jpg" alt="Chania">
+
+            </div>
+            <div class="col-sm-2 destino">
+                <!-- Iconos -->
+                <a class="btn" style="margin:3px;" href="videos.html"><i
+                        class="fas fa-map-marker-alt icono"></i>&nbsp;&nbsp;Otras poblaciones</a>
+            </div>
+        </div>
+    </section>
+    <section class="xarxes" style="background-color: #f79e31;">
+        <div class="container mt-5">
+            <div class="row justify-content-center" style="margin:2%;">
+                <row>
+                <h3 style="padding-top:10px;">Visita nuestras redes</h3>
+                <a href="https://www.instagram.com/" target="_blank" class="btnX">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" class="btnX">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/" target="_blank" class="btnX">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </row>
+        
+            </div>
+        </div>
+    </section>
+    <section class="testimonios">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-xl-8 text-center">
+                <h3 class="mb-4">Testimonials</h3>
+                <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+                    numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+                    quisquam eum porro a pariatur veniam.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">Maria Smantha</h5>
+                <h6 class="text-primary mb-3">Web Developer</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+                    tenetur.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star-half-alt fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-5 mb-md-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">Lisa Cudrow</h5>
+                <h6 class="text-primary mb-3">Graphic Designer</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-0">
+                <div class="d-flex justify-content-center mb-4">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                        class="rounded-circle shadow-1-strong" width="150" height="150" />
+                </div>
+                <h5 class="mb-3">John Smith</h5>
+                <h6 class="text-primary mb-3">Marketing Specialist</h6>
+                <p class="px-xl-3">
+                    <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
+                    dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+                </p>
+                <ul class="list-unstyled d-flex justify-content-center mb-0">
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-star fa-sm text-warning"></i>
+                    </li>
+                    <li>
+                        <i class="far fa-star fa-sm text-warning"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
+{% block content2 %}
+
+<script>
+
+    //funcion de inicio de la página
+    function main() {
+        setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 2000);
+
+        // precio
+
+        $("#price-slider").slider({
+            range: true,
+            min: 0,
+            max: 300,
+            values: [0, 300],
+            slide: function (event, ui) {
+                $("#price-values").text(ui.values[0] + " - " + ui.values[1]);
+            }
+        });
+        $("#price-values").text($("#price-slider").slider("values", 0) + " - " + $("#price-slider").slider("values", 1));
+
+        // Estrellas
+
+        $('.star').on('mouseup', function () {
+            starsValue = parseInt($(this).data('value'));
+            $('.star').html('&#9733;');
+            $(this).prevAll('.star').addBack().html('&#9734;');
+
+        });
+
+        // Personas
+
+        $("#person-count").attr("min", 1);
+        $("#person-count").attr("max", 10);
+        $("#room-count").attr("min", 1);
+        $("#room-count").attr("max", 4);
+
+        function updateBookingInfo() {
+            var personCount = $("#person-count").val();
+            var roomCount = $("#room-count").val();
+            alert("Personas: " + personCount + ", Habitaciones: " + roomCount);
+        }
+
+        // Calendario
+
+        $("#startDate").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (selectedDate) {
+                var startDate = $(this).datepicker('getDate');
+                $("#endDate").datepicker("option", "minDate", startDate);
+            }
+        });
+
+        $("#endDate").datepicker({
+            dateFormat: "yy-mm-dd",
+            onSelect: function (selectedDate) {
+                var endDate = $(this).datepicker('getDate');
+                $("#startDate").datepicker("option", "maxDate", endDate);
+            }
+        });
+
+        $("#dateForm").submit(function (event) {
+            var startDate = $("#startDate").datepicker('getDate');
+            var endDate = $("#endDate").datepicker('getDate');
+
+            if (!startDate || !endDate || endDate <= startDate) {
+                alert("La fecha final debe ser superior a la fecha inicial.");
+                event.preventDefault();
+            }
+        });
+
+
+
+
+        document.getElementById("nombre").innerHTML = getCookie("username");
+        arrayAselect("idiomas", Idiomas.idioma);
+        arrayAselect("destino", Municipios.pueblo);
+        imagenCambiante();
+        document.getElementById("search-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            busquedaPrincipal();
+        });
+    }
+
+
+
+
+
+</script>
+{% endblock %}

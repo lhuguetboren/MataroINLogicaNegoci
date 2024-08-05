@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <!-- Contenido principal -->
+    <section id="prueba">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="text-align: left;" id="hotel">Hotel Alella</h1>
+                    <h2 style="text-align: left;" id="direccion"></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <img id="imagen" class="img-fluid">
+                </div>
+                <div class="col-sm-3">
+                    <div id="fechas"></div>
+                    <table id="tabla"></table>
+                </div>
+                <div class="col-sm-3">
+                    <div id="precio"></div>
+                    <div id="ofertas"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="servicios"></div>
+
+
+                    <div id="mensaje"
+                        style="display: none; position: absolute; background-color: #fff; padding: 10px; border: 1px solid #000;">
+                        aaa
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <style>
+                        .desplazar-texto {
+                            margin-top: 25px;
+                            /* Ajusta el valor según sea necesario */
+                        }
+                    </style>
+                    <div class="desplazar-texto"></div>
+                    <div id="hotel"></div>
+                    <div id="imagen"></div>
+                    <div id="direccion"></div>
+                    <div id="descripcion"></div>
+
+
+                    <img class="logo" src="assets/imagenes/telefono.jpg" />
+                    <div id="telefono"></div>
+                    <img class="logo" src="assets/imagenes/correo.png" />
+                    <div id="correo"></div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div id="map"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Sección de presentación con imágenes cambiantes y formulario de búsqueda -->
+
+</main>
+{% endblock %}
+{% block content2 %}
+<script>
+    function main() {
+        CargaAlojamiento('{{ id }}');
+
+        setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 1);
+    };
+
+
+    // Función de inicialización para Google Maps
+    function initMap() {
+        // Dirección a geocodificar
+        const address = "Calle Valencia nº 3, Mataró, Barcelona, España";
+
+        // Crear una instancia del servicio de Geocoding
+        const geocoder = new google.maps.Geocoder();
+        // Ubicacion
+        // Geocodificar la dirección
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK') {
+                // Obtener la ubicación geocodificada
+                const location = results[0].geometry.location;
+
+                // Crear un nuevo mapa y mostrarlo en el div con id "map"
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: location
+                });
+
+                // Añadir un marcador en la ubicación geocodificada
+                const marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            } else {
+                alert('Geocoding falló debido a: ' + status);
+            }
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDud_q1oM6OT8QRQCKGjHYO4KnKSmNiL0M&callback=initMap" async
+    defer>
+</script>
+{% endblock %}

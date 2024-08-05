@@ -1,0 +1,773 @@
+/* paleta de colores*/
+:root {
+    --main-color: #f79e31;
+    --strong-color: #d87c0b;
+    --stronger-color: #aa5d00;
+    --light-color: #ffb458;
+    --lighter-color: #ffc681;
+}
+
+/* Estilos generales*/
+/* Estilos para FORMULARIOS */
+/* Estilos para tablas todas las secciones*/
+/* Estilos para botones*/
+
+/* Estilos header logo, titulo, navegacion*/
+/* Estilos para la sección de presentación (banner y formulario) */
+
+/* Estilos para la sección de destinos */
+/* Estilos para la sección de ofertas */
+/* Estilos para la sección de testimonios */
+/* Estilos para el footer */
+
+/* Estilos generales*/
+body {
+    display: block;
+    /*tipo de fuente*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    background-color: white;
+    line-height: 100%;
+
+
+}
+
+p {
+    display: block;
+    /*color de fuente*/
+    color: gray;
+    /*tamaño de fuente*/
+    font-size: medium;
+    /*interlineado*/
+    line-height: 150%;
+}
+
+h1 {
+    display: block;
+    /*color de fuente*/
+    color: var(--stronger-color);
+    /*tamaño de fuente*/
+    font-size: large;
+    font-weight: bolder;
+    /*centrado*/
+    text-align: center;
+    margin: 10px;
+}
+
+h2 {
+    display: block;
+    /*color de fuente*/
+    color: var(--strong-color);
+    /*tamaño de fuente*/
+    font-size: large;
+    /*centrado*/
+    text-align: center;
+}
+
+h3 {
+    display: block;
+    /*color de fuente*/
+    color: var(--stronger-color);
+    /*tamaño de fuente*/
+    font-size: medium;
+    font-weight: bolder;
+    /*centrado*/
+    text-align: center;
+}
+
+ul {
+    display: block;
+    /*margen izquierdo*/
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+li {
+    display: block;
+    /* bullet es un cuadrado */
+
+}
+
+/* Estilos para FORMULARIOS */
+form {
+    width: 100%;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 3px;
+    padding-left: 25%;
+    color: white;
+    font-weight: bold;
+
+}
+
+.form-group {
+    padding: 10px;
+    width: 40%;
+    margin-top:10px;
+    margin-left:30%;
+    background-color: rgba(145, 66, 23, 0.5);
+    /*background transparente y con color de paleta*/
+}
+
+label {
+    display: block;
+    width: 40%;
+}
+
+input,
+textarea {
+    width: 40%;
+    float: left;
+
+}
+
+input[type="submit"] {
+    /*color*/
+    background-color: #aa5d00;
+    color: white;
+    /*tipo de cursor*/
+    cursor: pointer;
+    margin-left: 25%;
+
+}
+
+input[type="submit"]:hover {
+    /*color  al pasar el boton*/
+    background-color: #ffb458;
+
+}
+
+/*Estilos para tablas*/
+
+table{
+    /*color fondo en blanco*/
+}
+th {
+    /*negrita*/
+    font-weight: bold;
+}
+
+tr {
+    /*centrado*/
+    text-align: center;
+}
+
+td {
+    /*centrado*/
+    text-align: center;
+}
+
+.tableTitulo1 {
+    /*fondo color */
+    background-color: var(--stronger-color);
+    font-weight: bold;
+    padding: 10px;
+
+}
+
+.tableTitulo2 {
+    /*fondo color */
+    background-color: var(--strong-color);
+
+    /*tipo letra normal*/
+
+}
+
+.tableDestacado {
+    /*fondo color*/
+    background-color: var(--main-color);
+
+}
+
+main
+{
+    margin-top:1%;
+    margin-bottom: 10%;
+}
+/*Estilos para botones*/
+
+.btn {
+    /*bordes redondeados*/
+    border-radius: 3%;
+    background-color: var(--strong-color);
+    /*longitud del 80% relativo a donde se encuentre*/
+    width: 80%;
+    color: white;
+    margin: auto;
+}
+
+/*Estilos header logo, titulo, navegacion*/
+
+header {
+
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    top: 0;
+    background-color: var(--main-color);
+
+}
+
+header .navbar-nav {
+    /*color fondo*/
+    float: right;
+
+}
+
+header.navbar {
+    float: right;
+    /*color fondo*/
+    /*¿alineacion derecha?*/
+ 
+}
+
+#menuizquierda {
+    border-radius: 5px 0 0 5px;
+}
+
+#bibliotecaDropdown {
+    border-radius: 0 5px 5px 0;
+}
+
+#menuderecha:hover{
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 7px;
+    background-color:#aa5d00;
+    /*colo caracteres del enlace*/
+    color:#ffb458;
+    border: 1px solid #aa5d00; 
+}
+
+#menuderecha{
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 7px;
+    
+    background-color:#ffb458;;
+    /*colo caracteres del enlace*/
+    color:#aa5d00;
+    border: 1px solid #aa5d00; 
+}
+
+
+ 
+header .nav-link {
+    display: block;
+    margin-right: 2px;
+    /*color fondo enlace*/
+    background-color:#aa5d00 ;
+    /*colo caracteres del enlace*/
+    color:#ffc681;
+}
+ 
+.nav-select {
+    padding: 8px;
+    background-color: #aa5d00;
+    color: #ffc681;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+ 
+.nav-select option {
+    background-color: #1700aa;
+    color: #ffc681;
+}
+ 
+.icono-idioma {
+    width: 24px; /* Ancho del icono */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin-right: 5px; /* Margen derecho para separar el icono del texto */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
+ 
+#idiomas3 {
+    display: block;
+    color: #aa5d00;
+    
+    border: none; /* Sin borde */
+    width: 100%; /* Ancho relativo */
+    padding: auto;
+    border-radius: 5px 5px 5px 5px;
+    background-color: transparent;
+}
+
+
+#idiomas3:hover {
+    display: block;
+    /*color fondo enlace*/
+    color:var(--lighter-color);
+}
+ 
+
+ 
+ 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 0px;
+    width: 100%;
+ 
+}
+ 
+ 
+.dropdown-item .dropdown-menu a {
+   
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+ 
+footer .dropdown-menu a {
+    width: 100%;
+    background-color: #e0370d;
+    color: #ffc681;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+ 
+ 
+.dropdown-item{
+    padding: 8px;
+    background-color: #aa5d00;
+    color: #ffc681;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+ 
+.nav-link dropdown-toggle{
+    width: 100%;
+}
+ 
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+ 
+ 
+ 
+.dropdown-menu a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+ 
+
+
+ 
+ 
+ 
+ 
+header .nav-link:hover{
+    display: block;
+    /*color fondo enlace*/
+    background-color: #ffb458;
+    color:#aa5d00 ;
+    /*colo caracteres del enlace*/
+}
+ 
+header .dropdown-item:hover{
+    background-color: #ffb458;
+    color:#aa5d00 ;
+   
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+}
+ 
+ 
+.nav-select:hover,
+.nav-select:focus {
+    outline: none;
+    background-color: #ffb458;
+    color: #aa5d00;
+}
+ 
+ 
+.nav-select:hover,
+.nav-select:focus {
+    display: block;
+    /*color fondo enlace*/
+    background-color: #ffb458;
+    color:#aa5d00 ;
+}
+ 
+ 
+header .titulo {
+    display: block;
+    /*tipo de letra*/
+    font-variant: small-caps;
+}
+
+header .logo {
+    background-image: url(../static/imagenes/logoPOSITIVO.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 60px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* estilos para la sección de presentación (BANNER)*/
+.presentacion {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 40%;
+    margin-top: -1%;
+}
+
+/* Estilos para la sección de destinos */
+
+.destinos {
+    text-align: center;
+    background-color: #ffc681;
+    padding: 10px;
+    width: 100%;
+    clear: both;
+
+}
+
+.destino img {
+    /* Espacio superior */
+    width: 80%;
+    margin-left: 20px;
+    max-height: 150px;
+
+}
+
+.destino p {
+    display: block;
+    /* Espacio superior */
+}
+
+/* Estilos para la sección de ofertas */
+
+.oferta {
+    display: inline-block;
+}
+
+.oferta img {
+    display: block;
+
+}
+
+.oferta p {
+    display: block;
+
+}
+
+
+
+/* Estilos para la sección de testimonios */
+
+.testimonio img {
+    display: inline;
+
+}
+
+.testimonio p {
+    display: block;
+    padding-bottom: 10px;
+
+}
+
+
+/* Estilos para el footer */
+ 
+footer {
+    background-color: #ffb458;;
+
+    width: 100%;
+    padding: 0px !important;
+    z-index: 1001;
+    }
+     
+    footer div{
+        /*ancho del 33% del footer*/
+    text-align: center;
+    background-color: #ffb458;;
+    
+    }
+    footer a {
+        color:var(--stronger-color);
+        }
+     
+footer p{
+    display: block;
+    margin-top: 10px;
+    color:#aa5d00;
+    font-size: small;
+    line-height: 150%;
+}
+
+.CierrePagina{
+position:fixed;
+bottom:0px;
+}
+.contenedorfooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffb458;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.btnfoot
+{
+      /*bordes redondeados*/
+      border-radius: 1%;
+      background-color: var(--strong-color);
+      /*longitud del 80% relativo a donde se encuentre*/
+      width: 80%;
+      color: white;
+      margin: auto;  
+}
+
+
+/*otros*/
+#resultados {
+    text-align: center;
+    display: block;
+
+}
+
+#loadingIndicator {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 45%;
+
+}
+
+#loadingIndicator img {
+    width: 150px;
+    height: auto;
+}
+
+#cargando {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    /*transform: translate(-50%, -50%);*/
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+
+}
+
+#cargando img {
+    display: block;
+    margin: 20% auto;
+
+}
+
+.price-range {
+    margin: 10px 0;
+    font-size: 16px;
+    margin-left: 35%;
+}
+
+#price-slider {
+    width: 90%;
+    margin-left: 5%;
+}
+
+#price-values {
+    font-weight: bold;
+    color: white;
+
+}
+
+.rating {
+    font-size: 18px;
+    margin-top: 2%;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.selector {
+    margin-top: 2%;
+    margin-left:2%;
+
+}
+
+.selector label {
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.selector input[type="number"] {
+    width: 50%;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+label {
+    font-weight: bold;
+}
+
+
+
+.main-content {
+    width: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 300px;
+    min-height: 300px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PUEBLO {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #f79e31;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.PUEBLO .nombre {
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.PUEBLO .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-container .prev,
+.carousel-container .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-container .prev {
+    left: 10px;
+}
+
+.carousel-container .next {
+    right: 10px;
+}
+
+.info-content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.widget-container {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-top: 20px;
+}
+
+#calendar {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.icono {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+/* Asegúrate de que el div del mapa tenga tamaño, de lo contrario no se mostrará */
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+#bibliotecaVideos {
+    text-align: center;
+}
+
+.videoContainer {
+    display: inline-block;
+    margin: 20px;
+
+}
+
+video {
+    width: 320px;
+    height: auto;
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+
+}
+
+.enabled {
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: all;
+
+}

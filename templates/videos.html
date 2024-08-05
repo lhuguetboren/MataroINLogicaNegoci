@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div style="clear: both;margin-bottom: 30px;">
+        <input type="text" id="busqueda" placeholder="Buscar por nombre...">
+        <button onclick="buscarVideos()">Buscar</button>
+    </div>
+
+    <div id="bibliotecaVideos">
+    </div>
+</main>
+
+{% endblock %}
+
+{% block content2 %}
+
+    <script>
+        function main() {
+            document.getElementById("nombre").innerHTML = getCookie("username");
+            arrayAselect("idiomas", Idiomas.idioma);
+
+            setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 2000)
+        };
+    </script>
+{% endblock %}

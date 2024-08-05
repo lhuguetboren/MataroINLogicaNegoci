@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoteles</title>
+    <style>
+        .hotel-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .hotel {
+            text-align: center;
+            width: 30%;
+        }
+        .hotel img {
+            width: 100%; /* Ajusta el tamaño de la imagen dentro del div */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="hotel-container">
+        {% for hotel in hotels %}
+            <div class="hotel">
+                <img src="{{ url_for('static', filename='images/' + hotel['imagen']) }}" alt="Imagen del hotel {{ hotel['nombre'] }}">
+                <h2>{{ hotel['nombre'] }}</h2>
+                <p>{{ hotel['poblacion'] }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

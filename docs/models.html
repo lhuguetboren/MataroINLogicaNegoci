@@ -1,0 +1,1448 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">models</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/models.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/models.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="pydoc.html">pydoc</a><br>
+</td><td class="multicolumn"><a href="pytz.html">pytz</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text">sqlalchemy.orm.decl_api.Base(<a href="builtins.html#object">builtins.object</a>)
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="models.html#Alojamientos">Alojamientos</a>
+</dt><dt class="heading-text"><a href="models.html#Alojamientos_fechas">Alojamientos_fechas</a>
+</dt><dt class="heading-text"><a href="models.html#Alojamientos_servicios">Alojamientos_servicios</a>
+</dt><dt class="heading-text"><a href="models.html#Apartamentos">Apartamentos</a>
+</dt><dt class="heading-text"><a href="models.html#Biblioteca">Biblioteca</a>
+</dt><dt class="heading-text"><a href="models.html#Campings">Campings</a>
+</dt><dt class="heading-text"><a href="models.html#Cookies">Cookies</a>
+</dt><dt class="heading-text"><a href="models.html#Destino">Destino</a>
+</dt><dt class="heading-text"><a href="models.html#Dispositivos">Dispositivos</a>
+</dt><dt class="heading-text"><a href="models.html#Estadisticas">Estadisticas</a>
+</dt><dt class="heading-text"><a href="models.html#FechasAlojamientos">FechasAlojamientos</a>
+</dt><dt class="heading-text"><a href="models.html#Hostales">Hostales</a>
+</dt><dt class="heading-text"><a href="models.html#Hoteles">Hoteles</a>
+</dt><dt class="heading-text"><a href="models.html#Localidades">Localidades</a>
+</dt><dt class="heading-text"><a href="models.html#Paises">Paises</a>
+</dt><dt class="heading-text"><a href="models.html#Servicios">Servicios</a>
+</dt><dt class="heading-text"><a href="models.html#Tags">Tags</a>
+</dt><dt class="heading-text"><a href="models.html#TagsRelacion">TagsRelacion</a>
+</dt><dt class="heading-text"><a href="models.html#UsabDatos">UsabDatos</a>
+</dt><dt class="heading-text"><a href="models.html#UsabRelacion">UsabRelacion</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Alojamientos">class <strong>Alojamientos</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Alojamientos">Alojamientos</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'alojamientos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Alojamientos">Alojamientos</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Alojamientos-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>correo</strong></dt>
+</dl>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>direccion</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_imagen</strong></dt>
+</dl>
+<dl><dt><strong>id_localidad</strong></dt>
+</dl>
+<dl><dt><strong>id_proveedor</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<dl><dt><strong>telefono</strong></dt>
+</dl>
+<dl><dt><strong>tipo</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10653e510; Alojamientos&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('alojamientos', MetaData(), Column('id', I..., DateTime(), table=&lt;alojamientos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'alojamientos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Alojamientos_fechas">class <strong>Alojamientos_fechas</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Alojamientos_fechas">Alojamientos_fechas</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'alojamientos_fechas'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Alojamientos_fechas">Alojamientos_fechas</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Alojamientos_fechas-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Alojamientos_fechas-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>anyo</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>fechasMes</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_alojamiento</strong></dt>
+</dl>
+<dl><dt><strong>libresMes</strong></dt>
+</dl>
+<dl><dt><strong>mes</strong></dt>
+</dl>
+<dl><dt><strong>precios</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065fb950; Alojamientos_fechas&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('alojamientos_fechas', MetaData(), Column(...le=2), table=&lt;alojamientos_fechas&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'alojamientos_fechas'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Alojamientos_servicios">class <strong>Alojamientos_servicios</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Alojamientos_servicios">Alojamientos_servicios</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'alojamientos_servicios'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Alojamientos_servicios">Alojamientos_servicios</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Alojamientos_servicios-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_alojamientos</strong></dt>
+</dl>
+<dl><dt><strong>id_servicios</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065f8710; Alojamientos_servicios&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('alojamientos_servicios', MetaData(), Colu...(), table=&lt;alojamientos_servicios&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'alojamientos_servicios'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Apartamentos">class <strong>Apartamentos</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Apartamentos">Apartamentos</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'apartamentos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Apartamentos">Apartamentos</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Apartamentos-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Apartamentos-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>habitaciones</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065e7c10; Apartamentos&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('apartamentos', MetaData(), Column('id', I..., DateTime(), table=&lt;apartamentos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'apartamentos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Biblioteca">class <strong>Biblioteca</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Biblioteca">Biblioteca</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'biblioteca'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Biblioteca">Biblioteca</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Biblioteca-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>duracion</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>filename</strong></dt>
+</dl>
+<dl><dt><strong>formato</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>imagen</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<dl><dt><strong>texto</strong></dt>
+</dl>
+<dl><dt><strong>tipo</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10659e550; Biblioteca&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('biblioteca', MetaData(), Column('id', Int...ent_time_in_spain at 0x10657ed40&gt;)), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'biblioteca'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Campings">class <strong>Campings</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Campings">Campings</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'camping'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Campings">Campings</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Campings-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Campings-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>plazas</strong></dt>
+</dl>
+<dl><dt><strong>tipo_camping</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065d6b10; Campings&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('camping', MetaData(), Column('id', Intege...elim', DateTime(), table=&lt;camping&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'camping'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Cookies">class <strong>Cookies</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Cookies">Cookies</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'cookies'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Cookies">Cookies</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Cookies-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Cookies-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>comprar</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>fecha_y_hora</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_dispositivo</strong></dt>
+</dl>
+<dl><dt><strong>id_pais</strong></dt>
+</dl>
+<dl><dt><strong>id_tag</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10658cc50; Cookies&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('cookies', MetaData(), Column('id', Intege...elim', DateTime(), table=&lt;cookies&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'cookies'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Destino">class <strong>Destino</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Destino">Destino</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'destinos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Destino">Destino</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Destino-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Destino-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>dextras_primavera</strong></dt>
+</dl>
+<dl><dt><strong>dextras_resto</strong></dt>
+</dl>
+<dl><dt><strong>dextras_verano</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_alojamiento</strong></dt>
+</dl>
+<dl><dt><strong>id_localidad</strong></dt>
+</dl>
+<dl><dt><strong>resultado</strong></dt>
+</dl>
+<dl><dt><strong>tarjeta_oro</strong></dt>
+</dl>
+<dl><dt><strong>tarjeta_plata</strong></dt>
+</dl>
+<dl><dt><strong>temporada_especial</strong></dt>
+</dl>
+<dl><dt><strong>temporada_primavera</strong></dt>
+</dl>
+<dl><dt><strong>temporada_verano</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x104ee3f90; Destino&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('destinos', MetaData(), Column('id', Integ...lim', DateTime(), table=&lt;destinos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'destinos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Dispositivos">class <strong>Dispositivos</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Dispositivos">Dispositivos</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'dispositivos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Dispositivos">Dispositivos</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Dispositivos-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Dispositivos-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x106570ad0; Dispositivos&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('dispositivos', MetaData(), Column('id', I..., DateTime(), table=&lt;dispositivos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__table_args__</strong> = (UniqueConstraint(Column('id', Integer(), table=&lt;dispositivos&gt;, primary_key=True, nullable=False)),)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'dispositivos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Estadisticas">class <strong>Estadisticas</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Estadisticas">Estadisticas</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'estadisticas'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Estadisticas">Estadisticas</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Estadisticas-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>estadistica</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10658f8d0; Estadisticas&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('estadisticas', MetaData(), Column('id', I..., DateTime(), table=&lt;estadisticas&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'estadisticas'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="FechasAlojamientos">class <strong>FechasAlojamientos</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#FechasAlojamientos">FechasAlojamientos</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'fechas_alojamientos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#FechasAlojamientos">FechasAlojamientos</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FechasAlojamientos-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="FechasAlojamientos-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>disponible</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>fecha</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_alojamiento</strong></dt>
+</dl>
+<dl><dt><strong>libres</strong></dt>
+</dl>
+<dl><dt><strong>precio</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x10660b6d0; FechasAlojamientos&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('fechas_alojamientos', MetaData(), Column(...ime(), table=&lt;fechas_alojamientos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'fechas_alojamientos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Hostales">class <strong>Hostales</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Hostales">Hostales</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'hostales'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Hostales">Hostales</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Hostales-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Hostales-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>categoria</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>habitaciones</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065e5410; Hostales&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('hostales', MetaData(), Column('id', Integ...lim', DateTime(), table=&lt;hostales&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'hostales'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Hoteles">class <strong>Hoteles</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Hoteles">Hoteles</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'hoteles'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Hoteles">Hoteles</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Hoteles-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Hoteles-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>estrellas</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>habitaciones</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>suites</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065cb210; Hoteles&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('hoteles', MetaData(), Column('id', Intege...elim', DateTime(), table=&lt;hoteles&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'hoteles'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Localidades">class <strong>Localidades</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Localidades">Localidades</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'localidades'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Localidades">Localidades</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Localidades-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Localidades-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<dl><dt><strong>poblacion</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065c8b10; Localidades&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('localidades', MetaData(), Column('id', In...', DateTime(), table=&lt;localidades&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'localidades'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Paises">class <strong>Paises</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Paises">Paises</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'paises'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Paises">Paises</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Paises-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Paises-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x106573a90; Paises&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('paises', MetaData(), Column('id', Integer..._elim', DateTime(), table=&lt;paises&gt;), schema=None)</dl>
+
+<dl><dt><strong>__table_args__</strong> = (UniqueConstraint(Column('id', Integer(), table=&lt;paises&gt;, primary_key=True, nullable=False)),)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'paises'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Servicios">class <strong>Servicios</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Servicios">Servicios</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'servicios'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Servicios">Servicios</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Servicios-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Servicios-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>img_servicio</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065f6050; Servicios&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('servicios', MetaData(), Column('id', Inte...od', DateTime(), table=&lt;servicios&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'servicios'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Tags">class <strong>Tags</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Tags">Tags</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'tags'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#Tags">Tags</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Tags-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="Tags-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>descripcion</strong></dt>
+</dl>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>nombre</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x106585f90; Tags&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('tags', MetaData(), Column('id', Integer()...umn('f_elim', Date(), table=&lt;tags&gt;), schema=None)</dl>
+
+<dl><dt><strong>__table_args__</strong> = (UniqueConstraint(Column('id', Integer(), table=&lt;tags&gt;, primary_key=True, nullable=False)),)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'tags'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="TagsRelacion">class <strong>TagsRelacion</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#TagsRelacion">TagsRelacion</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'tags_relacion'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#TagsRelacion">TagsRelacion</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TagsRelacion-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<dl><dt><a name="TagsRelacion-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
+
+<dl><dt><a name="TagsRelacion-guardar"><strong>guardar</strong></a>(self, session)</dt><dd><span class="code">Guarda&nbsp;la&nbsp;instancia&nbsp;actual&nbsp;en&nbsp;la&nbsp;sesión&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+:param&nbsp;session:&nbsp;La&nbsp;sesión&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_elim</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_origen</strong></dt>
+</dl>
+<dl><dt><strong>id_tag</strong></dt>
+</dl>
+<dl><dt><strong>origen</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065b1890; TagsRelacion&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('tags_relacion', MetaData(), Column('id', ...ent_time_in_spain at 0x10657fe20&gt;)), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'tags_relacion'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="UsabDatos">class <strong>UsabDatos</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#UsabDatos">UsabDatos</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'usab_datos'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#UsabDatos">UsabDatos</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UsabDatos-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_origen</strong></dt>
+</dl>
+<dl><dt><strong>id_usab</strong></dt>
+</dl>
+<dl><dt><strong>media</strong></dt>
+</dl>
+<dl><dt><strong>mediana</strong></dt>
+</dl>
+<dl><dt><strong>moda</strong></dt>
+</dl>
+<dl><dt><strong>origen</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065b3fd0; UsabDatos&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('usab_datos', MetaData(), Column('id', Int...moda', Float(), table=&lt;usab_datos&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'usab_datos'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="UsabRelacion">class <strong>UsabRelacion</strong></a>(sqlalchemy.orm.decl_api.Base)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#UsabRelacion">UsabRelacion</a>(**kwargs)<br>
+&nbsp;<br>
+Modelo&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;tabla&nbsp;'usab_relacion'.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="models.html#UsabRelacion">UsabRelacion</a></dd>
+<dd>sqlalchemy.orm.decl_api.Base</dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UsabRelacion-__init__"><strong>__init__</strong></a>(self, **kwargs)</dt><dd><span class="code">A&nbsp;simple&nbsp;constructor&nbsp;that&nbsp;allows&nbsp;initialization&nbsp;from&nbsp;kwargs.<br>
+&nbsp;<br>
+Sets&nbsp;attributes&nbsp;on&nbsp;the&nbsp;constructed&nbsp;instance&nbsp;using&nbsp;the&nbsp;names&nbsp;and<br>
+values&nbsp;in&nbsp;``kwargs``.<br>
+&nbsp;<br>
+Only&nbsp;keys&nbsp;that&nbsp;are&nbsp;present&nbsp;as<br>
+attributes&nbsp;of&nbsp;the&nbsp;instance's&nbsp;class&nbsp;are&nbsp;allowed.&nbsp;These&nbsp;could&nbsp;be,<br>
+for&nbsp;example,&nbsp;any&nbsp;mapped&nbsp;columns&nbsp;or&nbsp;relationships.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>f_crea</strong></dt>
+</dl>
+<dl><dt><strong>f_mod</strong></dt>
+</dl>
+<dl><dt><strong>id</strong></dt>
+</dl>
+<dl><dt><strong>id_alojamientos</strong></dt>
+</dl>
+<dl><dt><strong>id_usab</strong></dt>
+</dl>
+<dl><dt><strong>valor</strong></dt>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x1065be710; UsabRelacion&gt;</dl>
+
+<dl><dt><strong>__table__</strong> = Table('usab_relacion', MetaData(), Column('id', ...r', Float(), table=&lt;usab_relacion&gt;), schema=None)</dl>
+
+<dl><dt><strong>__tablename__</strong> = 'usab_relacion'</dl>
+
+<hr>
+Data descriptors inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<hr>
+Data and other attributes inherited from sqlalchemy.orm.decl_api.Base:<br>
+<dl><dt><strong>__abstract__</strong> = True</dl>
+
+<dl><dt><strong>metadata</strong> = MetaData()</dl>
+
+<dl><dt><strong>registry</strong> = &lt;sqlalchemy.orm.decl_api.registry object&gt;</dl>
+
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-get_current_time_in_spain"><strong>get_current_time_in_spain</strong></a>()</dt><dd><span class="code">Obtiene&nbsp;la&nbsp;hora&nbsp;actual&nbsp;en&nbsp;la&nbsp;zona&nbsp;horaria&nbsp;de&nbsp;España.<br>
+&nbsp;<br>
+:return:&nbsp;La&nbsp;hora&nbsp;actual&nbsp;en&nbsp;la&nbsp;zona&nbsp;horaria&nbsp;de&nbsp;España.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>Session</strong> = sessionmaker(class_='Session', bind=Engine(mysql...mataroin), autoflush=True, expire_on_commit=True)<br>
+<strong>__warningregistry__</strong> = {'version': 12}<br>
+<strong>engine</strong> = Engine(mysql+mysqlconnector://flask:***@localhost/mataroin)<br>
+<strong>session</strong> = &lt;sqlalchemy.orm.session.Session object&gt;</td></tr></table>

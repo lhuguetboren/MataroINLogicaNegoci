@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <main>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="blog-entrada">
+                <!-- Entradas del blog -->
+                <h2>Entradas del Blog</h2>
+                <div id="blog-entradas"></div>
+            </div>
+        </div>
+        <!-- BARRA LATERAL DE TAGS -->
+        <div class="col-md-4 sidebar">
+
+
+
+
+            <ul id="municipios-list">
+                <!--  los municipios -->
+            </ul>
+
+            <h2>Tags</h2>
+            <ul id="tags-list" onclick="buscarPorTag()">
+                <!-- los tags -->
+            </ul>
+
+
+        </div>
+    </div>
+    <!-- Pie de página -->
+    </main>
+ 
+{% endblock %}
+{% block content2 %}
+   
+    <script>
+        function main() {
+            document.getElementById("nombre").innerHTML = getCookie("username");
+            arrayAselect("idiomas", Idiomas.idioma);
+            entradasBlog = Blog;
+            llenarArrays();
+            mostrarEntradas();
+
+            setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 2000);
+ 
+        };
+
+        function llenarArrays() {
+            tags = []
+            for (i = 0; i < Blog.viaje.length; i++) {
+                a = Blog.viaje[i].tags.split(",")
+                for (k = 0; k < a.length - 1; k++) {
+                    tags.push(a[k])
+                    //console.log(a[k])
+                }
+            }
+
+            const result = tags.reduce((acc, item) => {
+                if (!acc.includes(item)) {
+                    acc.push(item);
+                }
+                return acc;
+            }, [])
+            console.log(result);
+
+
+            for (i = 0; i < result.length; i++) {
+                tagB = document.createElement("button")
+                tagB.innerHTML = result[i]
+                tagB.className = "btn";
+                tagB.style.width = "auto";
+                tagB.style.margin = "3px";
+                tagB.setAttribute("onclick", "buscarPorTag(this.innerHTML)")
+                document.getElementById("tags-list").appendChild(tagB);
+
+            }
+
+
+
+
+        }
+
+
+
+        // Función para mostrar las entradas del blog
+        function mostrarEntradas() {
+            var blogEntradas = document.getElementById("blog-entradas");
+            entradasBlog.viaje.forEach(function (entrada) {
+                var div = document.createElement("div");
+                div.innerHTML = "<h3>" + entrada.titulo + "</h3><p><strong>Fecha:</strong> " + entrada.fecha + "</p><p><strong>Tags:</strong> " + entrada.tags + "</p><p>" + entrada.contenido + "</p>";
+                blogEntradas.appendChild(div);
+            });
+        }
+
+        // Llamar a las funciones al cargar la página
+
+
+
+        function buscarPorCiudad(municipio) {
+            var resultados = [];
+
+            for (var i = 0; i < entradasBlog.length; i++) {
+                var entrada = entradasBlog[i];
+                for (var j = 0; j < entrada.tags.length; j++) {
+                    if (entrada.tags[j] === municipio) {
+                        resultados.push(entrada);
+                        break;
+                    }
+                }
+
+            }
+            // console.log(resultados)
+            return resultados;
+        }
+
+
+        function buscarPorTag(tag) {
+
+
+            if (tag == undefined || tag.length == 0) return;
+            var resultadosContenido = document.getElementById("blog-entradas");
+            resultadosContenido.innerHTML = "";
+            var resultados = [];
+            eal = ''
+            for (var i = 0; i < Blog.viaje.length - 1; i++) {
+                var entrada = Blog.viaje[i];
+                console.log(entrada);
+                if (entrada.tags.includes(tag)) {
+                    console.log("el tag existe en el array tags")
+                    resultados.push(entrada);
+
+                }
+                else if (entrada.titulo.indexOf(tag) != -1) {
+                    console.log("el tag existe en el titulo")
+                    resultados.push(entrada);
+
+                }
+                else if (entrada.contenido.indexOf(tag) != -1) {
+                    console.log("el tag existe en el contenido")
+                    resultados.push(entrada);
+
+                }
+            }
+
+
+            // Mostrar los resultados en el navegador
+            resultados.forEach(function (entrada) {
+                //var entradaElement = document.createElement("div");
+                eal += "<br><br><h3>" + entrada.titulo + "</h3><p>" + entrada.contenido + "</p>" + entrada.tags;
+
+                //resultadosContenido.appendChild(entradaElement);
+            });
+            resultadosContenido.innerHTML = eal;
+
+
+
+        }
+
+
+
+    </script>
+
+{% endblock %}

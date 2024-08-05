@@ -1,0 +1,102 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">pila</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/pila.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/pila.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="asyncio.html">asyncio</a><br>
+<a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+<a href="pydoc.html">pydoc</a><br>
+</td><td class="multicolumn"><a href="socket.html">socket</a><br>
+<a href="time.html">time</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="pila.html#Pila">Pila</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Pila">class <strong>Pila</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code">Clase&nbsp;que&nbsp;representa&nbsp;una&nbsp;pila&nbsp;para&nbsp;gestionar&nbsp;eventos.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Pila-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Inicializa&nbsp;la&nbsp;pila.</span></dd></dl>
+
+<dl><dt>async <a name="Pila-afegir"><strong>afegir</strong></a>(self, id, datos)</dt><dd><span class="code">Añade&nbsp;un&nbsp;nuevo&nbsp;evento&nbsp;a&nbsp;la&nbsp;pila&nbsp;después&nbsp;de&nbsp;un&nbsp;retraso&nbsp;simulado.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;evento.<br>
+:param&nbsp;datos:&nbsp;Datos&nbsp;del&nbsp;evento&nbsp;a&nbsp;añadir.</span></dd></dl>
+
+<dl><dt><a name="Pila-desapilar_por_id"><strong>desapilar_por_id</strong></a>(self, id_evento)</dt><dd><span class="code">Desapila&nbsp;un&nbsp;evento&nbsp;por&nbsp;su&nbsp;ID.<br>
+&nbsp;<br>
+:param&nbsp;id_evento:&nbsp;ID&nbsp;del&nbsp;evento&nbsp;a&nbsp;desapilar.<br>
+:return:&nbsp;El&nbsp;evento&nbsp;desapilado&nbsp;o&nbsp;None&nbsp;si&nbsp;no&nbsp;se&nbsp;encuentra&nbsp;el&nbsp;evento.</span></dd></dl>
+
+<dl><dt><a name="Pila-is_empty"><strong>is_empty</strong></a>(self)</dt><dd><span class="code">Verifica&nbsp;si&nbsp;la&nbsp;pila&nbsp;está&nbsp;vacía.<br>
+&nbsp;<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;pila&nbsp;está&nbsp;vacía,&nbsp;False&nbsp;en&nbsp;caso&nbsp;contrario.</span></dd></dl>
+
+<dl><dt><a name="Pila-mostrar_elementos"><strong>mostrar_elementos</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;los&nbsp;elementos&nbsp;de&nbsp;la&nbsp;pila&nbsp;y&nbsp;los&nbsp;envía&nbsp;a&nbsp;través&nbsp;de&nbsp;un&nbsp;socket.</span></dd></dl>
+
+<dl><dt><a name="Pila-peek"><strong>peek</strong></a>(self)</dt><dd><span class="code">Devuelve&nbsp;el&nbsp;último&nbsp;evento&nbsp;de&nbsp;la&nbsp;pila&nbsp;sin&nbsp;desapilarlo.<br>
+&nbsp;<br>
+:return:&nbsp;El&nbsp;último&nbsp;evento&nbsp;de&nbsp;la&nbsp;pila&nbsp;o&nbsp;None&nbsp;si&nbsp;la&nbsp;pila&nbsp;está&nbsp;vacía.</span></dd></dl>
+
+<dl><dt><a name="Pila-pop"><strong>pop</strong></a>(self)</dt><dd><span class="code">Desapila&nbsp;el&nbsp;último&nbsp;evento&nbsp;de&nbsp;la&nbsp;pila.<br>
+&nbsp;<br>
+:return:&nbsp;El&nbsp;evento&nbsp;desapilado&nbsp;o&nbsp;None&nbsp;si&nbsp;la&nbsp;pila&nbsp;está&nbsp;vacía.</span></dd></dl>
+
+<dl><dt>async <a name="Pila-push"><strong>push</strong></a>(self, datos)</dt><dd><span class="code">Apila&nbsp;un&nbsp;nuevo&nbsp;evento&nbsp;de&nbsp;manera&nbsp;asíncrona.<br>
+&nbsp;<br>
+:param&nbsp;datos:&nbsp;Datos&nbsp;del&nbsp;evento&nbsp;a&nbsp;apilar.</span></dd></dl>
+
+<dl><dt><a name="Pila-size"><strong>size</strong></a>(self)</dt><dd><span class="code">Devuelve&nbsp;el&nbsp;número&nbsp;de&nbsp;eventos&nbsp;en&nbsp;la&nbsp;pila.<br>
+&nbsp;<br>
+:return:&nbsp;Número&nbsp;de&nbsp;eventos&nbsp;en&nbsp;la&nbsp;pila.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-eliminar_archivo"><strong>eliminar_archivo</strong></a>(archivo)</dt><dd><span class="code">Elimina&nbsp;un&nbsp;archivo&nbsp;del&nbsp;sistema&nbsp;de&nbsp;archivos.<br>
+&nbsp;<br>
+:param&nbsp;archivo:&nbsp;Nombre&nbsp;del&nbsp;archivo&nbsp;a&nbsp;eliminar.</span></dd></dl>
+ <dl><dt>async <a name="-leer_archivo_datos"><strong>leer_archivo_datos</strong></a>(pila, archivo='pila.json')</dt><dd><span class="code">Lee&nbsp;las&nbsp;acciones&nbsp;desde&nbsp;un&nbsp;archivo&nbsp;JSON&nbsp;y&nbsp;las&nbsp;procesa.<br>
+&nbsp;<br>
+:param&nbsp;pila:&nbsp;Instancia&nbsp;de&nbsp;la&nbsp;clase&nbsp;<a href="#Pila">Pila</a>.<br>
+:param&nbsp;archivo:&nbsp;Nombre&nbsp;del&nbsp;archivo&nbsp;JSON&nbsp;a&nbsp;leer.</span></dd></dl>
+ <dl><dt>async <a name="-main"><strong>main</strong></a>()</dt><dd><span class="code">Función&nbsp;principal&nbsp;que&nbsp;inicializa&nbsp;la&nbsp;pila&nbsp;y&nbsp;lee&nbsp;las&nbsp;acciones&nbsp;desde&nbsp;un&nbsp;archivo.</span></dd></dl>
+ <dl><dt>async <a name="-procesar_acciones"><strong>procesar_acciones</strong></a>(pila, acciones)</dt><dd><span class="code">Procesa&nbsp;una&nbsp;lista&nbsp;de&nbsp;acciones&nbsp;y&nbsp;las&nbsp;añade&nbsp;a&nbsp;la&nbsp;pila.<br>
+&nbsp;<br>
+:param&nbsp;pila:&nbsp;Instancia&nbsp;de&nbsp;la&nbsp;clase&nbsp;<a href="#Pila">Pila</a>.<br>
+:param&nbsp;acciones:&nbsp;Lista&nbsp;de&nbsp;acciones&nbsp;a&nbsp;procesar.</span></dd></dl>
+</td></tr></table>

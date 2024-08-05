@@ -1,0 +1,26 @@
+<packs>
+    <pack precio-total="450.00€" tipo="pareja">
+        <nombre>Escapada Romántica</nombre>
+        <descripcion>Disfruta de una escapada romántica en la hermosa ciudad de Barcelona.</descripcion>
+        <incluye>
+            <alojamiento>Vistas al Mar</alojamiento>
+            <actividades>
+                <actividad>Cena romántica en un restaurante exclusivo</actividad>
+                <actividad>Paseo en velero al atardecer</actividad>
+                <actividad>Visita guiada por el Barrio Gótico</actividad>
+            </actividades>
+        </incluye>
+    </pack>
+    <pack precio-total="750.00€" tipo="familiar">
+        <nombre>Aventura en Familia</nombre>
+        <descripcion>Diviértete en familia con este pack lleno de aventuras y diversión.</descripcion>
+        <incluye>
+            <alojamiento>Lujoso Loft</alojamiento>
+            <actividades>
+                <actividad>Parque de atracciones</actividad>
+                <actividad>Excursión a la montaña</actividad>
+                <actividad>Visita al Acuario de Barcelona</actividad>
+            </actividades>
+        </incluye>
+    </pack>
+</packs>

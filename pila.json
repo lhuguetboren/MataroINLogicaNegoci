@@ -1,0 +1,37 @@
+[
+    {
+        "opcion": 5,
+        "id_cliente": 123,
+        "cliente": "Nombre del cliente",
+        "empresa": "uber",
+        "fecha": "2024-08-01 10:00"
+    },
+    {
+        "opcion": 6,
+        "id_cliente": 123,
+        "cliente": "Nombre del cliente",
+        "empresa": "uber",
+        "conductor": "victor",
+        "lugar_recogida": "Direcci\u00f3n de recogida",
+        "lugar_destino": "Direcci\u00f3n de destino",
+        "fecha": "2024-08-01 10:00"
+    },
+    {
+        "opcion": 7,
+        "id_cliente": 123,
+        "conductor": "victor",
+        "estado": "en camino"
+    },
+    {
+        "opcion": 7,
+        "id_cliente": 123,
+        "conductor": "victor",
+        "estado": "recogido"
+    },
+    {
+        "opcion": 7,
+        "id_cliente": 123,
+        "conductor": "victor",
+        "estado": "entregado"
+    }
+]

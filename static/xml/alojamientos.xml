@@ -1,0 +1,2519 @@
+<alojamientos>
+    <hoteles>
+        <hotel estrellas="4" precio="120" habitaciones-disponibles="85" poblacion="Mataró">
+            <nombre>URH Ciutat de Mataró</nombre>
+            <direccion>Carrer de la Riera, 58, 08302 Mataró, Barcelona</direccion>
+            <telefono>937417800</telefono>
+            <correo>info@urhciutatdemataro.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0002.jpg</imagen>
+            <servicios>Piscina, WIFI, Gimnasio, Spa</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>85,85,85,85,85,85,85</enero>
+                <febrero>75,85,85,85,85,85,85</febrero>
+                <marzo>65,85,85,85,85,85,85</marzo>
+            </fechaxhabitaciones>
+            <descripcion>URH Ciutat de Mataró es un moderno hotel situado cerca del centro y de la playa. 
+                Renovado en 2022, ofrece piscina, spa, gimnasio y restaurante.</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="110" habitaciones-disponibles="90" poblacion="Montgat">
+            <nombre>Hotel Castell de l'Oliver</nombre>
+            <direccion>Carretera N-II, Km. 647, 08390 Montgat, Barcelona</direccion>
+            <telefono>935561234</telefono>
+            <correo>info@hotelcastelloliver.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0003.jpg</imagen>
+            <servicios>Piscina, WIFI, Restaurante, Spa</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>90,90,90,90,90,90,90</enero>
+                <febrero>80,90,90,90,90,90,90</febrero>
+                <marzo>70,90,90,90,90,90,90</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel ubicado en un castillo restaurado del siglo XIX con vistas al mar Mediterráneo. Ofrece 
+                spa, restaurante de cocina mediterránea y habitaciones elegantes con terraza.</descripcion>
+        </hotel>
+        
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Masnou (El)">
+            <nombre>Masnou (El)</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Cabrils">
+            <nombre>Cabrils</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Mar">
+            <nombre>Vilassar de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Alella">
+            <nombre>Alella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120" poblacion="Tiana">
+            <nombre>Tiana</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120" poblacion="Teià">
+            <nombre>Teià</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Mar">
+            <nombre>Premià de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Dalt">
+            <nombre>Premià de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Mar">
+            <nombre>Arenys de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Munt">
+            <nombre>Arenys de Munt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Caldes d'Estrac">
+            <nombre>Caldes d'Estrac</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Canet de Mar">
+            <nombre>Canet de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Calella">
+            <nombre>Calella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Pineda de Mar">
+            <nombre>Pineda de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Cebrià de Vallalta">
+            <nombre>Sant Cebrià de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Argentona">
+            <nombre>Argentona</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Vicenç de Montalt">
+            <nombre>Sant Vicenç de Montalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Órrius">
+            <nombre>Órrius</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Andreu de Llavaneres">
+            <nombre>Sant Andreu de Llavaneres</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Malgrat de Mar">
+            <nombre>Malgrat de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Santa Susanna">
+            <nombre>Santa Susanna</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Palafolls">
+            <nombre>Palafolls</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Fogars de la Selva">
+            <nombre>Fogars de la Selva</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Tordera">
+            <nombre>Tordera</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Dalt">
+            <nombre>Vilassar de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+        <hotel estrellas="4" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hotel>
+    </hoteles>
+    <hostales>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Montgat">
+            <nombre>Montgat</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Masnou (El)">
+            <nombre>Masnou (El)</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Cabrils">
+            <nombre>Cabrils</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Mar">
+            <nombre>Vilassar de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Alella">
+            <nombre>Alella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Tiana">
+            <nombre>Tiana</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Teià">
+            <nombre>Teià</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Mar">
+            <nombre>Premià de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Dalt">
+            <nombre>Premià de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Mar">
+            <nombre>Arenys de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Munt">
+            <nombre>Arenys de Munt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Caldes d'Estrac">
+            <nombre>Caldes d'Estrac</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Canet de Mar">
+            <nombre>Canet de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Calella">
+            <nombre>Calella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Pineda de Mar">
+            <nombre>Pineda de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Cebrià de Vallalta">
+            <nombre>Sant Cebrià de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Argentona">
+            <nombre>Argentona</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Vicenç de Montalt">
+            <nombre>Sant Vicenç de Montalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Órrius">
+            <nombre>Órrius</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Andreu de Llavaneres">
+            <nombre>Sant Andreu de Llavaneres</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Malgrat de Mar">
+            <nombre>Malgrat de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Santa Susanna">
+            <nombre>Santa Susanna</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Palafolls">
+            <nombre>Palafolls</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Fogars de la Selva">
+            <nombre>Fogars de la Selva</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Tordera">
+            <nombre>Tordera</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Dalt">
+            <nombre>Vilassar de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+        <hostal calidad="regular" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </hostal>
+    </hostales>
+    <campings>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Montgat">
+            <nombre>Montgat</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Masnou (El)">
+            <nombre>Masnou (El)</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Cabrils">
+            <nombre>Cabrils</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Mar">
+            <nombre>Vilassar de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Alella">
+            <nombre>Alella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Tiana">
+            <nombre>Tiana</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Teià">
+            <nombre>Teià</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Mar">
+            <nombre>Premià de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Premià de Dalt">
+            <nombre>Premià de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Mar">
+            <nombre>Arenys de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Arenys de Munt">
+            <nombre>Arenys de Munt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Caldes d'Estrac">
+            <nombre>Caldes d'Estrac</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Canet de Mar">
+            <nombre>Canet de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Calella">
+            <nombre>Calella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Pineda de Mar">
+            <nombre>Pineda de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Cebrià de Vallalta">
+            <nombre>Sant Cebrià de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Argentona">
+            <nombre>Argentona</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Vicenç de Montalt">
+            <nombre>Sant Vicenç de Montalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Órrius">
+            <nombre>Órrius</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Andreu de Llavaneres">
+            <nombre>Sant Andreu de Llavaneres</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Malgrat de Mar">
+            <nombre>Malgrat de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Santa Susanna">
+            <nombre>Santa Susanna</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Palafolls">
+            <nombre>Palafolls</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Fogars de la Selva">
+            <nombre>Fogars de la Selva</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Tordera">
+            <nombre>Tordera</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Vilassar de Dalt">
+            <nombre>Vilassar de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+        <camping estrellas="3" precio="100" habitaciones-disponibles="120"
+            poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </camping>
+
+    </campings>
+    <apartamentos>
+        <apartamento capacidad="3" precio="100" poblacion="Montgat">
+            <nombre>Montgat</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Masnou (El)">
+            <nombre>Masnou (El)</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Cabrils">
+            <nombre>Cabrils</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Vilassar de Mar">
+            <nombre>Vilassar de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Alella">
+            <nombre>Alella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Tiana">
+            <nombre>Tiana</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Teià">
+            <nombre>Teià</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Premià de Mar">
+            <nombre>Premià de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Premià de Dalt">
+            <nombre>Premià de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Arenys de Mar">
+            <nombre>Arenys de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Arenys de Munt">
+            <nombre>Arenys de Munt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Caldes d'Estrac">
+            <nombre>Caldes d'Estrac</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Canet de Mar">
+            <nombre>Canet de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Calella">
+            <nombre>Calella</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Pineda de Mar">
+            <nombre>Pineda de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Cebrià de Vallalta">
+            <nombre>Sant Cebrià de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Argentona">
+            <nombre>Argentona</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Vicenç de Montalt">
+            <nombre>Sant Vicenç de Montalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Órrius">
+            <nombre>Órrius</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Andreu de Llavaneres">
+            <nombre>Sant Andreu de Llavaneres</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Malgrat de Mar">
+            <nombre>Malgrat de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Santa Susanna">
+            <nombre>Santa Susanna</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Palafolls">
+            <nombre>Palafolls</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Fogars de la Selva">
+            <nombre>Fogars de la Selva</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Pol de Mar">
+            <nombre>Sant Pol de Mar</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Tordera">
+            <nombre>Tordera</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Vilassar de Dalt">
+            <nombre>Vilassar de Dalt</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+        <apartamento capacidad="3" precio="100" poblacion="Sant Iscle de Vallalta">
+            <nombre>Sant Iscle de Vallalta</nombre>
+            <direccion>Carre Escopeta, numero pum</direccion>
+            <telefono>919701784</telefono>
+            <correo>hmaresme@mataroin.com</correo>
+            <imagen>../../biblioteca/fotos/poblaciones/img0001.jpg</imagen>
+            <servicios>Piscina, WIFI</servicios>
+            <fechas>
+                <enero>1,2,3,4,5,6,7</enero>
+                <febrero>1,2,3,4,5,6,7</febrero>
+                <marzo>1,2,3,4,5,6,7</marzo>
+            </fechas>
+            <fechaxhabitaciones>
+                <enero>120,120,120,120,120,120,120</enero>
+                <febrero>100,120,120,120,120,120,120</febrero>
+                <marzo>90,120,120,120,120,120,120</marzo>
+            </fechaxhabitaciones>
+            <descripcion>Hotel en primera linea de playa con excelentes vistas. Reformado el 2023
+                cuenta con servicios de piscina, restauración y alquiler de tumbonas"</descripcion>
+        </apartamento>
+    </apartamentos>
+</alojamientos>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+<equipo>
+<direccion></direccion>
+<comercial></comercial>
+<it></it>
+</equipo>
+<oficina>
+    <direccion></direccion>
+    <poblacion></poblacion>
+    <telefonos>
+        <fijo>
+
+        </fijo>
+        <movil></movil>
+    </telefonos>
+
+</oficina>
+
+<mapa>
+    <ubicaciones>
+        <geogragica></geogragica>
+        <alojamientos></alojamientos>
+        <playas></playas>
+        <oficina></oficina>
+    </ubicaciones>
+</mapa>
+</root>

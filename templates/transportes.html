@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <div class="container-fluid">
+    <div class="row">
+        <!-- Columna izquierda con hasta 20 botones -->
+        <div class="col-md-1">
+            <div class="btn-group-vertical w-100" role="group">
+                <!-- Aquí puedes agregar hasta 20 botones -->
+                <div class="" id="municipios">
+                    <button class="btn w-100 m-1" data-municipio="0">Mataró</button>
+                    <button class="btn w-100 m-1" data-municipio="1">Canet de Mar</button>
+                    <button class="btn w-100 m-1" data-municipio="2">Alella</button>
+                    <button class="btn w-100 m-1" data-municipio="3">Calella</button>
+                </div>
+
+
+
+
+
+
+                <!-- ... -->
+            </div>
+        </div>
+        <!-- Segunda columna con 4 botones -->
+        <div class="col-md-2">
+            <div class="btn-group-vertical w-100" role="group">
+                <!-- Aquí puedes agregar los 4 botones -->
+                <div class="container" id="transporte" style="display: block;">
+                    <button class="btn w-100 m-1 disabled" data-trasnporte="0">Tren</button>
+                    <button class="btn w-100 m-1 disabled" data-trasnporte="1">Autobus</button>
+                    <button class="btn w-100 m-1 disabled" data-trasnporte="2">Aeroport</button>
+                </div>
+                <!-- ... -->
+            </div>
+        </div>
+        <!-- Tercera columna con desplegable por mes -->
+        <div class="col-md-3">
+
+
+            <div class="container" id="meses" style="display: block;">
+                <form>
+                    <label for="mes">Selecciona un mes:</label>
+                    <select id="mes" name="mes" class="select-month disabled">
+                        <option value="0">Enero</option>
+                        <option value="1">Febrero</option>
+                        <option value="2">Marzo</option>
+                        <option value="3">Abril</option>
+                        <option value="4">Mayo</option>
+                        <option value="5">Junio</option>
+                        <option value="6">Julio</option>
+                        <option value="7">Agosto</option>
+                        <option value="8">Septiembre</option>
+                        <option value="9">Octubre</option>
+                        <option value="10">Noviembre</option>
+                        <option value="11">Diciembre</option>
+                    </select>
+                </form>
+            </div>
+
+
+            <div class="container" id="dias" style="display: block;">
+                <form>
+                    <label for="dia">Selecciona un día:</label>
+                    <select id="dia" name="dia" class="select-day disabled">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cuarta columna con tabla de valores -->
+        <div class="col-md-3">
+            <div id="tablas">
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+{% endblock %}
+{% block content2 %}
+<script>
+    function main() {
+        document.getElementById("nombre").innerHTML = getCookie("username");
+        arrayAselect("idiomas", Idiomas.idioma);
+        setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 1);
+    };
+    
+
+    // Crear un array multidimensional
+    var arrayMultidimensional = [];
+    var municipios = ["Mataró", "Canet de Mar", "Alella", "Callela"];
+    var tiposViaje = ["Tren", "Autobus", "Aeroport"];
+    var meses = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+    var municipiosBtn = document.getElementById('municipios');
+    var transporteBtn = document.getElementById('transporte');
+    var mesesBtn = document.getElementById('meses');
+    var mesesSel = document.getElementById('mes')
+    var diasBtn = document.getElementById('dias');
+    var diasSel = document.getElementById('dia');
+    var vmunicipio = 0
+    var vtiposViajes = 0
+    var vmeses = 0
+    var vdias = 0
+
+
+    // Llenar el array con información
+    for (let i = 0; i < 4; i++) {
+        arrayMultidimensional[i] = []; // Cada elemento es un array
+
+        for (let j = 0; j < 3; j++) {
+            arrayMultidimensional[i][j] = []; // Cada elemento de cada elemento es un array
+
+            for (let k = 0; k < 12; k++) {
+                arrayMultidimensional[i][j][k] = []; // Cada elemento de cada elemento de cada elemento es un array
+
+                for (let l = 0; l < 31; l++) {
+                    arrayMultidimensional[i][j][k][l] = []; // Inicializar con algún valor
+                    for (let m = 0; m < 25; m++) {
+                        arrayMultidimensional[i][j][k][l][m] = []; // Inicializar con algún valor
+                        for (let n = 0; n < 2; n++) {
+                            arrayMultidimensional[i][j][k][l][m][n] = []; // Inicializar con algún valor
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    for (ij = 0; ij < 25; ij++) {
+        for (il = 0; il < 31; il++) {
+            dato(il, ij, ij, il);
+        }
+    }
+
+    function dato(posicionl, posicionm, valor1, valor2) {
+        for (let i = 0; i < 4; i++) {
+
+            for (let j = 0; j < 3; j++) {
+
+                for (let k = 0; k < 12; k++) {
+                    arrayMultidimensional[i][j][k][posicionl][posicionm][0] = valor1
+                    arrayMultidimensional[i][j][k][posicionl][posicionm][1] = valor2
+
+                }
+            }
+        }
+    }
+    // Imprimir el array
+    console.log(arrayMultidimensional);
+
+    // i: municipios
+
+    // j: tiposViajes
+
+    // k: meses
+
+    // l: dia
+
+    // m: hora
+
+    //n: precios
+
+
+    for (let i = 0; i < municipiosBtn.children.length; i++) {
+        municipiosBtn.children[i].onclick = function () {
+            const municipio = this.getAttribute('data-municipio');
+            vmunicipio = municipio;
+            for (let i = 0; i < transporteBtn.children.length; i++) {
+                transporteBtn.children[i].classList.remove("disabled");
+            }
+            /*alert(vmunicipio)
+            municipiosBtn.style.display = 'none';
+            municipiosBtn.nextElementSibling.style.removeProperty('display');*/
+
+
+        };
+    }
+
+
+    for (let i = 0; i < transporteBtn.children.length; i++) {
+        transporteBtn.children[i].onclick = function () {
+            const transporte = this.getAttribute('data-trasnporte');
+            vtiposViajes = transporte;
+            document.getElementById('mes').classList.remove("disabled");
+            /*alert(vtiposViajes)
+            transporteBtn.style.display = 'none';
+            transporteBtn.nextElementSibling.style.removeProperty('display');*/
+        };
+    }
+
+    mesesSel.addEventListener('change', function () {
+        const mes = mesesSel.value;
+        vmeses = mes;
+        document.getElementById('dia').classList.remove("disabled");
+
+        /*alert(vmeses);
+        mesesBtn.style.display = 'none';
+        mesesBtn.nextElementSibling.style.removeProperty('display');*/
+    })
+
+    diasSel.addEventListener('change', function () {
+        const dia = diasSel.value;
+        vdias = dia
+        /*alert(vdias);
+        diasBtn.style.display = 'none';*/
+        document.getElementById('tablas').innerHTML = "";
+
+        document.getElementById('tablas').appendChild(invocarTabla(vmunicipio, vtiposViajes, vmeses, vdias));
+
+    });
+
+
+    function invocarTabla(valor1, valor2, valor3, valor4) {
+
+        let tabla = document.createElement("table");
+        tabla.setAttribute("id", "tableTransporte");
+
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+
+        let trHead = document.createElement("tr");
+        let th1 = document.createElement("th");
+        th1.textContent = 'Horas';
+        trHead.appendChild(th1);
+
+        let th2 = document.createElement("th");
+        th2.textContent = 'Precios';
+        trHead.appendChild(th2);
+
+        thead.appendChild(trHead);
+        tabla.appendChild(thead);
+
+        for (let g = 0; g < 25; g++) {
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerHTML = arrayMultidimensional[valor1][valor2][valor3][valor4][g][0];
+            tr.appendChild(td1);
+
+            let td2 = document.createElement("td");
+            td2.innerHTML = arrayMultidimensional[valor1][valor2][valor3][valor4][g][1];
+            tr.appendChild(td2);
+
+            tbody.appendChild(tr);
+        }
+
+        tabla.appendChild(tbody);
+        return tabla;
+    }
+    console.log(arrayMultidimensional[0][0][3][5][9][0])
+</script>
+{% endblock %}

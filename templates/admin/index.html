@@ -1,0 +1,54 @@
+
+<style>
+    #loading {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.5em;
+    }
+</style>
+<div id="loading">Cargando...</div>
+    <script>
+    var registro = {
+        "id": {{ codigo }},
+        "fechaini": "20240810",
+        "fechafin": "20240820",
+        "habitaciones": 1
+    }       
+    
+    const loadingElement = document.getElementById('loading');
+
+        function addToCart() {
+            loadingElement.style.display = 'block';
+
+            fetch('http://127.0.0.1:5000/admin/add_to_cart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(registro)
+            })
+            .then(response => response.json())
+            .then(data => {
+                loadingElement.style.display = 'none';
+                if (data.redirect_url) {
+                    window.location.href = data.redirect_url;
+                } else {
+                    console.error('No redirect URL found in response');
+                }
+            })
+            .catch(error => {
+                loadingElement.style.display = 'none';
+                console.error('Error:', error);
+            });
+        }
+
+    </script>
+
+
+
+<button onclick="addToCart();">Agregar al Carrito</button>
+
+

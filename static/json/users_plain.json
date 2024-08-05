@@ -1,0 +1,12 @@
+{
+    "1": {
+        "username": "cliente1",
+        "password": "hashed_password_1",
+        "type": "cliente"
+    },
+    "2": {
+        "username": "proveedor1",
+        "password": "hashed_password_2",
+        "type": "proveedor"
+    }
+}

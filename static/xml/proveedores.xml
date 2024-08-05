@@ -1,0 +1,18 @@
+<proveedores>
+    <proveedor>
+        <id>1</id>
+        <tipo>hotel</tipo>
+        <usuario>Hotel Maresme</usuario>
+        <password>Maresme</password>
+        <primeraConexion></primeraConexion>
+        <ultimaConexion></ultimaConexion>
+    </proveedor>
+    <proveedor>
+        <id>2</id>
+        <tipo>hotel</tipo>
+        <usuario>Hotel Playa</usuario>
+        <password>Playa</password>
+        <primeraConexion></primeraConexion>
+        <ultimaConexion></ultimaConexion>
+    </proveedor>
+</proveedores>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Contenido principal -->
+<main>
+    <h1>Benvingut a ExploraMaresme: La Teva Porta al Paradís Mediterrani</h1>
+    <p>Situada al cor de la preciosa província de Barcelona, MataroIN és molt més que una simple agència de viatges. Som
+        els teus guies experts en la fascinant regió del Maresme, on el sol, el mar i la cultura es fusionen en una
+        experiència única.</p>
+    <p>Amb <strong>MataroIN</strong>, el teu viatge es converteix en una aventura inoblidable. Des de les platges de
+        sorra daurada fins als pintorescs pobles costaners, et portem a descobrir cada racó d'aquest paradís mediterrani
+        amb <em>passió i professionalisme</em>.</p>
+    <blockquote>“El Maresme és un tresor amagat que mereix ser explorat. Amb <strong>MataroIN</strong>, et submergiràs
+        en la seva rica història, et deleitaràs amb la seva exquisida gastronomia i et meravellaràs amb els seus
+        paisatges impressionants.”</blockquote>
+    <h2>Descobreix l'Encant de les Costes del Maresme</h2>
+    <p>Ja sigui que busquis relaxar-te sota el càlid sol mediterrani o aventurar-te en emocionants esports aquàtics, el
+        Maresme ho té tot. Amb els nostres paquets turístics personalitzats, podràs explorar les encantadores ciutats
+        costaneres com Calella, Malgrat de Mar i Pineda de Mar.</p>
+    <h3>Submergeix-te en la Cultura i la Història</h3>
+    <p>A <em>MataroIN</em>, no només t'enduem als destins més populars, sinó que també et donem l'oportunitat de
+        submergir-te en la rica cultura i la història fascinant de la regió. Visita les antigues runes romanes a Mataró,
+        explora els encantadors mercats locals o degusta els deliciosos vins i formatges de la zona.</p>
+    <p>Els nostres experts guies t'acompanyaran en cada pas del camí, compartint amb tu històries captivadores i
+        coneixements profunds sobre la regió.</p>
+    <h2>Viu una Experiència Inoblidable amb MataroIN</h2>
+    <p>Ja sigui que estiguis buscant unes vacances relaxants a la platja, una aventura activa a la natura o una immersió
+        a la cultura local, <strong>MataroIN</strong> té el paquet perfecte per a tu. Deixa'ns portar els teus somnis de
+        viatge al següent nivell i descobreix la màgia del Maresme amb nosaltres.</p>
+    <p>No esperis més per embarcar-te en l'aventura de la teva vida. Posa't en contacte amb nosaltres avui mateix i
+        comença a planificar la teva escapada al paradís mediterrani amb <strong>MataroIN</strong>!</p>
+</main>
+{% endblock %}
+{% block content2 %}
+<script>
+    function main() {
+        document.getElementById("nombre").innerHTML = getCookie("username");
+        arrayAselect("idiomas", Idiomas.idioma);
+    }
+    setTimeout(function () {
+            $(document).ready(function () {
+                $('#cargando').fadeOut('slow');
+
+            });
+        }, 1);
+</script>
+{% endblock %}

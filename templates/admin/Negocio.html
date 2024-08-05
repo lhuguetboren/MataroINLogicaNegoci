@@ -1,0 +1,75 @@
+
+
+{% block content %}
+<h2>Páginas estáticas</h2>
+
+<ul>
+
+<li><a href="/home">Navegación home - Revisar los estilos para los botones</a></li>
+<li><a href="/destinos">Navegación destino - Generr un endpoint para que genere un json con los destinos por orden según la tabla destinos, que incluya una imagen de la localidad - En la parte inferior crear mediante javascript enlaces para actuaizar un mmapa y el tiempo para cada uno de ellos</a></li>
+<li><a href="/ofertas">Navegación ofertas - Generar un endpoint para que genere un json según la usabilidad para que solo aparezcan las fotos de los municipios y alojamientos con mayor valor en un item (por ejemplo playas) </a></li>
+<li><a href="/calendario">Navegación calendario - Crear una tabla para incoporar hechos reseñables por fecha - Modificar el jquery para que en en lugar del nombre aparezca un texto</a></li>
+<li><a href="/loginhtml">Navegación login - Incoporar el endpoint de login flash</a></li>
+<li><a href="/home">Navegación info alojamiento tras seleccionarlo en búsqueda principal - Revisar los iconos de servicios y la maquetación general</a></li>
+<li><a href="/blog/id">Navegación blog con la posibilidad de editar una entrada en concreto- Crear una tabla en la BBDD con las entradas del blog y permitir acceder a una mediante la url admin/blog/idEntradaBlog</a></li>
+<li><a href="/videos/vacio">Navegación videos biblioteca - Mejorar la visualización</a></li>
+<li><a href="/folletos/vacio">Navegación folletos biblioteca - Adaptar el actual que es el de videos para poder ver los folletos</a></li>
+<li><a href="/imagenes/vacio">Navegación imagenes biblioteca - Adaptar el actual que es el de videos para poder ver los folletos</a></li>
+<li><a href="/transportes/vacio">Navegación horarios transportes a pueblos maresme-Crear un archivo json con los datos de todos los municipios, el método de transporte, los meses, las horas y los precios 
+    para permitir ver los datos durante todo el año - Mejorar la visualización</a></li>
+<li><a href="/clientes/id">Navegación a un cliente mediante un id - Generar un formulario para editar los datos</a></li>
+<li><a href="/proveedores/id">Navegación a un proveedor mediante un id - Generar un formulario para editar los datos</a></li>
+<li><a href="/quienessomos">Navegación a quienes somos</a></li>
+</ul>
+<h2>Traducir</h2>
+
+<ul>
+<li><a href="/traduccion">Traducción una página - Traducir alguna página estática</a></li>
+</ul>
+<h2>Logica de negocio: gestión biblioteca, cookies, destinos y usabilidad</h2>
+
+<ul>
+<li><a href="/admin/Biblioteca_gest">Gestion archivos biblioteca - incluir css MataroIN - </a>/</li>
+<li><a href="/admin/guarda_cookies">Genera un archivo con los datos de cookies - incluir css MataroIN - Generar un template para listar los archivos existentes tras cada generacion y un botón para visualizarlo - Incluir un botón para generar el archivo para que el nombre del archivo incluya la fecha de creación (estadistica2024-05-08-json)</a>/</li>
+<li><a href="/admin/recupera_Cookies">Recupera el archivo de  cookies - incluir css MataroIN - Incluir un parametros para seleccionar solo un archivo que visualizar</a>/</li>
+<li><a href="/admin/calcula_destinos">calcula_destinos - endpoint</a></li>
+<li><a href="/admin/recupera_destinos">recupera_destinos- incluir css MataroIN -  implementar una salida que por alojamiento nos indique los diferentes valores de usabilidad, utilizar panda para extraer información más compleja</a></li>
+<li><a href="/admin/guarda_destinos">guarda destinos- incluir css MataroIN - implementar un formulario para incluir los datos de usabilildad por alojamiento</a></li>
+<li><a href="/admin/calcula_usabilidad">calcula usabilidad - endpoint</a></li>
+<li><a href="/admin/recupera_usabilidad">recupera usabilidad - implementar una salida que por alojamiento nos indique los diferentes valores de usabilidad, utilizar panda para extraer información más compleja</a></li>
+<li><a href="/admin/guarda_usabilidad">guarda usabilidad - implementar un formulario para incluir los datos de usabilildad por alojamiento</a></li>
+</ul>
+<h2>Buscar, reserva y comprar</h2>
+
+<ul>
+<li><a href="/admin/buscar">Utilizar Mataro, URH como nombre y colocar fechas inicial y final - Colocar un botón para el endpoint reservar</a></li>
+<li><a href="/admin/reservar">reservar mediante clases y herencia (crear las clases para apartamento, hostal y camping) - Utilizar la clase usuario para leer desde la tabla de clientes - Devolver la confirmación de la reserva</a></li>
+<li><a href="/admin/pagar">simulacion pago visa - Utilizar encriptación para validar los datos de pago - Enviar la confirmacion al enpoint process_payment</a></li>
+<li><a href="/admin/process_payment">simulacion final de pago (se accede tras la simulacion pago visa) - Reenviar, tras asegurarse que el cliente esta dado de alta como usuario a la página estática cliente donde incoporar el viaje contratado</a></li>
+</ul>
+
+<h2>Login flask</h2>
+
+<ul>
+<li><a href="/admin/login">Login de flask -  Utilizar este endpoint en la página estática loginhtml - Crear accesos a cliente.html o proveedor.html - Crear un formulario con los campos de cliente y proveedor que permita editar los datos -  En el caso de proovedor alojamiento permita editar los campos fechaslibre y habitaciones libres</a></li>
+</ul>
+
+<h2>Pila</h2>
+
+<ul>
+
+<li><a href="/admin/pilasuma/">Añadir elementos a la pila (previamente arrancar aplicaciones socket_1 y pila en modo debug)</a></li>
+<li><a href="/admin/read_socket_data/">Leer elementos de la pila desde la web (revisar que se esta leyendo)</a></li>
+</ul>
+
+
+<h2>Documentacion</h2>
+<ul>
+<li>Documentación - Si realizas cualquiera de las propuestas, documentalo!!</li>
+
+
+</ul>
+
+{%endblock%}
+
+

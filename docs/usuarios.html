@@ -1,0 +1,146 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">usuarios</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/usuarios.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/usuarios.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="pydoc.html">pydoc</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="usuarios.html#BaseDatos">BaseDatos</a>
+</dt><dt class="heading-text"><a href="usuarios.html#Cliente">Cliente</a>
+</dt><dt class="heading-text"><a href="usuarios.html#Proveedor">Proveedor</a>
+</dt></dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="BaseDatos">class <strong>BaseDatos</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#BaseDatos">BaseDatos</a>(archivo_clientes,&nbsp;archivo_proveedores)<br>
+&nbsp;<br>
+Clase&nbsp;que&nbsp;representa&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;para&nbsp;clientes&nbsp;y&nbsp;proveedores.<br>
+&nbsp;<br>
+:param&nbsp;archivo_clientes:&nbsp;Ruta&nbsp;del&nbsp;archivo&nbsp;JSON&nbsp;que&nbsp;contiene&nbsp;los&nbsp;datos&nbsp;de&nbsp;los&nbsp;clientes.<br>
+:param&nbsp;archivo_proveedores:&nbsp;Ruta&nbsp;del&nbsp;archivo&nbsp;JSON&nbsp;que&nbsp;contiene&nbsp;los&nbsp;datos&nbsp;de&nbsp;los&nbsp;proveedores.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="BaseDatos-__init__"><strong>__init__</strong></a>(self, archivo_clientes, archivo_proveedores)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-agregar_cliente"><strong>agregar_cliente</strong></a>(self, cliente)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;cliente&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;cliente:&nbsp;Instancia&nbsp;de&nbsp;<a href="#Cliente">Cliente</a>&nbsp;a&nbsp;agregar.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-agregar_proveedor"><strong>agregar_proveedor</strong></a>(self, proveedor)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;proveedor&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;proveedor:&nbsp;Instancia&nbsp;de&nbsp;<a href="#Proveedor">Proveedor</a>&nbsp;a&nbsp;agregar.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-cargar_datos"><strong>cargar_datos</strong></a>(self, archivo, tipo)</dt><dd><span class="code">Carga&nbsp;los&nbsp;datos&nbsp;desde&nbsp;un&nbsp;archivo&nbsp;JSON.<br>
+&nbsp;<br>
+:param&nbsp;archivo:&nbsp;Ruta&nbsp;del&nbsp;archivo&nbsp;JSON.<br>
+:param&nbsp;tipo:&nbsp;Tipo&nbsp;de&nbsp;datos&nbsp;a&nbsp;cargar&nbsp;('cliente'&nbsp;o&nbsp;'hotel').<br>
+:return:&nbsp;Diccionario&nbsp;con&nbsp;los&nbsp;datos&nbsp;cargados.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-eliminar_cliente"><strong>eliminar_cliente</strong></a>(self, id_cliente)</dt><dd><span class="code">Elimina&nbsp;un&nbsp;cliente&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;id_cliente:&nbsp;ID&nbsp;del&nbsp;cliente&nbsp;a&nbsp;eliminar.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-eliminar_proveedor"><strong>eliminar_proveedor</strong></a>(self, id_proveedor)</dt><dd><span class="code">Elimina&nbsp;un&nbsp;proveedor&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;id_proveedor:&nbsp;ID&nbsp;del&nbsp;proveedor&nbsp;a&nbsp;eliminar.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-guardar_datos"><strong>guardar_datos</strong></a>(self)</dt><dd><span class="code">Guarda&nbsp;los&nbsp;datos&nbsp;de&nbsp;clientes&nbsp;y&nbsp;proveedores&nbsp;en&nbsp;archivos&nbsp;JSON.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-modificar_cliente"><strong>modificar_cliente</strong></a>(self, id_cliente, nuevo_cliente)</dt><dd><span class="code">Modifica&nbsp;los&nbsp;datos&nbsp;de&nbsp;un&nbsp;cliente&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;id_cliente:&nbsp;ID&nbsp;del&nbsp;cliente&nbsp;a&nbsp;modificar.<br>
+:param&nbsp;nuevo_cliente:&nbsp;Instancia&nbsp;de&nbsp;<a href="#Cliente">Cliente</a>&nbsp;con&nbsp;los&nbsp;nuevos&nbsp;datos.</span></dd></dl>
+
+<dl><dt><a name="BaseDatos-modificar_proveedor"><strong>modificar_proveedor</strong></a>(self, id_proveedor, nuevo_proveedor)</dt><dd><span class="code">Modifica&nbsp;los&nbsp;datos&nbsp;de&nbsp;un&nbsp;proveedor&nbsp;en&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;y&nbsp;guarda&nbsp;los&nbsp;cambios.<br>
+&nbsp;<br>
+:param&nbsp;id_proveedor:&nbsp;ID&nbsp;del&nbsp;proveedor&nbsp;a&nbsp;modificar.<br>
+:param&nbsp;nuevo_proveedor:&nbsp;Instancia&nbsp;de&nbsp;<a href="#Proveedor">Proveedor</a>&nbsp;con&nbsp;los&nbsp;nuevos&nbsp;datos.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Cliente">class <strong>Cliente</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Cliente">Cliente</a>(id,&nbsp;nombre,&nbsp;correo,&nbsp;telefono,&nbsp;direccion,&nbsp;usuario,&nbsp;password)<br>
+&nbsp;<br>
+Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;cliente.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;nombre:&nbsp;Nombre&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;correo:&nbsp;Correo&nbsp;electrónico&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;telefono:&nbsp;Teléfono&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;direccion:&nbsp;Dirección&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;usuario:&nbsp;Nombre&nbsp;de&nbsp;usuario&nbsp;del&nbsp;cliente.<br>
+:param&nbsp;password:&nbsp;Contraseña&nbsp;del&nbsp;cliente.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Cliente-__init__"><strong>__init__</strong></a>(self, id, nombre, correo, telefono, direccion, usuario, password)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Proveedor">class <strong>Proveedor</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Proveedor">Proveedor</a>(id,&nbsp;tipo,&nbsp;nombre,&nbsp;password,&nbsp;primeraConexion=None,&nbsp;ultimaConexion=None)<br>
+&nbsp;<br>
+Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;proveedor.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;proveedor.<br>
+:param&nbsp;tipo:&nbsp;Tipo&nbsp;de&nbsp;proveedor.<br>
+:param&nbsp;nombre:&nbsp;Nombre&nbsp;del&nbsp;proveedor.<br>
+:param&nbsp;password:&nbsp;Contraseña&nbsp;del&nbsp;proveedor.<br>
+:param&nbsp;primeraConexion:&nbsp;Fecha&nbsp;de&nbsp;la&nbsp;primera&nbsp;conexión&nbsp;del&nbsp;proveedor.<br>
+:param&nbsp;ultimaConexion:&nbsp;Fecha&nbsp;de&nbsp;la&nbsp;última&nbsp;conexión&nbsp;del&nbsp;proveedor.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Proveedor-__init__"><strong>__init__</strong></a>(self, id, tipo, nombre, password, primeraConexion=None, ultimaConexion=None)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table></td></tr></table>

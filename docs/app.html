@@ -1,0 +1,195 @@
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">app</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/app.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/app.py</a></td></tr></table>
+    <p><span class="code">#&nbsp;Librerías&nbsp;comunes</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="CalculosNegocios.html">CalculosNegocios</a><br>
+<a href="aiohttp.html">aiohttp</a><br>
+<a href="cryptography.hazmat.primitives.hashes.html">cryptography.hazmat.primitives.hashes</a><br>
+</td><td class="multicolumn"><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+<a href="cryptography.hazmat.primitives.asymmetric.padding.html">cryptography.hazmat.primitives.asymmetric.padding</a><br>
+</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
+<a href="pydoc.html">pydoc</a><br>
+<a href="cryptography.hazmat.primitives.asymmetric.rsa.html">cryptography.hazmat.primitives.asymmetric.rsa</a><br>
+</td><td class="multicolumn"><a href="cryptography.hazmat.primitives.serialization.html">cryptography.hazmat.primitives.serialization</a><br>
+<a href="socket_1.html">socket_1</a><br>
+</td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-aloajamiento"><strong>aloajamiento</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;alojamiento.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;alojamiento<br>
+:return:&nbsp;Template&nbsp;'alojamiento.html'</span></dd></dl>
+ <dl><dt><a name="-blog"><strong>blog</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;del&nbsp;blog.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;blog<br>
+:return:&nbsp;Template&nbsp;'blog.html'</span></dd></dl>
+ <dl><dt><a name="-buscar"><strong>buscar</strong></a>()</dt><dd><span class="code">Busca&nbsp;alojamientos&nbsp;basados&nbsp;en&nbsp;criterios&nbsp;predefinidos.<br>
+&nbsp;<br>
+:return:&nbsp;JSON&nbsp;con&nbsp;los&nbsp;alojamientos&nbsp;encontrados.</span></dd></dl>
+ <dl><dt><a name="-calcula_destinos"><strong>calcula_destinos</strong></a>()</dt><dd><span class="code">Calcula&nbsp;los&nbsp;destinos&nbsp;usando&nbsp;la&nbsp;lógica&nbsp;de&nbsp;negocios&nbsp;definida&nbsp;en&nbsp;CalculosNegocios.<br>
+&nbsp;<br>
+:return:&nbsp;Resultado&nbsp;de&nbsp;la&nbsp;función&nbsp;calcula_destinos&nbsp;de&nbsp;CalculosNegocios.</span></dd></dl>
+ <dl><dt><a name="-calcula_usabilidad"><strong>calcula_usabilidad</strong></a>()</dt><dd><span class="code">Calcula&nbsp;la&nbsp;usabilidad&nbsp;usando&nbsp;la&nbsp;lógica&nbsp;de&nbsp;negocios&nbsp;definida&nbsp;en&nbsp;CalculosNegocios.<br>
+&nbsp;<br>
+:return:&nbsp;Resultado&nbsp;de&nbsp;la&nbsp;función&nbsp;calculaUsabilidad&nbsp;de&nbsp;CalculosNegocios.</span></dd></dl>
+ <dl><dt><a name="-calendario"><strong>calendario</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;del&nbsp;calendario.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'calendario.html'</span></dd></dl>
+ <dl><dt><a name="-clientes"><strong>clientes</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;clientes.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;cliente<br>
+:return:&nbsp;Template&nbsp;'clientes.html'</span></dd></dl>
+ <dl><dt><a name="-delete_file"><strong>delete_file</strong></a>(folder, filename)</dt><dd><span class="code">Maneja&nbsp;la&nbsp;eliminación&nbsp;de&nbsp;archivos.<br>
+&nbsp;<br>
+:param&nbsp;folder:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;carpeta<br>
+:param&nbsp;filename:&nbsp;Nombre&nbsp;del&nbsp;archivo<br>
+:return:&nbsp;Redirige&nbsp;a&nbsp;la&nbsp;ruta&nbsp;principal</span></dd></dl>
+ <dl><dt><a name="-destinos"><strong>destinos</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;destinos.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'destino.html'</span></dd></dl>
+ <dl><dt><a name="-edit_file"><strong>edit_file</strong></a>(folder, filename)</dt><dd><span class="code">Permite&nbsp;renombrar&nbsp;y&nbsp;actualizar&nbsp;la&nbsp;descripción&nbsp;de&nbsp;un&nbsp;archivo.<br>
+&nbsp;<br>
+:param&nbsp;folder:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;carpeta<br>
+:param&nbsp;filename:&nbsp;Nombre&nbsp;del&nbsp;archivo<br>
+:return:&nbsp;Renderiza&nbsp;el&nbsp;template&nbsp;'edit.html'&nbsp;o&nbsp;redirige&nbsp;a&nbsp;la&nbsp;ruta&nbsp;principal</span></dd></dl>
+ <dl><dt><a name="-editar"><strong>editar</strong></a>()</dt><dd><span class="code">Agrupa&nbsp;los&nbsp;logs&nbsp;por&nbsp;nivel&nbsp;y&nbsp;hora&nbsp;para&nbsp;contar&nbsp;el&nbsp;número&nbsp;de&nbsp;logs&nbsp;y&nbsp;guarda&nbsp;los&nbsp;resultados&nbsp;en&nbsp;un&nbsp;archivo&nbsp;JSON.<br>
+&nbsp;<br>
+:return:&nbsp;"Ok"&nbsp;si&nbsp;se&nbsp;completa&nbsp;correctamente.</span></dd></dl>
+ <dl><dt><a name="-folletos"><strong>folletos</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;folletos.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;folleto<br>
+:return:&nbsp;Template&nbsp;'videos.html'</span></dd></dl>
+ <dl><dt><a name="-get_folder_for_file"><strong>get_folder_for_file</strong></a>(filename)</dt><dd><span class="code">Determina&nbsp;la&nbsp;carpeta&nbsp;de&nbsp;destino&nbsp;basada&nbsp;en&nbsp;el&nbsp;tipo&nbsp;de&nbsp;archivo.<br>
+&nbsp;<br>
+:param&nbsp;filename:&nbsp;Nombre&nbsp;del&nbsp;archivo<br>
+:return:&nbsp;Ruta&nbsp;de&nbsp;la&nbsp;carpeta&nbsp;correspondiente&nbsp;al&nbsp;tipo&nbsp;de&nbsp;archivo</span></dd></dl>
+ <dl><dt><a name="-get_locale"><strong>get_locale</strong></a>()</dt><dd><span class="code">Obtiene&nbsp;el&nbsp;idioma&nbsp;preferido&nbsp;del&nbsp;usuario.<br>
+&nbsp;<br>
+:return:&nbsp;Idioma&nbsp;preferido&nbsp;del&nbsp;usuario.</span></dd></dl>
+ <dl><dt><a name="-guarda_destinos"><strong>guarda_destinos</strong></a>()</dt><dd><span class="code">Guarda&nbsp;los&nbsp;datos&nbsp;de&nbsp;destinos&nbsp;(pendiente&nbsp;de&nbsp;implementación).<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;está&nbsp;pendiente&nbsp;de&nbsp;implementación.</span></dd></dl>
+ <dl><dt><a name="-guarda_usabilidad"><strong>guarda_usabilidad</strong></a>()</dt><dd><span class="code">Guarda&nbsp;los&nbsp;datos&nbsp;de&nbsp;usabilidad&nbsp;(pendiente&nbsp;de&nbsp;implementación).<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;está&nbsp;pendiente&nbsp;de&nbsp;implementación.</span></dd></dl>
+ <dl><dt><a name="-guardapila"><strong>guardapila</strong></a>(diccionario, nombre_archivo)</dt><dd><span class="code">Guarda&nbsp;un&nbsp;diccionario&nbsp;en&nbsp;un&nbsp;archivo&nbsp;JSON.<br>
+&nbsp;<br>
+:param&nbsp;diccionario:&nbsp;Diccionario&nbsp;a&nbsp;guardar<br>
+:param&nbsp;nombre_archivo:&nbsp;Nombre&nbsp;del&nbsp;archivo&nbsp;JSON</span></dd></dl>
+ <dl><dt><a name="-home"><strong>home</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;principal&nbsp;del&nbsp;sitio&nbsp;web.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'home.html'</span></dd></dl>
+ <dl><dt><a name="-imagenes"><strong>imagenes</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;imágenes.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;de&nbsp;la&nbsp;imagen<br>
+:return:&nbsp;Template&nbsp;'videos.html'</span></dd></dl>
+ <dl><dt><a name="-index"><strong>index</strong></a>()</dt><dd><span class="code">Página&nbsp;principal&nbsp;de&nbsp;administración&nbsp;para&nbsp;usuarios&nbsp;autenticados.<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;de&nbsp;bienvenida&nbsp;al&nbsp;usuario.</span></dd></dl>
+ <dl><dt><a name="-load_user"><strong>load_user</strong></a>(user_id)</dt><dd><span class="code">Carga&nbsp;un&nbsp;usuario&nbsp;basado&nbsp;en&nbsp;su&nbsp;ID.<br>
+&nbsp;<br>
+:param&nbsp;user_id:&nbsp;ID&nbsp;del&nbsp;usuario<br>
+:return:&nbsp;Instancia&nbsp;de&nbsp;User&nbsp;si&nbsp;el&nbsp;usuario&nbsp;existe,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;None.</span></dd></dl>
+ <dl><dt><a name="-login"><strong>login</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;inicio&nbsp;de&nbsp;sesión&nbsp;de&nbsp;los&nbsp;usuarios.<br>
+&nbsp;<br>
+:return:&nbsp;Redirige&nbsp;al&nbsp;índice&nbsp;si&nbsp;el&nbsp;login&nbsp;es&nbsp;exitoso,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;renderiza&nbsp;el&nbsp;formulario&nbsp;de&nbsp;login.</span></dd></dl>
+ <dl><dt><a name="-loginhtml"><strong>loginhtml</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;login.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'login.html'</span></dd></dl>
+ <dl><dt><a name="-logout"><strong>logout</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;cierre&nbsp;de&nbsp;sesión&nbsp;de&nbsp;los&nbsp;usuarios.<br>
+&nbsp;<br>
+:return:&nbsp;Redirige&nbsp;al&nbsp;formulario&nbsp;de&nbsp;login.</span></dd></dl>
+ <dl><dt><a name="-negocio"><strong>negocio</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;principal&nbsp;de&nbsp;negocio.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'admin/negocio.html'</span></dd></dl>
+ <dl><dt><a name="-ofertas"><strong>ofertas</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;ofertas.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'ofertas.html'</span></dd></dl>
+ <dl><dt><a name="-pagar"><strong>pagar</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;el&nbsp;formulario&nbsp;de&nbsp;pago.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'admin/payment_form.html'</span></dd></dl>
+ <dl><dt><a name="-pilasuma"><strong>pilasuma</strong></a>()</dt><dd><span class="code">Añade&nbsp;una&nbsp;serie&nbsp;de&nbsp;operaciones&nbsp;a&nbsp;la&nbsp;pila&nbsp;y&nbsp;las&nbsp;guarda&nbsp;en&nbsp;un&nbsp;archivo&nbsp;JSON.<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;se&nbsp;añadieron&nbsp;las&nbsp;operaciones&nbsp;a&nbsp;la&nbsp;pila.</span></dd></dl>
+ <dl><dt><a name="-process_payment"><strong>process_payment</strong></a>()</dt><dd><span class="code">Procesa&nbsp;el&nbsp;pago&nbsp;con&nbsp;la&nbsp;información&nbsp;proporcionada.<br>
+&nbsp;<br>
+:return:&nbsp;Redirige&nbsp;al&nbsp;índice&nbsp;con&nbsp;un&nbsp;mensaje&nbsp;de&nbsp;éxito&nbsp;o&nbsp;error.</span></dd></dl>
+ <dl><dt><a name="-proveedores"><strong>proveedores</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;proveedores.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;proveedor<br>
+:return:&nbsp;Template&nbsp;'proveedores.html'</span></dd></dl>
+ <dl><dt><a name="-quienessomos"><strong>quienessomos</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;"Quiénes&nbsp;somos".<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'quienessomos.html'</span></dd></dl>
+ <dl><dt><a name="-read_socket_data"><strong>read_socket_data</strong></a>()</dt><dd><span class="code">Lee&nbsp;los&nbsp;datos&nbsp;recibidos&nbsp;por&nbsp;el&nbsp;socket&nbsp;y&nbsp;los&nbsp;devuelve&nbsp;en&nbsp;formato&nbsp;JSON.<br>
+&nbsp;<br>
+:return:&nbsp;JSON&nbsp;con&nbsp;los&nbsp;datos&nbsp;del&nbsp;socket.</span></dd></dl>
+ <dl><dt><a name="-recupera_destinos"><strong>recupera_destinos</strong></a>()</dt><dd><span class="code">Recupera&nbsp;los&nbsp;datos&nbsp;de&nbsp;destinos&nbsp;usando&nbsp;la&nbsp;lógica&nbsp;de&nbsp;negocios&nbsp;definida&nbsp;en&nbsp;CalculosNegocios.<br>
+&nbsp;<br>
+:return:&nbsp;Resultado&nbsp;de&nbsp;la&nbsp;función&nbsp;devulvem3&nbsp;de&nbsp;CalculosNegocios.</span></dd></dl>
+ <dl><dt><a name="-recupera_usabilidad"><strong>recupera_usabilidad</strong></a>()</dt><dd><span class="code">Recupera&nbsp;los&nbsp;datos&nbsp;de&nbsp;usabilidad&nbsp;(pendiente&nbsp;de&nbsp;implementación).<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;está&nbsp;pendiente&nbsp;de&nbsp;implementación.</span></dd></dl>
+ <dl><dt><a name="-request_entity_too_large"><strong>request_entity_too_large</strong></a>(error)</dt><dd><span class="code">Manejo&nbsp;del&nbsp;error&nbsp;de&nbsp;archivo&nbsp;demasiado&nbsp;grande.<br>
+&nbsp;<br>
+:param&nbsp;error:&nbsp;Error&nbsp;capturado<br>
+:return:&nbsp;Mensaje&nbsp;de&nbsp;error&nbsp;y&nbsp;código&nbsp;de&nbsp;estado&nbsp;413</span></dd></dl>
+ <dl><dt><a name="-reservar"><strong>reservar</strong></a>()</dt><dd><span class="code">Maneja&nbsp;la&nbsp;reserva&nbsp;de&nbsp;un&nbsp;alojamiento.<br>
+&nbsp;<br>
+:return:&nbsp;Mensaje&nbsp;de&nbsp;éxito&nbsp;si&nbsp;hay&nbsp;disponibilidad,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;mensaje&nbsp;de&nbsp;error.</span></dd></dl>
+ <dl><dt><a name="-signup"><strong>signup</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;registro&nbsp;de&nbsp;nuevos&nbsp;usuarios.<br>
+&nbsp;<br>
+:return:&nbsp;Redirige&nbsp;al&nbsp;formulario&nbsp;de&nbsp;login&nbsp;si&nbsp;el&nbsp;registro&nbsp;es&nbsp;exitoso,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;renderiza&nbsp;el&nbsp;formulario&nbsp;de&nbsp;registro.</span></dd></dl>
+ <dl><dt><a name="-traduccion"><strong>traduccion</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;traducción.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'traduccion.html'</span></dd></dl>
+ <dl><dt><a name="-transportes"><strong>transportes</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;transportes.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;transporte<br>
+:return:&nbsp;Template&nbsp;'transportes.html'</span></dd></dl>
+ <dl><dt><a name="-upload_file"><strong>upload_file</strong></a>()</dt><dd><span class="code">Muestra&nbsp;el&nbsp;formulario&nbsp;de&nbsp;subida&nbsp;de&nbsp;archivos&nbsp;y&nbsp;lista&nbsp;los&nbsp;archivos&nbsp;ya&nbsp;subidos.<br>
+&nbsp;<br>
+:return:&nbsp;Renderiza&nbsp;el&nbsp;template&nbsp;'formulariob.html'</span></dd></dl>
+ <dl><dt><a name="-uploaded_file"><strong>uploaded_file</strong></a>(folder, filename)</dt><dd><span class="code">Permite&nbsp;la&nbsp;descarga&nbsp;de&nbsp;archivos&nbsp;subidos.<br>
+&nbsp;<br>
+:param&nbsp;folder:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;carpeta<br>
+:param&nbsp;filename:&nbsp;Nombre&nbsp;del&nbsp;archivo<br>
+:return:&nbsp;Envía&nbsp;el&nbsp;archivo&nbsp;desde&nbsp;el&nbsp;directorio&nbsp;de&nbsp;subida</span></dd></dl>
+ <dl><dt><a name="-uploader"><strong>uploader</strong></a>()</dt><dd><span class="code">Maneja&nbsp;la&nbsp;subida&nbsp;de&nbsp;archivos.<br>
+&nbsp;<br>
+:return:&nbsp;Redirige&nbsp;a&nbsp;la&nbsp;ruta&nbsp;principal&nbsp;o&nbsp;renderiza&nbsp;mensajes&nbsp;de&nbsp;error</span></dd></dl>
+ <dl><dt><a name="-videos"><strong>videos</strong></a>(id)</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;videos.<br>
+&nbsp;<br>
+:param&nbsp;id:&nbsp;ID&nbsp;del&nbsp;video<br>
+:return:&nbsp;Template&nbsp;'videos.html'</span></dd></dl>
+ <dl><dt><a name="-visualizar"><strong>visualizar</strong></a>()</dt><dd><span class="code">Carga&nbsp;los&nbsp;datos&nbsp;de&nbsp;un&nbsp;archivo&nbsp;JSON,&nbsp;los&nbsp;convierte&nbsp;a&nbsp;DataFrame,&nbsp;los&nbsp;ordena&nbsp;y&nbsp;los&nbsp;muestra&nbsp;en&nbsp;un&nbsp;template.<br>
+&nbsp;<br>
+:return:&nbsp;Template&nbsp;'admin/estadistica.html'&nbsp;con&nbsp;los&nbsp;datos&nbsp;en&nbsp;formato&nbsp;HTML.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>app</strong> = &lt;Flask 'app'&gt;<br>
+<strong>current_user</strong> = None<br>
+<strong>data_storage</strong> = []<br>
+<strong>log_df</strong> =      Pais Dispositivo            Timestamp    Ta...a          PC  2024-07-22 10:30:00  Playa    True<br>
+<strong>login_manager</strong> = &lt;flask_login.login_manager.LoginManager object&gt;<br>
+<strong>public_key</strong> = &lt;cryptography.hazmat.bindings._rust.openssl.rsa.RSAPublicKey object&gt;<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
+<strong>session</strong> = &lt;sqlalchemy.orm.session.Session object&gt;<br>
+<strong>uploaded_files</strong> = []<br>
+<strong>users</strong> = {'1': {'password': 'hashed_password_1', 'type': 'cliente', 'username': 'cliente1'}, '2': {'password': 'hashed_password_2', 'type': 'proveedor', 'username': 'proveedor1'}}</td></tr></table>
