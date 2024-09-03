@@ -1,0 +1,31 @@
+{
+    "intents": [
+      {
+        "tag": "saludo",
+        "patterns": ["Hola", "¿Cómo estás?", "Hola, ¿qué tal?", "Buenos días"],
+        "responses": ["Hola!", "¿Cómo puedo ayudarte?", "¡Hola! ¿Qué necesitas?"]
+      },
+      {
+        "tag": "despedida",
+        "patterns": ["Adiós", "Nos vemos", "Hasta luego"],
+        "responses": ["¡Adiós!", "¡Cuídate!", "¡Hasta pronto!"]
+      },
+      {
+        "tag": "gracias",
+        "patterns": ["Gracias", "Muchas gracias", "Te lo agradezco"],
+        "responses": ["¡De nada!", "¡No hay problema!", "¡Con gusto!"]
+      },
+      {
+        "tag": "viaje",
+        "patterns": ["hotel", "avión", "tren", "vacaciones"],
+        "responses": ["maresme", "hoteles", "playa"]
+      }
+,
+      {
+        "tag": "resto",
+        "patterns": ["xxx", "vvvv"],
+        "responses": ["no te entiendo"]
+      }
+    ]
+  }
+  
