@@ -74,8 +74,8 @@ def calculaUsabilidad():
     for id_usab in ids_usab:
         valores = [val.valor for val in session.query(UsabRelacion.valor).filter_by(id_usab=id_usab[0])]
 
-        media = calcular_media(valores)
-        mediana = calcular_mediana(valores)
+        media = float(calcular_media(valores))
+        mediana = float(calcular_mediana(valores))
 
         usab_datos_entry = session.query(UsabDatos).filter_by(id_usab=id_usab[0]).first()
         if usab_datos_entry:

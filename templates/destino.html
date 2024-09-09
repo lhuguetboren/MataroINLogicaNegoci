@@ -11,8 +11,12 @@
         </div>
 
         <div class="info-content">
-            <div class="sub-col"><h1>Mapa</h1></div>
-            <div class="sub-col"><h1>Tiempo y Wiki</h1></div>
+            <div class="sub-col">
+                <h1>Mapa</h1>
+            </div>
+            <div class="sub-col">
+                <h1>Tiempo y Wiki</h1>
+            </div>
         </div>
 
     </div>
@@ -26,6 +30,8 @@
 
     function main() {
         document.getElementById("nombre").innerHTML = getCookie("username");
+
+
         arrayAULaAccion('listaPueblos', Municipios.pueblo, 'ifsrc');
 
         setTimeout(function () {
@@ -43,7 +49,8 @@
             selectHTML += `
                     <li class="slide">
                         <div class="PUEBLO">
-                            <img src="${opcion.trim()}.jpeg" class="img" alt="${opcion.trim()}">
+
+                            <img src="static/`+extraerFilenamePrimero(Biblioteca, opcion.trim()) +`" class="img" alt="${opcion.trim()}">
                             <div class="nombre">${opcion}</div>
                         </div>
                     </li>
@@ -73,6 +80,42 @@
         carousel.style.transform = `translateX(${offset}px)`;
     }
 
-</script> 
+function extraerFilenamePrimero(data, searchString) {
+  // Función para buscar en las tags
+  function buscarEnTags(tags, searchString) {
+    //return tags && tags.tag && tags.tag.some(tag => tag.toLowerCase().includes(searchString.toLowerCase()));
+  }
+
+  // Buscar en las fotos
+  if (data.fotos && data.fotos.foto) {
+    for (let foto of data.fotos.foto) {
+      const descripcionIncluye = foto.description && foto.description.toLowerCase().includes(searchString.toLowerCase());
+      const tagsIncluyen = buscarEnTags(foto.tags, searchString);
+
+      if (descripcionIncluye || tagsIncluyen) {
+        return foto.filename;
+      }
+    }
+  }
+
+  // Buscar en los videos
+  if (data.videos && data.videos.video) {
+    for (let video of data.videos.video) {
+      const descripcionIncluye = video.description && video.description.toLowerCase().includes(searchString.toLowerCase());
+      const tagsIncluyen = buscarEnTags(video.tags, searchString);
+
+      if (descripcionIncluye || tagsIncluyen) {
+        return video.url;
+      }
+    }
+  }
+
+  // Si no se encuentra ninguna coincidencia
+  return null;
+}
+
+
+
+</script>
 
 {% endblock %}

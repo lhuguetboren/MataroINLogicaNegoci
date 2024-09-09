@@ -16,7 +16,7 @@ from datetime import datetime
 from securityUsers import User, users, save_users, public_key
 
 import CalculosNegocios
-from models import session, Alojamientos, Cookies, Paises, Dispositivos, Tags, Biblioteca, get_current_time_in_spain
+from models import session, Alojamientos, Cookies, Paises#, Dispositiv
 from CalculosNegocios import log_df, pd, Destino, calcula_destinos, devulvem3
 from buscador_aloj import buscar_alojamiento_por_criterios
 
