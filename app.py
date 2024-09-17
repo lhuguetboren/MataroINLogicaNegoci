@@ -16,7 +16,7 @@ from datetime import datetime
 from securityUsers import User, users, save_users, public_key
 
 import CalculosNegocios
-from models import session, Alojamientos, Cookies, Paises#, Dispositiv
+from models import session, Alojamientos, Cookies, Paises, Dispositivos,obtener_datos_hotel2
 from CalculosNegocios import log_df, pd, Destino, calcula_destinos, devulvem3
 from buscador_aloj import buscar_alojamiento_por_criterios
 
@@ -488,6 +488,20 @@ def request_entity_too_large(error):
     :return: Mensaje de error y código de estado 413
     """
     return "El archivo es demasiado grande, el límite es de 16 MB.", 413
+
+#BLOQUE RECUPERACION INFORMACION
+
+@app.route('/info/hotel/<id>')
+def info_hotel(id):
+    """
+    Calcula los destinos usando la lógica de negocios definida en CalculosNegocios.
+
+    :return: Resultado de la función calcula_destinos de CalculosNegocios.
+    """
+    return jsonify(obtener_datos_hotel2(id))
+
+
+
 
 # Bloque de lógica de negocios
 

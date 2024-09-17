@@ -4,7 +4,8 @@ from sqlalchemy import create_engine, Column, Integer, String, DateTime, Foreign
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship, aliased
 from decimal import Decimal
-from models import Alojamientos, Alojamientos_fechas, Localidades, Hoteles, Apartamentos, Campings, Servicios, Hostales, Alojamientos_servicios, FechasAlojamientos, session
+
+from models import Alojamientos, AlojamientosFechas, Localidades, Hoteles, Apartamentos, Campings, Servicios, Hostales, AlojamientosServicios, FechasAlojamientos, session
 from datetime import datetime, date
 
 

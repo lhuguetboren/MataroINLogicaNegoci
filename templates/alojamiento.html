@@ -69,12 +69,70 @@
     </section>
     <!-- Sección de presentación con imágenes cambiantes y formulario de búsqueda -->
 
+
+    <div id="hotel-info">
+        <!-- Aquí se mostrará la información del hotel -->
+    </div>
 </main>
 {% endblock %}
 {% block content2 %}
 <script>
     function main() {
-        CargaAlojamiento('{{ id }}');
+        //CargaAlojamiento('{{ id }}');
+
+        function obtenerDatosHotel(id) {
+    // Construimos la URL con el ID del hotel
+    const url = `/info/hotel/${id}`;
+
+    // Hacemos la solicitud GET al servidor
+    fetch(url)
+        .then(response => {
+            // Comprobamos si la respuesta es correcta (status 200-299)
+            if (!response.ok) {
+                throw new Error(`Error en la solicitud: ${response.status}`);
+            }
+            // Parseamos el cuerpo de la respuesta como JSON
+            return response.json();
+        })
+        .then(data => {
+            // Aquí manejamos los datos JSON recibidos del servidor
+            console.log("Datos del hotel:", data);
+
+            // Por ejemplo, podrías mostrar los datos en el HTML
+            mostrarDatosHotel(data);
+        })
+        .catch(error => {
+            // Manejamos cualquier error que haya ocurrido
+            console.error("Hubo un problema con la solicitud Fetch:", error);
+        });
+}
+
+// Función para mostrar los datos del hotel en el HTML (opcional)
+function mostrarDatosHotel(data) {
+    // Supongamos que tenemos un div con id "hotel-info" en el HTML
+    const hotelInfoDiv = document.getElementById("hotel-info");
+
+    // Limpiamos el contenido previo
+    hotelInfoDiv.innerHTML = "";
+
+    // Mostramos los datos (aquí puedes personalizar el contenido según la estructura de 'data')
+    hotelInfoDiv.innerHTML += `<h2>${data.alojamiento.nombre} (ID: ${data.alojamiento.id})</h2>`;
+    hotelInfoDiv.innerHTML += `<p>Tipo: ${data.alojamiento.tipo}</p>`;
+    
+    if (data.fechas.fecha_inicio && data.fechas.fecha_fin) {
+        hotelInfoDiv.innerHTML += `<p>Fechas: ${data.fechas.fecha_inicio} - ${data.fechas.fecha_fin}</p>`;
+    }
+    
+    if (data.servicio.nombre) {
+        hotelInfoDiv.innerHTML += `<p>Servicios: ${data.servicio.nombre}</p>`;
+    }
+
+    if (data.hotel.nombre) {
+        hotelInfoDiv.innerHTML += `<p>Hotel: ${data.hotel.nombre}</p>`;
+    }
+}
+
+obtenerDatosHotel('{{ id }}');
 
         setTimeout(function () {
             $(document).ready(function () {

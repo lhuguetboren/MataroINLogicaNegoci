@@ -4,6 +4,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime, time
 import pytz
 import pydoc
+import json
 
 def get_current_time_in_spain():
     """
@@ -15,7 +16,8 @@ def get_current_time_in_spain():
     return datetime.now(spain_tz)
 
 # Configuración de la conexión a la base de datos
-engine = create_engine("mysql+mysqlconnector://flask:flask2024@localhost/mataroin", echo=False)
+#engine = create_engine("mysql+mysqlconnector://flask:flask2024@localhost/mataroin", echo=False)
+engine = create_engine("mysql+mysqlconnector://flask:flask2024@13.60.205.202/mataroin", echo=False)
 
 # Declarative base
 Base = declarative_base()
@@ -320,7 +322,7 @@ class Servicios(Base):
     def __repr__(self):
         return f"<Los servicios disponibles para este alojamiento son: '{self.nombre}')>"
 
-class Alojamientos_servicios(Base):
+class AlojamientosServicios(Base):
     """
     Modelo de datos para la tabla 'alojamientos_servicios'.
     """
@@ -333,11 +335,11 @@ class Alojamientos_servicios(Base):
     f_mod = Column(DateTime)
     f_elim = Column(DateTime)
 
-class Alojamientos_fechas(Base):
+class AlojamientosFechas(Base):
     """
     Modelo de datos para la tabla 'alojamientos_fechas'.
     """
-    __tablename__ = 'alojamientos_fechas'
+    __tablename__ = 'alojamientosfechas'
     id = Column(Integer, ForeignKey('alojamientos.id'), primary_key=True)
     id_alojamiento = Column(Integer, ForeignKey('alojamientos.id'))
     mes = Column(String(45))
@@ -347,7 +349,7 @@ class Alojamientos_fechas(Base):
     f_crea = Column(DateTime)
     f_mod = Column(DateTime)
     f_elim = Column(DateTime)
-    precios = Column(Numeric(10, 2))
+    #precios = Column(Numeric(10, 2))
 
     def __repr__(self):
         return f" Se dispone de {self.libresMes} habitaciones libres para la fecha {self.fechasMes} de {self.mes} y su precio es {self.precios}>"
@@ -379,3 +381,40 @@ Base.metadata.create_all(engine)
 # Creación de la sesión
 Session = sessionmaker(bind=engine)
 session = Session()
+
+#conusltas
+def obtener_datos_hotel2(nombre_hotel):
+    # Realizamos la consulta usando SQLAlchemy ORM
+    result = (
+        session.query(Alojamientos, AlojamientosFechas, AlojamientosServicios, Servicios, Hoteles)
+        .join(AlojamientosFechas, AlojamientosFechas.id_alojamiento == Alojamientos.id, isouter=True)
+        .join(AlojamientosServicios, AlojamientosServicios.id_alojamientos == Alojamientos.id, isouter=True)
+        .join(Servicios, Servicios.id == AlojamientosServicios.id_servicios, isouter=True)
+        .join(Hoteles, Hoteles.id == Alojamientos.id, isouter=True)
+        .filter(Alojamientos.tipo == 'hotel', Alojamientos.nombre == nombre_hotel)
+        .all()
+    )
+
+    # Convertimos el resultado en un diccionario
+    data = []
+    for alojamiento, fecha, servicio_alojamiento, servicio, hotel in result:
+        data.append({
+            "alojamiento": {
+                "id": alojamiento.id,
+                "nombre": alojamiento.nombre,
+                "tipo": alojamiento.tipo,
+            },
+            "servicio": {
+                "id": servicio.id if servicio else None,
+                "nombre": servicio.nombre if servicio else None
+            },
+            "hotel": {
+                "id": hotel.id if hotel else None,
+                "nombre": alojamiento.nombre if hotel else None
+            }
+        })
+
+    # Convertimos el diccionario a JSON
+    json_data = json.dumps(data, default=str)
+    
+    return json_data
