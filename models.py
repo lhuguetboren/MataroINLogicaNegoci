@@ -397,24 +397,27 @@ def obtener_datos_hotel2(nombre_hotel):
 
     # Convertimos el resultado en un diccionario
     data = []
-    for alojamiento, fecha, servicio_alojamiento, servicio, hotel in result:
+    #bucle servicios
+    #bucle fechas
+    #recuperar imagen
+    for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
         data.append({
-            "alojamiento": {
-                "id": alojamiento.id,
                 "nombre": alojamiento.nombre,
-                "tipo": alojamiento.tipo,
-            },
-            "servicio": {
-                "id": servicio.id if servicio else None,
-                "nombre": servicio.nombre if servicio else None
-            },
-            "hotel": {
-                "id": hotel.id if hotel else None,
-                "nombre": alojamiento.nombre if hotel else None
+                "direccion": alojamiento.direccion,
+                "imagen":"",#recuperar imagen
+                "descripcion": alojamiento.descripcion,
+                "correo":alojamiento.correo,
+                "telefono":alojamiento.telefono,
+                "servicios":[],
+                "fechas":[], #recuperar meses
+                "precio":100 #recuperar precio (crear campo en alojamientos fechas)
             }
-        })
+        )
 
     # Convertimos el diccionario a JSON
-    json_data = json.dumps(data, default=str)
+    json_data = json.dumps(data[0], default=str)
     
     return json_data
+
+
+obtener_datos_hotel2('Hotel Barcelona')

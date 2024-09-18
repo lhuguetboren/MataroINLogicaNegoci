@@ -252,6 +252,9 @@ for (let i = 2; i <= 4; i++) {
 }
 controlCargado=1;
 }
+
+
+
 //Al actualizar el desplegable actualizo los datos de la tabla
 function ActualizarTable(mes,posicion)
 {

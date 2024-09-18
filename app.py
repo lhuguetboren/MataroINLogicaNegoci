@@ -494,11 +494,11 @@ def request_entity_too_large(error):
 @app.route('/info/hotel/<id>')
 def info_hotel(id):
     """
-    Calcula los destinos usando la lógica de negocios definida en CalculosNegocios.
+    Recupera información del alojamiento
 
-    :return: Resultado de la función calcula_destinos de CalculosNegocios.
+    :return: Datos del hotel
     """
-    return jsonify(obtener_datos_hotel2(id))
+    return (obtener_datos_hotel2(id))
 
 
 

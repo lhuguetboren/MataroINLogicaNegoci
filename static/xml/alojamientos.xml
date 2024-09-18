@@ -8,9 +8,9 @@
             <imagen>../../biblioteca/fotos/poblaciones/img0002.jpg</imagen>
             <servicios>Piscina, WIFI, Gimnasio, Spa</servicios>
             <fechas>
-                <enero>1,2,3,4,5,6,7</enero>
-                <febrero>1,2,3,4,5,6,7</febrero>
-                <marzo>1,2,3,4,5,6,7</marzo>
+                    <enero>1,2,3,4,5,6,7</enero>
+                    <febrero>1,2,3,4,5,6,7</febrero>
+                    <marzo>1,2,3,4,5,6,7</marzo>
             </fechas>
             <fechaxhabitaciones>
                 <enero>85,85,85,85,85,85,85</enero>
