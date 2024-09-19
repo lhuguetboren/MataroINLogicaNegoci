@@ -268,12 +268,14 @@ document.getElementById("fechas").appendChild(crearTable(hotelData,mes,posicion)
 }
 
 //creo la tabla
-function crearTable(hotelData, mes,posicion) {
+function crearTable(hotelData) {
     // Crear el elemento select
     //Primero cojo los datos de fechas, [posicion] me indica el registro, 
     //[mes] el nombre de la clave y [0] el primer elemento de esta clave
-    fechasSeparadas = hotelData.fechas[mes].split(",");
-    hxfSeparadas = hotelData.fechaxhabitaciones[mes].split(",");
+
+    console.log(hotelData.fechas);
+    fechasSeparadas = hotelData.fechas.split(",");
+    hxfSeparadas = hotelData.fechaxhabitaciones.split(",");
     
     //creo los diferentes tags para generar dinamicamente la tabla
     table = document.createElement("table");

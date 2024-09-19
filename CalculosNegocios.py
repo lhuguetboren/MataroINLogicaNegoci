@@ -1,7 +1,7 @@
 import pydoc
 from flask import jsonify
 from datetime import datetime
-from models import session, Alojamientos, Cookies, Paises, Dispositivos, Tags, UsabDatos, UsabRelacion, Destino
+from models import get_db_session, Alojamientos, Cookies, Paises, Dispositivos, Tags, UsabDatos, UsabRelacion, Destino
 from sqlalchemy import desc
 import numpy as np
 import pandas as pd
@@ -41,6 +41,8 @@ def recuperaDatos():
 
     :return: Lista de diccionarios con los datos recuperados.
     """
+    session = get_db_session()
+
     query = (
         session.query(Cookies, Paises, Dispositivos, Tags)
         .outerjoin(Paises, Cookies.id_pais == Paises.id)
@@ -69,6 +71,8 @@ def calculaUsabilidad():
 
     :return: "ok" si la operación se realiza correctamente.
     """
+    session = get_db_session()
+
     ids_usab = session.query(UsabRelacion.id_usab).distinct()
 
     for id_usab in ids_usab:
@@ -102,6 +106,8 @@ def calcular_valor_promedio_destinos(info):
     :param info: Diccionario con la información de los destinos.
     :return: Valor promedio calculado.
     """
+    session = get_db_session()
+
     fecha_actual = datetime.now()
     temporada = info["temporada"]
     tarjetas = info["tarjetas"]
@@ -144,6 +150,8 @@ def devulvem3():
 
     :return: Lista de diccionarios con los tres mejores destinos.
     """
+    session = get_db_session()
+
     consulta = session.query(Destino).order_by(desc(Destino.resultado)).limit(3).all()
     respuesta = []
     for desti in consulta:
@@ -157,6 +165,8 @@ def calcula_destinos():
 
     :return: JSON con el resultado de la operación.
     """
+    session = get_db_session()
+
     destin = session.query(Destino).all()
     for al in destin:
         info = {

@@ -3,6 +3,7 @@
 {% block content %}
 
 <main>
+    <p>Nombre de usuario: {{ current_user.username }}</p>
 <form
     action="javascript:validarClaves(document.getElementById('username').value,document.getElementById('password').value);">
     <h1 id="inic">Inicia Sesión</h1>

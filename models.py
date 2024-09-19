@@ -1,10 +1,17 @@
+from flask_login import UserMixin
 from sqlalchemy import create_engine, Column, Integer, Float, String, DateTime, ForeignKey, desc, UniqueConstraint, Text, Date, Boolean, Numeric, DECIMAL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime, time
+from werkzeug.security import generate_password_hash, check_password_hash
 import pytz
 import pydoc
 import json
+import logging
+
+# Configuración del logging para detectar problemas de conexión
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 def get_current_time_in_spain():
     """
@@ -16,8 +23,12 @@ def get_current_time_in_spain():
     return datetime.now(spain_tz)
 
 # Configuración de la conexión a la base de datos
-#engine = create_engine("mysql+mysqlconnector://flask:flask2024@localhost/mataroin", echo=False)
-engine = create_engine("mysql+mysqlconnector://flask:flask2024@13.60.205.202/mataroin", echo=False)
+try:
+    engine = create_engine("mysql+mysqlconnector://flask:flask2024@13.60.205.202/mataroin", echo=False)
+    logger.info("Conexión a la base de datos establecida correctamente.")
+except Exception as e:
+    logger.error(f"Error al conectar a la base de datos: {e}")
+    raise
 
 # Declarative base
 Base = declarative_base()
@@ -339,7 +350,7 @@ class AlojamientosFechas(Base):
     """
     Modelo de datos para la tabla 'alojamientos_fechas'.
     """
-    __tablename__ = 'alojamientosfechas'
+    __tablename__ = 'alojamientos_fechas'
     id = Column(Integer, ForeignKey('alojamientos.id'), primary_key=True)
     id_alojamiento = Column(Integer, ForeignKey('alojamientos.id'))
     mes = Column(String(45))
@@ -349,7 +360,7 @@ class AlojamientosFechas(Base):
     f_crea = Column(DateTime)
     f_mod = Column(DateTime)
     f_elim = Column(DateTime)
-    #precios = Column(Numeric(10, 2))
+    precios = Column(Numeric(10, 2))
 
     def __repr__(self):
         return f" Se dispone de {self.libresMes} habitaciones libres para la fecha {self.fechasMes} de {self.mes} y su precio es {self.precios}>"
@@ -375,14 +386,68 @@ class FechasAlojamientos(Base):
                 f"fecha={self.fecha}, libres={self.libres}, disponible={self.disponible}, "
                 f"precio={self.precio}, f_crea={self.f_crea}, f_mod={self.f_mod}, f_elim={self.f_elim})>")
 
+
+#conusltas
+
+
+class User(UserMixin, Base):
+    """
+    Modelo de datos para la tabla 'usuarios', que es compatible con Flask-Login.
+    """
+    __tablename__ = 'usuarios'
+
+    id = Column(Integer, primary_key=True)
+    username = Column(String(100), unique=True, nullable=False)
+    password_hash = Column(Text, nullable=False)
+    public_key = Column(Text, nullable=False)  # Almacenar la clave pública
+    private_key = Column(Text, nullable=False)  # Almacenar la clave privada
+
+
+class Cliente(Base):
+    __tablename__ = 'cliente'
+
+    # Definición de las columnas
+    id = Column(Integer, primary_key=True)
+    nombre = Column(String(50), nullable=True)
+    apellido = Column(String(50), nullable=True)
+    telefono = Column(String(15), nullable=True)
+    email = Column(String(30), nullable=True)
+    comentarios = Column(String(240), nullable=True)
+    fecha_nacimiento = Column(Date, nullable=True)
+    direccion = Column(String(50), nullable=True)
+    id_pais = Column(Integer, ForeignKey('paises.id'), nullable=True)  # Clave foránea a la tabla `paises`
+    fecha_entrada = Column(Date, nullable=True)
+    fecha_salida = Column(Date, nullable=True)
+    precio = Column(Float, nullable=True)
+    f_crea = Column(Date, nullable=True)
+    f_elim = Column(Date, nullable=True)
+    f_modif = Column(Date, nullable=True)
+
+class Proveedores(Base):
+    __tablename__ = 'proveedores'
+
+    # Definición de las columnas
+    id = Column(Integer, primary_key=True, autoincrement=True, unique=True)
+    tipo = Column(String(25), nullable=True)
+    nombre = Column(String(50), nullable=True)
+    telefono = Column(String(12), nullable=True)
+    email = Column(String(30), nullable=True)
+    direccion = Column(String(50), nullable=True)
+    comentarios = Column(String(240), nullable=True)
+    f_crea = Column(Date, nullable=True)
+    f_modif = Column(Date, nullable=True)
+    f_elim = Column(Date, nullable=True)
+
 # Creación de las tablas
 Base.metadata.create_all(engine)
 
 # Creación de la sesión
 Session = sessionmaker(bind=engine)
-session = Session()
 
-#conusltas
+def get_db_session():
+    """Crea y retorna una nueva sesión para interactuar con la base de datos."""
+    session = Session()
+    return session
 def obtener_datos_hotel2(nombre_hotel):
     # Realizamos la consulta usando SQLAlchemy ORM
     result = (
@@ -398,7 +463,26 @@ def obtener_datos_hotel2(nombre_hotel):
     # Convertimos el resultado en un diccionario
     data = []
     #bucle servicios
+
+    serviciosA=[]
+    for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
+        serviciosA.append(servicios.nombre)
+
+    cadena1=[]
+    cadena2=[]
+    cadena3=[]
+
     #bucle fechas
+    for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
+        cadena1.append(fecha.fechasMes.replace("{","").replace("}",""))
+        cadena2.append(fecha.libresMes.replace("{","").replace("}",""))
+        cadena3.append(fecha.mes)
+
+
+    cadena1 = list(dict.fromkeys(cadena1))
+    cadena2 = list(dict.fromkeys(cadena2))
+    cadena3 = list(dict.fromkeys(cadena3))
+
     #recuperar imagen
     for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
         data.append({
@@ -408,16 +492,21 @@ def obtener_datos_hotel2(nombre_hotel):
                 "descripcion": alojamiento.descripcion,
                 "correo":alojamiento.correo,
                 "telefono":alojamiento.telefono,
-                "servicios":[],
-                "fechas":[], #recuperar meses
-                "precio":100 #recuperar precio (crear campo en alojamientos fechas)
+                "servicios":",".join(serviciosA),
+                "meses":",".join(cadena3),
+                "fechas":",".join(cadena1),
+                "fechaxhabitaciones":",".join(cadena2),
+                "precio":fecha.precios, #recuperar precio (crear campo en alojamientos fechas),
+                "estrella":hotel.estrellas
+
+       
             }
         )
 
     # Convertimos el diccionario a JSON
     json_data = json.dumps(data[0], default=str)
-    
+    #print(json_data)
     return json_data
 
 
-obtener_datos_hotel2('Hotel Barcelona')
+#(obtener_datos_hotel2('Hotel Barcelona'))

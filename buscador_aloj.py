@@ -5,7 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship, aliased
 from decimal import Decimal
 
-from models import Alojamientos, AlojamientosFechas, Localidades, Hoteles, Apartamentos, Campings, Servicios, Hostales, AlojamientosServicios, FechasAlojamientos, session
+from models import  Alojamientos, AlojamientosFechas, Localidades, Hoteles, Apartamentos, Campings, Servicios, Hostales, AlojamientosServicios, FechasAlojamientos, get_db_session
 from datetime import datetime, date
 
 
@@ -17,6 +17,8 @@ def buscar_alojamiento_por_criterios(criterios_busqueda):
     :return: Lista de diccionarios con los alojamientos que cumplen los criterios de búsqueda.
     """
     # Construir la consulta base
+    session = get_db_session()
+
     query = session.query(
         Alojamientos.tipo,
         Alojamientos.nombre,

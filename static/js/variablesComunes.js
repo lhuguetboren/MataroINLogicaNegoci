@@ -25,7 +25,7 @@ const servicios = new Map([
   ]);
   
 const archivos = [
-    { archivo: "Newsvarter.xml", nombre: "Newsvarter" },
+    { archivo: "Newsletter.xml", nombre: "Newsletter" },
     { archivo: "Feed.xml", nombre: "Feed" },
     { archivo: "SocialMedia.xml", nombre: "SocialMedia" },
     { archivo: "clientes.xml", nombre: "Clientes" },

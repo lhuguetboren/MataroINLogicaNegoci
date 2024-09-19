@@ -4,19 +4,15 @@ import json
 import os
 import socket_1
 from socket_1 import data_storage
-from flask import Flask, render_template, request, redirect, url_for, flash, session, jsonify, send_from_directory
-from flask_login import LoginManager, login_user, logout_user, login_required, current_user
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, send_from_directory
+from flask_login import LoginManager, login_user,current_user
 import pydoc
 
-from cryptography.hazmat.primitives.asymmetric import rsa, padding
-from cryptography.hazmat.primitives import serialization, hashes
-from werkzeug.utils import secure_filename
-from werkzeug.security import generate_password_hash, check_password_hash
+from security import generate_key_pair,encrypt_password,decrypt_password
 from datetime import datetime
-from securityUsers import User, users, save_users, public_key
 
 import CalculosNegocios
-from models import session, Alojamientos, Cookies, Paises, Dispositivos,obtener_datos_hotel2
+from models import get_db_session, User,Alojamientos, Cookies, Paises, Dispositivos,obtener_datos_hotel2
 from CalculosNegocios import log_df, pd, Destino, calcula_destinos, devulvem3
 from buscador_aloj import buscar_alojamiento_por_criterios
 
@@ -24,9 +20,19 @@ from buscador_aloj import buscar_alojamiento_por_criterios
 app = Flask(__name__)
 app.config.from_object('config.Config')
 
-login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+# Configurar Flask-Login
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login'  # Página a la que se redirigirá si no se está autenticado
 
+@login_manager.user_loader
+def load_user(user_id):
+    # Función que carga un usuario a partir de su ID
+    session = get_db_session()
+    try:
+        return session.query(User).get(int(user_id))
+    finally:
+        session.close()
 
 def get_locale():
     """
@@ -37,18 +43,6 @@ def get_locale():
     return request.accept_languages.best_match(['en', 'es', 'fr'])
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    """
-    Carga un usuario basado en su ID.
-
-    :param user_id: ID del usuario
-    :return: Instancia de User si el usuario existe, de lo contrario None.
-    """
-    user_data = users.get(user_id)
-    if user_data:
-        return User(id=user_id, username=user_data['username'], password=user_data['password'])
-    return None
 
 # Lista para almacenar los archivos subidos temporalmente
 uploaded_files = []
@@ -242,56 +236,7 @@ def get_folder_for_file(filename):
     else:
         return app.config['UPLOAD_FOLDER']
 
-# Bloque de login
-@app.route('/admin/login', methods=['GET', 'POST'])
-def login():
-    """
-    Maneja el inicio de sesión de los usuarios.
 
-    :return: Redirige al índice si el login es exitoso, de lo contrario renderiza el formulario de login.
-    """
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        for user_id, user_data in users.items():
-            if user_data['username'] == username and user_data['password'] == password:
-                user = User(id=user_id, username=username, password=user_data['password'])
-                login_user(user)
-                return redirect(url_for('index'))
-        flash('Invalid username or password')
-    return render_template('admin/login.html')
-
-@app.route('/admin/logout')
-@login_required
-def logout():
-    """
-    Maneja el cierre de sesión de los usuarios.
-
-    :return: Redirige al formulario de login.
-    """
-    logout_user()
-    return redirect(url_for('login'))
-
-@app.route('/admin/signup', methods=['GET', 'POST'])
-def signup():
-    """
-    Maneja el registro de nuevos usuarios.
-
-    :return: Redirige al formulario de login si el registro es exitoso, de lo contrario renderiza el formulario de registro.
-    """
-    if request.method == 'POST':
-        username = request.form['username']
-        password = generate_password_hash(request.form['password'])
-        user_id = str(len(users) + 1)
-        users[user_id] = {'username': username, 'password': password}
-        save_users(users, public_key)
-        flash('User registered successfully')
-        return redirect(url_for('login'))
-    return render_template('admin/signup.html')
-
-@app.route('/admin/confirmacion')
-@login_required
-def index():
     """
     Página principal de administración para usuarios autenticados.
 
@@ -723,6 +668,88 @@ def read_socket_data():
     :return: JSON con los datos del socket.
     """
     return jsonify({"datos": socket_1.data_storage})
+
+
+
+
+#bloque login
+# Ruta de inicio de sesión
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        # Obtener los datos del formulario
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Crear una nueva sesión de SQLAlchemy
+        session = get_db_session()
+
+        # Consultar si el usuario existe en la base de datos
+        user = session.query(User).filter_by(username=username).first()
+
+        if user:
+            # Descifrar la contraseña almacenada usando la clave privada
+            try:
+                decrypted_password = decrypt_password(user.private_key, user.password_hash)
+                
+                # Verificar si la contraseña descifrada coincide con la proporcionada
+                if decrypted_password == password:
+                    # Autenticar al usuario usando Flask-Login
+                    login_user(user)
+                    session.close()  # Cierra la sesión de SQLAlchemy
+                    return redirect(url_for('loginhtml'))  # Redirigir al home
+                else:
+                    flash('Contraseña incorrecta.', 'danger')
+            except Exception as e:
+                flash('Error al procesar la autenticación.', 'danger')
+                print(f"Error: {e}")
+        else:
+            flash('El usuario no existe.', 'danger')
+
+        session.close()  # Cierra la sesión de SQLAlchemy
+
+    return render_template('admin2/login.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Obtener datos del formulario
+        username = request.form['username']
+        password = request.form['password']
+        
+        # Crear una nueva sesión de SQLAlchemy
+        session = get_db_session()
+
+        # Verificar si el usuario ya existe
+        existing_user = session.query(User).filter_by(username=username).first()
+        if existing_user:
+            flash('Este nombre de usuario ya existe, elige otro.')
+            session.close()
+            return redirect(url_for('register'))
+
+        # Generar par de claves pública y privada
+        private_key_pem, public_key_pem = generate_key_pair()
+
+        # Cifrar la contraseña usando la clave pública
+        encrypted_password = encrypt_password(public_key_pem, password)
+
+        # Crear un nuevo usuario con la contraseña cifrada y las claves
+        new_user = User(
+            username=username,
+            password_hash=encrypted_password,
+            public_key=public_key_pem,
+            private_key=private_key_pem
+        )
+
+        session.add(new_user)
+        session.commit()
+        session.close()
+
+        flash('Usuario creado con éxito. Ahora puedes iniciar sesión.')
+        return redirect(url_for('login'))
+
+    return render_template('admin2/register.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

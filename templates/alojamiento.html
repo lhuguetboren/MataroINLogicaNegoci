@@ -136,7 +136,7 @@ let cadena = "";
 
 for (let i = 0; i < asservicios.length; i++) {
 
-  cadena += `<img id="`+asservicios[i].trim()+`" class="icono" src="static/imagenes/`+serviciosIMG.get(asservicios[i].trim())+`" width="20px" height="20px"
+  cadena += `<img id="`+asservicios[i].trim()+`" class="icono" src="/static/`+serviciosIMG.get(asservicios[i].trim())+`" width="20px" height="20px"
   onmouseover="mostrarMensaje (this.id)" onmouseout="ocultarMensaje()">`
 }
 
@@ -157,21 +157,23 @@ document.getElementById("fechas").innerHTML = '<h2>Fechas</h2>';
 //Obtengo del objeto javascript las cadena de los meses
 //creo un array temporal
 var arrayMeses = []
-let claves= Object.keys(hotelData.fechas)
+/*let claves= Object.keys(hotelData.fechas)
 for (i = 0; i <claves.length; i++) {
     //inserto en el array la cadena del mes, la i recorre los registros existentes, el 0 indica que es el primer elemento de fecha
     arrayMeses.push(claves[i]);
-}
+}*/
+arrayMeses=hotelData.meses.split(',');
+
 console.log(arrayMeses)
 //inserto un child en el div fechas con un desplegable con los meses existentes
 document.getElementById("fechas").appendChild(crearSelect(arrayMeses));
 //inserto un child en el div fechas con los datos de dias y plaas libres de enero
-document.getElementById("fechas").appendChild(crearTable(hotelData,"enero",0));
+document.getElementById("fechas").appendChild(crearTable(hotelData,0));
 
 
 
 // Definir el valor constante
-let Precio = hotelData.attributes.precio;
+let Precio = hotelData.precio;
 document.getElementById("precio").innerHTML = '<h2>Precios</h2>';
 document.getElementById("precio").innerHTML += '<p> El precio de una plaza por persona es ' + Precio + '</p><h3>Ofertas</h3>';
 document.getElementById("precio").innerHTML += '<p><div style="width:35%;float:left;">Descuento</div>';
@@ -180,7 +182,6 @@ document.getElementById("precio").innerHTML += '<div style="width:25%;float:left
 
 
 let objetoOfertas = document.getElementById("ofertas")
-document.getElementById("servicios").innerHTML += cadena;
 
 // Bucle que va desde 1 hasta 4
 for (let i = 2; i <= 4; i++) {
@@ -245,7 +246,4 @@ controlCargado=1;
                 });
             }
             </script>
-<!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDud_q1oM6OT8QRQCKGjHYO4KnKSmNiL0M&callback=initMap" async
-    defer>
-</scrip-->
 {% endblock %}
