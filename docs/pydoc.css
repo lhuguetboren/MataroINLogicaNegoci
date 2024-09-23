@@ -1,0 +1,88 @@
+body {
+    background-color: #f0f0f8;
+    color: black;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+a {
+    color: #c00000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #602000;
+}
+
+h1, h2, h3 {
+    color: #c00000;
+    margin-bottom: 10px;
+}
+
+pre {
+    background-color: #e0e0ee;
+    padding: 10px;
+    border: 1px solid #808080;
+    white-space: pre-wrap;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+}
+
+.heading {
+    background-color: #f8f8ff;
+    border: 1px solid #ccc;
+}
+
+.heading-text {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.decor {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+}
+
+.title-decor {
+    background-color: #f0f0f0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.code {
+    font-family: "Courier New", monospace;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+.singlecolumn {
+    width: 70%;
+}
+
+.multicolumn {
+    width: 25%;
+    padding: 10px;
+}
+
+.bigsection {
+    font-size: 1.5em;
+    color: #c00000;
+    margin-top: 20px;
+}

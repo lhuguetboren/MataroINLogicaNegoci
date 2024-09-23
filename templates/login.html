@@ -3,19 +3,48 @@
 {% block content %}
 
 <main>
-    <p>Nombre de usuario: {{ current_user.username }}</p>
-<form
-    action="javascript:validarClaves(document.getElementById('username').value,document.getElementById('password').value);">
-    <h1 id="inic">Inicia Sesión</h1>
-    <input id="username" placeholder="Usuario" maxlength="8" style="border-radius: 15px;clear:both;width:80%;" />
-    <br>
-    <input type="password" placeholder="Contraseña" id="password" type="text" style="border-radius: 15px;width:80%;" />
-    <br>
+    {% if current_user.is_authenticated %}
+        <p>Nombre de usuario: {{ current_user.username }}</p>
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        <hr>
 
-    <input type="submit" value="Login" style="border-radius: 25px;" />
-    <hr>
 
-</form>
+     {% else %}   
+
+    <div class="">
+        <h2>Iniciar Sesión</h2>
+        
+        <!-- Mostrar mensajes flash (errores) si existen -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="error-message">
+                    {% for message in messages %}
+                        <p>{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST">
+            <div class="">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    
+        <!-- Enlace para el registro (si tienes una página de registro) -->
+        <div class="">
+            <p>¿No tienes una cuenta? <a href="{{ url_for('register') }}">Regístrate aquí</a></p>
+        </div>
+    </div>
+    {% endif %}
 </main>
 {% endblock %}
 {% block content2 %}

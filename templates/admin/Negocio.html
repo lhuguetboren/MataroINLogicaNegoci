@@ -1,75 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid con 30 elementos y Enlaces</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            min-height: 250px;
+        }
+
+        .progress {
+            height: 20px;
+        }
+
+        .progress-bar {
+            font-size: 1em;
+            line-height: 20px;
+        }
+
+        #json-editor {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center my-4">Consecució dels objectius del curs</h1>
+    <div class="row">
+    <div class="col-8"><p>El fil conductor del curs ha estat la creació de una aplicació web per una agència de viatges. 
+Tots els moduls formatius s'han orientat a dotar dels recursos necesaris a la aplicació tal com si fos un projecte real. </p>
+<img src="/static/imagenes/logoNEGATIVO.png" class="img-fluid" style="width:80%;margin: auto;"/>
+<br><p>S'han treballat les diverses tècniques de gestió 
+(Gestió de projectes web -Agile-,  Gestió de projectes d'aplicacions), Usabilitat i Accesibilitat, 
+les tecnologies treballades durant aquests mesos (HTML, CSS, javascript, JQuery, Python, Mysql) i el desenvolupament i desplegament 
+de les aplicacions web en el Cloud. </p>
+<p>En la definició del projecte es van definir <span id="projectes"></span> objectius que utilitzen més de un dels objectius formatius 
+    i on s'ha assolit un <span id="ponderacio"></span>%</p>
+<p>Els alumnes han desmostrat, treballant en equip, orientarse als objectius. Potser no hem aconsseguit el 100 % pero si una experiència
+    valuosa per poder afegir valor als seus llocs de treball.
+</p>
+
+<p>A continuació s'enumeren els 18 objectius plantejats amb una petita descripció, el grau d'assoliment,
+    l´accès a les diverses url i els punts que faltarien per poder establir com la finalització del mateix. 
+    La raó bàsica del no finalització cal adreçarla al professor i a la forta càrrega de contingut.
+</p>
+
+    </div>
+    <div class="col-4" id="titulo-container"></div>
+
+        <!-- Elementos generados dinámicamente aquí -->
+    </div>
+    <div class="row" id="element-container">
+        <!-- Elementos generados dinámicamente aquí -->
+    </div>
+
+    <!-- Editor de JSON para modificar el contenido de los elementos -->
+    <h2 class="my-4">Editor de Contenido</h2>
+    <textarea id="json-editor" class="form-control"></textarea>
+    <button class="btn btn-primary my-2" onclick="actualizarContenido()">Actualizar Contenido</button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Contenido inicial en formato JSON para los 30 elementos
+
+    const contenidoInicial = { 
+    "elementos": [
+        {
+            "titulo": "Home",
+            "texto": "Pàgina de presentació amb un CSS realitzada amb criteris semàntics i ús de javascript, jquery i elements multimèdia.",
+            "porcentaje": 95,
+            "enlace": "/home",
+            "descripcion_enlace": "Home",
+            "falta": "Ajustos en cercador i presentació de resultats, homogeneïtzar botons en el menú superior i menú inferior."
+        },
+        {
+            "titulo": "Destí",
+            "texto": "Pàgina que presenta els destins ordenats pels criteris de valoració a partir de la seva oferta. Permet ampliar la informació de cadascun d'ells indicant els allotjaments existents, la informació de la localitat i el temps meteorològic previst.",
+            "porcentaje": 60,
+            "enlace": "/destinos",
+            "descripcion_enlace": "Menú destí",
+            "falta": "Crear l'endpoint sobre les dades existents a les taules destí (dades base) i destins (dades calculades)."
+        },
+        {
+            "titulo": "Ofertes",
+            "texto": "Pàgina que presenta els allotjaments ordenats per diferents àmbits (criteris d'usabilitat). Aquesta sortida permetria accedir directament a l'allotjament seleccionat.",
+            "porcentaje": 40,
+            "enlace": "/ofertas",
+            "descripcion_enlace": "Navegació ofertes",
+            "falta": "Generar un endpoint que generi un JSON segons els diferents àmbits d'usabilitat perquè es visualitzin els allotjaments amb més valor en un àmbit (per exemple, platges)."
+        },
+        {
+            "titulo": "Calendari",
+            "texto": "Pàgina on es poden veure les diferents activitats, ofertes d'oci o qualsevol informació recollida directament dels proveïdors, organitzada per dies, setmanes o mesos.",
+            "porcentaje": 20,
+            "enlace": "/calendario",
+            "descripcion_enlace": "Navegació calendari",
+            "falta": "Creació de taula MySQL per incorporar esdeveniments destacats per data. Modificar el JQuery base per incorporar la informació."
+        },
+        {
+            "titulo": "Inici de sessió",
+            "texto": "Autenticació segura mitjançant ús d'autenticació per als usuaris de la intranet de MataroIN.",
+            "porcentaje": 80,
+            "enlace": "/login",
+            "descripcion_enlace": "Navegació inici de sessió",
+            "falta": "Pàgines personalitzades amb edició de dades de clients i proveïdors."
+        },
+        {
+            "titulo": "Informació allotjament",
+            "texto": "Accés a la informació completa de l'allotjament amb informació estàtica i dinàmica (dates lliures, ofertes de preus) per a cadascuna de les ofertes.",
+            "porcentaje": 90,
+            "enlace": "/home",
+            "descripcion_enlace": "Navegació info allotjament",
+            "falta": "Revisar les icones de serveis i la maquetació general, utilitzar l'id de l'allotjament en lloc del nom de l'hotel."
+        },
+        {
+            "titulo": "Blog",
+            "texto": "Continguts referenciats als diferents àmbits seleccionats per l'empresa.",
+            "porcentaje": 75,
+            "enlace": "/blog/id",
+            "descripcion_enlace": "Navegació blog",
+            "falta": "Creació d'una taula a la BBDD i CRUD de les entrades del blog i tags."
+        },
+        {
+            "titulo": "Biblioteca",
+            "texto": "Pàgina per visualitzar tots els recursos multimèdia de l'oferta. Des de la intranet es pot gestionar (CRUD) tots els seus elements.",
+            "porcentaje": 90,
+            "enlace": "/videos/vacio",
+            "descripcion_enlace": "Navegació vídeos biblioteca",
+            "falta": "Incorporar les imatges i els fulletons."
+        },
+        {
+            "titulo": "Transports",
+            "texto": "Pàgina d'informació per al trasllat entre Barcelona i els municipis. Mitjançant la selecció de localitats es poden trobar horaris i preus.",
+            "porcentaje": 50,
+            "enlace": "/transportes/",
+            "descripcion_enlace": "Navegació horaris transports",
+            "falta": "Crear una taula amb tots els municipis i el mètode de transport. Millorar la selecció d'interès per part del client."
+        },
+        {
+            "titulo": "Traducció",
+            "texto": "Traducció multillenguatge de l'aplicació web mitjançant l'ús de la llibreria i18n.",
+            "porcentaje": 30,
+            "enlace": "/traduccion",
+            "descripcion_enlace": "Traducció",
+            "falta": "Finalitzar la traducció de la resta de pàgines de l'aplicació."
+        },
+        {
+            "titulo": "CRUD Biblioteca",
+            "texto": "Gestió de tot el material multimèdia de l'empresa. Amb possibilitat d'incloure, eliminar o marcar qualsevol d'aquests elements.",
+            "porcentaje": 95,
+            "enlace": "/admin/Biblioteca_gest",
+            "descripcion_enlace": "Gestió arxius biblioteca",
+            "falta": ""
+        },
+        {
+            "titulo": "Anàlisi de l'activitat",
+            "texto": "Explotació de les dades recollides durant l'accés de clients, amb especial atenció a l'origen dels visitants i als interessos mostrats durant la seva navegació.",
+            "porcentaje": 60,
+            "enlace": "/admin/guarda_cookies",
+            "descripcion_enlace": "Cookies amb activitats",
+            "falta": "Generació mitjançant cookies i recollida posterior de la interacció dels usuaris amb el web, col·locant els diferents punts de control a les aplicacions."
+        },
+        {
+            "titulo": "Ponderació de destins",
+            "texto": "Definició de criteris, recollida d'informació i càlcul posterior de cadascun dels allotjaments per disposar d'un rànquing basat en informació objectiva.",
+            "porcentaje": 70,
+            "enlace": "/admin/calcula_destinos",
+            "descripcion_enlace": "Calcula destins",
+            "falta": "Endpoint per a la sortida i formulari per a la recollida de dades."
+        },
+        {
+            "titulo": "Ponderació d'usabilitat",
+            "texto": "Definició d'àmbits (platja, oci, gastronomia...) per a cadascun dels allotjaments. Aquesta informació recollida pels nostres treballadors permet disposar de rànquings en els diferents àmbits que són utilitzats en el càlcul de destins, les ofertes i en la cerca general.",
+            "porcentaje": 50,
+            "enlace": "/admin/calcula_usabilidad",
+            "descripcion_enlace": "Calcula usabilitat",
+            "falta": "Generació d'un formulari per a la recollida de dades i sortides estadístiques amb la informació agregada."
+        },
+        {
+            "titulo": "Cerca d'allotjaments",
+            "texto": "Cerca avançada d'allotjaments i presentació de llistats ordenats per criteris d'usabilitat, preu, dates, etc.",
+            "porcentaje": 90,
+            "enlace": "/admin/buscar",
+            "descripcion_enlace": "Cercar",
+            "falta": "Millora en la presentació de llistats i interactivitat en el filtratge."
+        },
+        {
+            "titulo": "Reserva",
+            "texto": "Reserva per a tots els tipus d'allotjaments, incloent-hi el pagament segur i la comunicació amb el client durant tot el procés.",
+            "porcentaje": 30,
+            "enlace": "/admin/reservar",
+            "descripcion_enlace": "Reservar",
+            "falta": "Visualització web del procés, adaptació de les taules de la BBDD."
+        },
+        {
+            "titulo": "Traçabilitat dels clients",
+            "texto": "Aplicació per al control de l'arribada i sortida dels clients. Es disposaria de la informació en temps real de la localització dels mateixos mitjançant la comunicació amb diferents agents de transport (Uber, taxi, serveis dels hotels).",
+            "porcentaje": 30,
+            "enlace": "/admin/read_socket_data/",
+            "descripcion_enlace": "Pila amb traçabilitat",
+            "falta": "Visualització"
+        },
+        {
+            "titulo": "ChatBot",
+            "texto": "ChatBot amb AI per millorar la comunicació amb el client des de la pàgina web. Gravació de les converses per a la millora del model i propostes directes per a la realització de reserves a partir de la informació recollida.",
+            "porcentaje": 80,
+            "enlace": "/admin/read_socket_data/",
+            "descripcion_enlace": "Pila amb traçabilitat",
+            "falta": "Entrenament del model"
+        }
+    ]
+}
 
 
-{% block content %}
-<h2>Páginas estáticas</h2>
+    const contenidoInicialcast = {
+  "elementos": [
+    {
+      "titulo": "Home",
+      "texto": "Página de presentación con un CSS realizada con criterios semánticos y uso de javascript, jquery y elementos multimedia.",
+      "porcentaje": 80,
+      "enlace": "/home",
+      "descripcion_enlace": "Home",
+      "falta": "Ajustes en buscador y presentación resultados, homogeneizar botones en menu superior y menú inferior."
+    },
+    {
+      "titulo": "Destino",
+      "texto": "Página que presenta los destinos ordenados por los criterios de valoración a partir de su oferta. Permite ampliar la información de cada uno de ellos indicando los alojamientos existentes, la información de la localidad y el tiempo meteorológico previsto.",
+      "porcentaje": 50,
+      "enlace": "/destinos",
+      "descripcion_enlace": "Menú destino",
+      "falta": "Crear el endpoint sobre los datos existentes en las tablas destino (datos base) y destinos (datos calculados)"
+    },
+    {
+      "titulo": "Ofertas",
+      "texto": "Página que presenta los alojamientos ordenados por diferentes ámbitos (criterios usabilidad). Esta salida permitiría acceder directamente al alojamiento seleccionado)",
+      "porcentaje": 20,
+      "enlace": "/ofertas",
+      "descripcion_enlace": "Navegación ofertas",
+      "falta": "Generar un endpoint para que genere un JSON según los diferentes ambito de usabilidad para que se visualicen los alojamientos con mayor valor en un ámbito (por ejemplo playas)"
+    },
+    {
+      "titulo": "Calendario",
+      "texto": "Página en la que por dias, semanas o meses se visualiza las diferentes actividades, ofertas de ocio o cualquier información recogida directamente de los proveedores.",
+      "porcentaje": 20,
+      "enlace": "/calendario",
+      "descripcion_enlace": "Navegación calendario",
+      "falta": "Creación tabla Mysql para incorporar hechos reseñables por fecha.  Modificar el JQuery base para incoporar la información."
+    },
+    {
+      "titulo": "Login",
+      "texto": "Incorporado autentiación segura mediante uso de autentificación para los usuarios de la intranet de MataroIN",
+      "porcentaje": 70,
+      "enlace": "/login",
+      "descripcion_enlace": "Navegación login",
+      "falta": "Páginas personalizadas con edición de los datos de clientes y proveedores."
+    },
+    {
+      "titulo": "Información alojamiento",
+      "texto": "Acceso a la información completa del alojamiento con información estática y dinámica (fechas libres, ofertas de precios) para cada una de las ofertas.",
+      "porcentaje": 80,
+      "enlace": "/home",
+      "descripcion_enlace": "Navegación info alojamiento",
+      "falta": "Revisar los iconos de servicios y la maquetación general, utilizar el id del alojamiento en lugar del nombre del hotel."
+    },
+    {
+      "titulo": "Blog",
+      "texto": "Contenidos referenciados a los difentes ámbitos seleccionados por la empresa.",
+      "porcentaje": 50,
+      "enlace": "/blog/id",
+      "descripcion_enlace": "Navegación blog",
+      "falta": "Creación de una tabla en la BBDD y CRUD de las entradas del blog y tags"
+    },
+    {
+      "titulo": "Biblioteca",
+      "texto": "Página para visualizar todos los recursos multimedia de la oferta. Desde la intranet se puede mantener (CRUD) todos sus elementos.",
+      "porcentaje": 80,
+      "enlace": "/videos/vacio",
+      "descripcion_enlace": "Navegación videos biblioteca",
+      "falta": "Incorporar las imágenes y los folletos"
+    },
+    {
+      "titulo": "Transportes",
+      "texto": "Página de información para el traslado entre Barcelona y los municipios. Mediante la selección de localidades encontrar horarios y precios.",
+      "porcentaje": 50,
+      "enlace": "/transportes/",
+      "descripcion_enlace": "Navegación horarios transportes",
+      "falta": "Crear una tabla con todos los municipios y el método de transporte. Mejorar la selección de interes por parte el cliente."
+    },
+    {
+      "titulo": "Traducción",
+      "texto": "Traducción multiidioma de la aplicación web mediante el uso de la libreria i18n.",
+      "porcentaje": 30,
+      "enlace": "/traduccion",
+      "descripcion_enlace": "Traducción",
+      "falta": "Finalizar la traducción del resto de páginas de la aplicación. "
+    },
+    {
+      "titulo": "CRUD Biblioteca",
+      "texto": "Mantenimiento de todo el material multimedia de la empresa. Con posibilidad de incluir, elimnar o marcar cualquier de dichos elementos.",
+      "porcentaje": 90,
+      "enlace": "/admin/Biblioteca_gest",
+      "descripcion_enlace": "Gestión archivos biblioteca",
+      "falta": ""
+    },
+    {
+      "titulo": "Análisis de la actividad",
+      "texto": "Explotación de los datos recogidos durante el acceso de clientes con especial atención al origen de los visitantes y a los intereses demostrados durante su navegación. ",
+      "porcentaje": 60,
+      "enlace": "/admin/guarda_cookies",
+      "descripcion_enlace": "Cookies con actividades",
+      "falta": "Generación mediante cookies y recogida posterior de la interacción de los usuarios con la web colocando lo diferentes puntos de control en las aplicaciones."
+    },
+    {
+      "titulo": "Ponderación destinos",
+      "texto": "Definición de criterios, recogida de información y cálculo posterior de cada uno de los alojamientos para disponer de un ranking basado en información objetiva.",
+      "porcentaje": 70,
+      "enlace": "/admin/calcula_destinos",
+      "descripcion_enlace": "Calcula destinos",
+      "falta": "Endpoint para la salida y formulario para la recogida de datos."
+    },
+    {
+      "titulo": "Ponderación usuabilidad",
+      "texto": "Definición de ámbitos (playa, ocio, gastronomía ...) para cada uno de los aloamientos. Esta información recogida por nuestros trabajadores permite disponer de rankings en los diferentes ámbitos que son utilizados en el cálculo de destinos, las ofertas y en la búsqueda general.",
+      "porcentaje": 50,
+      "enlace": "/admin/calcula_usabilidad",
+      "descripcion_enlace": "Calcula usabilidad",
+      "falta": "Generación de un formulario para la recogida de datos y salidas estadísticas con la información agregada."
+    },
+    {
+      "titulo": "Busqueda de alojamientos",
+      "texto": "Búsqueda avanzada de los alojamientos y presentación de listados ordenados por criterios de usabilidad, precio, fechas, etc... ",
+      "porcentaje": 80,
+      "enlace": "/admin/buscar",
+      "descripcion_enlace": "Buscar",
+      "falta": "Mejora en la presentación de listados e interactividad en su filtraje."
+    },
+    {
+      "titulo": "Reserva",
+      "texto": "Reserva para todos los tipos de alojamientos, incluyendo el pago seguro y la comunicación con el cliente durante todo el proceso.",
+      "porcentaje": 30,
+      "enlace": "/admin/reservar",
+      "descripcion_enlace": "Reservar",
+      "falta": "Visualización web del proceso, adaptación de las tablas de la BBDD"
+    },
+    {
+      "titulo": "Trazabilidad de los clientes",
+      "texto": "Aplicación para el control de la llegada y salida de los clientes. Se dispondría de la información on time de la localización de los mismos  mediante al comunicación con diferentes agentes de transporte (uber, taxi,servicios de los hoteles).",
+      "porcentaje": 30,
+      "enlace": "/admin/read_socket_data/",
+      "descripcion_enlace": "Pila con trazabilidad",
+      "falta": "Visualización"
+    },
+    {
+      "titulo": "ChatBot",
+      "texto": "ChatBot con AI para mejorar la comunicación con el cliente desde la página web. Grabación de las conversaciones para la mejora del modelo y propuestas directas para la realización de reservas a partir de la información recabada. ",
+      "porcentaje": 80,
+      "enlace": "/admin/read_socket_data/",
+      "descripcion_enlace": "Pila con trazabilidad",
+      "falta": "Entrenamiento del modelo"
+    }
+  ]
+}
+;
 
-<ul>
+    // Función para generar los elementos en el grid
+    function generarElementos(contenido) {
+        const container = document.getElementById('element-container');
+        container.innerHTML = '';  // Limpiar contenido previo
+        const containert = document.getElementById('titulo-container');
+        var iconta=0;
+        var ponde=0;
+        const colDivt = document.createElement('div');
 
-<li><a href="/home">Navegación home - Revisar los estilos para los botones</a></li>
-<li><a href="/destinos">Navegación destino - Generr un endpoint para que genere un json con los destinos por orden según la tabla destinos, que incluya una imagen de la localidad - En la parte inferior crear mediante javascript enlaces para actuaizar un mmapa y el tiempo para cada uno de ellos</a></li>
-<li><a href="/ofertas">Navegación ofertas - Generar un endpoint para que genere un json según la usabilidad para que solo aparezcan las fotos de los municipios y alojamientos con mayor valor en un item (por ejemplo playas) </a></li>
-<li><a href="/calendario">Navegación calendario - Crear una tabla para incoporar hechos reseñables por fecha - Modificar el jquery para que en en lugar del nombre aparezca un texto</a></li>
-<li><a href="/loginhtml">Navegación login - Incoporar el endpoint de login flash</a></li>
-<li><a href="/home">Navegación info alojamiento tras seleccionarlo en búsqueda principal - Revisar los iconos de servicios y la maquetación general</a></li>
-<li><a href="/blog/id">Navegación blog con la posibilidad de editar una entrada en concreto- Crear una tabla en la BBDD con las entradas del blog y permitir acceder a una mediante la url admin/blog/idEntradaBlog</a></li>
-<li><a href="/videos/vacio">Navegación videos biblioteca - Mejorar la visualización</a></li>
-<li><a href="/folletos/vacio">Navegación folletos biblioteca - Adaptar el actual que es el de videos para poder ver los folletos</a></li>
-<li><a href="/imagenes/vacio">Navegación imagenes biblioteca - Adaptar el actual que es el de videos para poder ver los folletos</a></li>
-<li><a href="/transportes/vacio">Navegación horarios transportes a pueblos maresme-Crear un archivo json con los datos de todos los municipios, el método de transporte, los meses, las horas y los precios 
-    para permitir ver los datos durante todo el año - Mejorar la visualización</a></li>
-<li><a href="/clientes/id">Navegación a un cliente mediante un id - Generar un formulario para editar los datos</a></li>
-<li><a href="/proveedores/id">Navegación a un proveedor mediante un id - Generar un formulario para editar los datos</a></li>
-<li><a href="/quienessomos">Navegación a quienes somos</a></li>
-</ul>
-<h2>Traducir</h2>
+        colDivt.innerHTML=`<div style="width:100%;font-weight:700;"><div style="width:50%;float:left;">Objectiu</div><div>Assoliment</div></div>`
+        containert.appendChild(colDivt);
 
-<ul>
-<li><a href="/traduccion">Traducción una página - Traducir alguna página estática</a></li>
-</ul>
-<h2>Logica de negocio: gestión biblioteca, cookies, destinos y usabilidad</h2>
+        contenido.elementos.forEach((elemento, index) => {
+            const colDiv = document.createElement('div');
+            colDiv.classList.add('col-md-4', 'col-sm-12', 'mb-4');
+            const colDivt = document.createElement('div');
+            iconta+=1
+            ponde+=parseInt(elemento.porcentaje);
+            
+            colDivt.innerHTML=`<div style="width:100%"><div style="width:50%;float:left;">${elemento.titulo}</div><div>${elemento.porcentaje}%</div></div>`
+            colDiv.innerHTML = `
+                <div class="card">
+                    <h5 class="card-title">${elemento.titulo}</h5>
+                    <p class="card-text">${elemento.texto}</p>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: ${elemento.porcentaje}%;" aria-valuenow="${elemento.porcentaje}" aria-valuemin="0" aria-valuemax="100">${elemento.porcentaje}%</div>
+                    </div>
+                    <a href="${elemento.enlace}" class="btn btn-link mt-3" target="_blank">${elemento.descripcion_enlace}</a>
+                    <div class="faltas">${elemento.falta}</div>
+                </div>
+            `;
 
-<ul>
-<li><a href="/admin/Biblioteca_gest">Gestion archivos biblioteca - incluir css MataroIN - </a>/</li>
-<li><a href="/admin/guarda_cookies">Genera un archivo con los datos de cookies - incluir css MataroIN - Generar un template para listar los archivos existentes tras cada generacion y un botón para visualizarlo - Incluir un botón para generar el archivo para que el nombre del archivo incluya la fecha de creación (estadistica2024-05-08-json)</a>/</li>
-<li><a href="/admin/recupera_Cookies">Recupera el archivo de  cookies - incluir css MataroIN - Incluir un parametros para seleccionar solo un archivo que visualizar</a>/</li>
-<li><a href="/admin/calcula_destinos">calcula_destinos - endpoint</a></li>
-<li><a href="/admin/recupera_destinos">recupera_destinos- incluir css MataroIN -  implementar una salida que por alojamiento nos indique los diferentes valores de usabilidad, utilizar panda para extraer información más compleja</a></li>
-<li><a href="/admin/guarda_destinos">guarda destinos- incluir css MataroIN - implementar un formulario para incluir los datos de usabilildad por alojamiento</a></li>
-<li><a href="/admin/calcula_usabilidad">calcula usabilidad - endpoint</a></li>
-<li><a href="/admin/recupera_usabilidad">recupera usabilidad - implementar una salida que por alojamiento nos indique los diferentes valores de usabilidad, utilizar panda para extraer información más compleja</a></li>
-<li><a href="/admin/guarda_usabilidad">guarda usabilidad - implementar un formulario para incluir los datos de usabilildad por alojamiento</a></li>
-</ul>
-<h2>Buscar, reserva y comprar</h2>
+            container.appendChild(colDiv);
+            containert.appendChild(colDivt);
 
-<ul>
-<li><a href="/admin/buscar">Utilizar Mataro, URH como nombre y colocar fechas inicial y final - Colocar un botón para el endpoint reservar</a></li>
-<li><a href="/admin/reservar">reservar mediante clases y herencia (crear las clases para apartamento, hostal y camping) - Utilizar la clase usuario para leer desde la tabla de clientes - Devolver la confirmación de la reserva</a></li>
-<li><a href="/admin/pagar">simulacion pago visa - Utilizar encriptación para validar los datos de pago - Enviar la confirmacion al enpoint process_payment</a></li>
-<li><a href="/admin/process_payment">simulacion final de pago (se accede tras la simulacion pago visa) - Reenviar, tras asegurarse que el cliente esta dado de alta como usuario a la página estática cliente donde incoporar el viaje contratado</a></li>
-</ul>
+        });
+        document.getElementById("projectes").innerHTML=iconta;
+        document.getElementById("ponderacio").innerHTML=Math.round(ponde/iconta);
+    }
 
-<h2>Login flask</h2>
+    // Función para actualizar los elementos con el JSON ingresado
+    function actualizarContenido() {
+        const jsonEditor = document.getElementById('json-editor');
+        try {
+            const nuevoContenido = JSON.parse(jsonEditor.value);
+            generarElementos(nuevoContenido);
+        } catch (error) {
+            alert("El formato JSON es incorrecto. Por favor, revísalo.");
+        }
+    }
 
-<ul>
-<li><a href="/admin/login">Login de flask -  Utilizar este endpoint en la página estática loginhtml - Crear accesos a cliente.html o proveedor.html - Crear un formulario con los campos de cliente y proveedor que permita editar los datos -  En el caso de proovedor alojamiento permita editar los campos fechaslibre y habitaciones libres</a></li>
-</ul>
+    // Inicialización
+    document.getElementById('json-editor').value = JSON.stringify(contenidoInicial, null, 4);
+    generarElementos(contenidoInicial);
+</script>
 
-<h2>Pila</h2>
-
-<ul>
-
-<li><a href="/admin/pilasuma/">Añadir elementos a la pila (previamente arrancar aplicaciones socket_1 y pila en modo debug)</a></li>
-<li><a href="/admin/read_socket_data/">Leer elementos de la pila desde la web (revisar que se esta leyendo)</a></li>
-</ul>
-
-
-<h2>Documentacion</h2>
-<ul>
-<li>Documentación - Si realizas cualquiera de las propuestas, documentalo!!</li>
-
-
-</ul>
-
-{%endblock%}
-
-
+</body>
+</html>

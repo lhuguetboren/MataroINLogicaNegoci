@@ -4,10 +4,10 @@ import json
 import os
 import socket_1
 from socket_1 import data_storage
-from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, send_from_directory
-from flask_login import LoginManager, login_user,current_user
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify, send_from_directory,session
+from flask_login import LoginManager, login_user,current_user, logout_user, login_required
 import pydoc
-
+import chat 
 from security import generate_key_pair,encrypt_password,decrypt_password
 from datetime import datetime
 
@@ -19,6 +19,8 @@ from buscador_aloj import buscar_alojamiento_por_criterios
 # Inicialización de la aplicación Flask
 app = Flask(__name__)
 app.config.from_object('config.Config')
+
+
 
 # Configurar Flask-Login
 login_manager = LoginManager()
@@ -119,14 +121,7 @@ def calendario():
     """
     return render_template('calendario.html')
 
-@app.route('/loginhtml')
-def loginhtml():
-    """
-    Renderiza la página de login.
 
-    :return: Template 'login.html'
-    """
-    return render_template('login.html')
 
 @app.route('/alojamiento/<id>')
 def aloajamiento(id):
@@ -237,12 +232,7 @@ def get_folder_for_file(filename):
         return app.config['UPLOAD_FOLDER']
 
 
-    """
-    Página principal de administración para usuarios autenticados.
 
-    :return: Mensaje de bienvenida al usuario.
-    """
-    return f'Hello, {current_user.username}!'
 
 @app.route("/admin/Biblioteca_gest")
 def upload_file():
@@ -539,19 +529,39 @@ def guarda_destinos():
     """
     return "pendiente"
 
-@app.route('/admin/buscar')
+@app.route('/buscar', methods=['POST'])
 def buscar():
     """
     Busca alojamientos basados en criterios predefinidos.
 
     :return: JSON con los alojamientos encontrados.
     """
-    criterios_busqueda = [
-    {"tipo": "hotel"},
-    {"fecha_entrada": "2024-08-01"},
-    {"fecha_salida": "2024-11-12"}]
 
-    criterios_busqueda = [{"nombre": "hotel Masnou"}]
+    # Recoger los datos del formulario
+    decoded_data = request.data.decode('utf-8')
+
+    # Step 2: Parse the JSON string into a Python dictionary
+    parsed_data = json.loads(decoded_data)
+
+    # Now, 'parsed_data' is a Python dictionary
+    # You can access the individual fields like this:
+    localidad_nombre = parsed_data.get('localidad')
+    nombre = parsed_data.get('nombre')
+    inicio = parsed_data.get('inicio')
+    fin = parsed_data.get('fin')
+    estrellas = parsed_data.get('estrellas')
+    preciomax = parsed_data.get('preciomax')
+    preciomin = parsed_data.get('preciomin')
+    personas = parsed_data.get('personas')
+    habitaciones = parsed_data.get('habitaciones')
+    # Procesar los datos o guardarlos, aquí simplemente los retornamos en formato JSON
+    criterios_busqueda = [
+        {'localidad_nombre': localidad_nombre},
+        {'nombre': nombre}
+    ]
+
+    
+  
 
     alojamientos_encontrados = buscar_alojamiento_por_criterios(criterios_busqueda)
 
@@ -674,6 +684,16 @@ def read_socket_data():
 
 #bloque login
 # Ruta de inicio de sesión
+@app.route('/loginhtml')
+def loginhtml():
+    """
+    Renderiza la página de login.
+
+    :return: Template 'login.html'
+    """
+    return render_template('login.html')
+
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -708,7 +728,7 @@ def login():
 
         session.close()  # Cierra la sesión de SQLAlchemy
 
-    return render_template('admin2/login.html')
+    return render_template('login.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -750,6 +770,21 @@ def register():
 
     return render_template('admin2/register.html')
 
+@app.route('/logout')
+@login_required  # Esto asegura que solo los usuarios logueados puedan hacer logout
+def logout():
+    logout_user()  # Cierra la sesión del usuario
+    flash('Has cerrado sesión correctamente.', 'success')
+    return redirect(url_for('home'))  # Redirigir a la página de login
+
+
+# Ruta para manejar las solicitudes del chatbot (AJAX)
+@app.route("/get_response", methods=["POST"])
+def get_response():
+    user_message = request.json.get("message")
+    bot_response = chat.chatbot_response(user_message, chat.user_random)
+    return jsonify({"response": bot_response})
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5500)

@@ -5,7 +5,7 @@ from models import get_db_session, Alojamientos, Cookies, Paises, Dispositivos, 
 from sqlalchemy import desc
 import numpy as np
 import pandas as pd
-from scipy import stats
+
 
 def calcular_media(valores):
     """

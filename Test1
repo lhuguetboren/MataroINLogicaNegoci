@@ -1,0 +1,32 @@
+Escenario:
+Actualmente estamos utilizando el nombre del hotel, deseamos utilizar el id de alojamiento
+
+En la función generateTableFromJson del archivo templates/home.html se genera una tabla con un botón con el id. 
+Se debe modificar la función "iraloj" para que se navegue a través del endpoint alojamiento enviando el id en lugar del nombre
+-->3 puntos
+Modificar la función obtener_datos_hotel2 en app.py para que filtre según el id y presente la información de un camping y un hotel
+-> 5 puntos
+
+
+Puntos adicionales: 
+Dar un estilo a la tabla de resultados de la búsqueda
+Maquetar la pagina alojamiento
+Incluir en el directorio adecuado una foto llamada imagen.jpg y referenciarla correctamente para que se visualice
+Solucionar la visualización del icono del icono que no se ve
+-->2 puntos
+
+Entrega: 
+archivos app.py templates/alojamiento.html modificados
+Captura de pantalla con el hotel masnou de alella y el camping Masnou de Alella
+
+
+Escenario
+
+
+Revisar conjuntamente el archivo index.html y app.py de chatMataró
+Conseguir tener información de las cuatro opciones contempladas (fecha, personas, ocio y alojamiento) en la página del chat
+3 puntos
+Cuando se tenga información de las cuatro opciones solicitar al usuario si quiere buscar alojamientos, si la respuesta es positiva crear un endpoint dentro del archivo py que presente por pantalla un mensaje de agradecimento (no hay que crear templates)
+3 puntos
+Transmitir a la página con una función asincrona los datos que se captura desde las funciones cadenaConv
+4 puntos

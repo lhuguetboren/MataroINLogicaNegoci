@@ -168,10 +168,15 @@ function displayResults(alojamientos) {
 
     setTimeout(function() {
         resultsContainer.innerHTML = "";
+        resultsContainer.style.padding="20px";
         loadingIndicator.style.display = "none";
+        resultsContainer.style.fontSize = "large";
+
 
         if (alojamientos.length === 0) {
             resultsContainer.textContent = "No se encontraron alojamientos que coincidan con los criterios de búsqueda.";
+        
+        
         } else {
             const totalPages = Math.ceil(alojamientos.length / itemsPerPage);
             const startIndex = (currentPage - 1) * itemsPerPage;

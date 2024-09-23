@@ -2,7 +2,7 @@
 <table class="heading">
 <tr class="heading-text decor">
 <td class="title">&nbsp;<br><strong class="title">reserva</strong></td>
-<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/reserva.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/reserva.py</a></td></tr></table>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/GitHub/MataroINLogicaNegoci/reserva.py">/Users/llorenchuguet/Documents/GitHub/MataroINLogicaNegoci/reserva.py</a></td></tr></table>
     <p></p>
 <p>
 <table class="section">
@@ -21,12 +21,10 @@
 <dt class="heading-text"><a href="builtins.html#Exception">builtins.Exception</a>(<a href="builtins.html#BaseException">builtins.BaseException</a>)
 </dt><dd>
 <dl>
-<dt class="heading-text"><a href="reserva.html#BalconingException">BalconingException</a>
-</dt><dt class="heading-text"><a href="reserva.html#HotelException">HotelException</a>
+<dt class="heading-text"><a href="reserva.html#HotelException">HotelException</a>
 </dt><dd>
 <dl>
 <dt class="heading-text"><a href="reserva.html#ReservaException">ReservaException</a>
-</dt><dt class="heading-text"><a href="reserva.html#TransferenciaException">TransferenciaException</a>
 </dt></dl>
 </dd>
 </dl>
@@ -37,11 +35,13 @@
 <dt class="heading-text"><a href="reserva.html#Establecimiento">Establecimiento</a>
 </dt><dd>
 <dl>
-<dt class="heading-text"><a href="reserva.html#Hotel">Hotel</a>
+<dt class="heading-text"><a href="reserva.html#Apartamento">Apartamento</a>
+</dt><dt class="heading-text"><a href="reserva.html#Camping">Camping</a>
+</dt><dt class="heading-text"><a href="reserva.html#Hostal">Hostal</a>
+</dt><dt class="heading-text"><a href="reserva.html#Hotel">Hotel</a>
 </dt></dl>
 </dd>
 <dt class="heading-text"><a href="reserva.html#Habitacion">Habitacion</a>
-</dt><dt class="heading-text"><a href="reserva.html#Localidad">Localidad</a>
 </dt><dt class="heading-text"><a href="reserva.html#SistemaHoteles">SistemaHoteles</a>
 </dt><dt class="heading-text"><a href="reserva.html#Usuario">Usuario</a>
 </dt></dl>
@@ -50,71 +50,88 @@
  <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="BalconingException">class <strong>BalconingException</strong></a>(<a href="builtins.html#Exception">builtins.Exception</a>)</td></tr>
+<td class="section-title" colspan=3>&nbsp;<br><a name="Apartamento">class <strong>Apartamento</strong></a>(<a href="reserva.html#Establecimiento">Establecimiento</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#BalconingException">BalconingException</a>(mensaje:&nbsp;str)<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Apartamento">Apartamento</a>(id_establecimiento:&nbsp;int,&nbsp;nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;categoria:&nbsp;int,&nbsp;num_habitaciones:&nbsp;int)<br>
 &nbsp;<br>
-Excepción&nbsp;específica&nbsp;para&nbsp;usuarios&nbsp;identificados&nbsp;por&nbsp;hacer&nbsp;balconing.<br>
-&nbsp;<br>
-:param&nbsp;mensaje:&nbsp;Mensaje&nbsp;de&nbsp;la&nbsp;excepción.<br>&nbsp;</span></td></tr>
+Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;apartamento.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn"><dl><dt>Method resolution order:</dt>
-<dd><a href="reserva.html#BalconingException">BalconingException</a></dd>
-<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
-<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="reserva.html#Apartamento">Apartamento</a></dd>
+<dd><a href="reserva.html#Establecimiento">Establecimiento</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="BalconingException-__init__"><strong>__init__</strong></a>(self, mensaje: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Apartamento-__init__"><strong>__init__</strong></a>(self, id_establecimiento: int, nombre: str, direccion: str, categoria: int, num_habitaciones: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Apartamento-liberar_habitacion"><strong>liberar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Libera&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;reservadas&nbsp;por&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;libera&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;liberar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;el&nbsp;usuario&nbsp;no&nbsp;tiene&nbsp;suficientes&nbsp;habitaciones&nbsp;reservadas&nbsp;para&nbsp;liberar.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;liberación&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
+
+<dl><dt><a name="Apartamento-mostrar_informacion"><strong>mostrar_informacion</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;del&nbsp;hotel.</span></dd></dl>
+
+<dl><dt><a name="Apartamento-reservar_habitacion"><strong>reservar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Reserva&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;para&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;reservar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;no&nbsp;hay&nbsp;suficientes&nbsp;habitaciones&nbsp;libres.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;reserva&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
 
 <hr>
-Data descriptors defined here:<br>
+Data descriptors inherited from <a href="reserva.html#Establecimiento">Establecimiento</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
 <dl><dt><strong>__weakref__</strong></dt>
 <dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
 </dl>
-<hr>
-Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
-<dl><dt><a name="BalconingException-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> from <a href="builtins.html#type">builtins.type</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
-
-<hr>
-Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
-<dl><dt><a name="BalconingException-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><span class="code">Implement&nbsp;delattr(self,&nbsp;name).</span></dd></dl>
-
-<dl><dt><a name="BalconingException-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><span class="code">Return&nbsp;getattr(self,&nbsp;name).</span></dd></dl>
-
-<dl><dt><a name="BalconingException-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
-
-<dl><dt><a name="BalconingException-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
-
-<dl><dt><a name="BalconingException-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><span class="code">Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</span></dd></dl>
-
-<dl><dt><a name="BalconingException-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
-
-<dl><dt><a name="BalconingException-__str__"><strong>__str__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;str(self).</span></dd></dl>
-
-<dl><dt><a name="BalconingException-add_note"><strong>add_note</strong></a>(...)</dt><dd><span class="code"><a href="builtins.html#Exception">Exception</a>.<a href="#BalconingException-add_note">add_note</a>(note)&nbsp;--<br>
-add&nbsp;a&nbsp;note&nbsp;to&nbsp;the&nbsp;exception</span></dd></dl>
-
-<dl><dt><a name="BalconingException-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><span class="code"><a href="builtins.html#Exception">Exception</a>.<a href="#BalconingException-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
-set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</span></dd></dl>
-
-<hr>
-Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
-<dl><dt><strong>__cause__</strong></dt>
-<dd><span class="code">exception&nbsp;cause</span></dd>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Camping">class <strong>Camping</strong></a>(<a href="reserva.html#Establecimiento">Establecimiento</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Camping">Camping</a>(id_establecimiento:&nbsp;int,&nbsp;nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;categoria:&nbsp;int,&nbsp;num_habitaciones:&nbsp;int)<br>
+&nbsp;<br>
+Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;camping.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="reserva.html#Camping">Camping</a></dd>
+<dd><a href="reserva.html#Establecimiento">Establecimiento</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
-<dl><dt><strong>__context__</strong></dt>
-<dd><span class="code">exception&nbsp;context</span></dd>
-</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Camping-__init__"><strong>__init__</strong></a>(self, id_establecimiento: int, nombre: str, direccion: str, categoria: int, num_habitaciones: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Camping-liberar_habitacion"><strong>liberar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Libera&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;reservadas&nbsp;por&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;libera&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;liberar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;el&nbsp;usuario&nbsp;no&nbsp;tiene&nbsp;suficientes&nbsp;habitaciones&nbsp;reservadas&nbsp;para&nbsp;liberar.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;liberación&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
+
+<dl><dt><a name="Camping-mostrar_informacion"><strong>mostrar_informacion</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;del&nbsp;hotel.</span></dd></dl>
+
+<dl><dt><a name="Camping-reservar_habitacion"><strong>reservar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Reserva&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;para&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;reservar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;no&nbsp;hay&nbsp;suficientes&nbsp;habitaciones&nbsp;libres.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;reserva&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="reserva.html#Establecimiento">Establecimiento</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
 </dl>
-<dl><dt><strong>__suppress_context__</strong></dt>
-</dl>
-<dl><dt><strong>__traceback__</strong></dt>
-</dl>
-<dl><dt><strong>args</strong></dt>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
 </dl>
 </td></tr></table> <p>
 <table class="section">
@@ -122,16 +139,16 @@ Data descriptors inherited from <a href="builtins.html#BaseException">builtins.B
 <td class="section-title" colspan=3>&nbsp;<br><a name="Establecimiento">class <strong>Establecimiento</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Establecimiento">Establecimiento</a>(nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;localidad:&nbsp;str)<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Establecimiento">Establecimiento</a>(id_establecimiento:&nbsp;int,&nbsp;nombre:&nbsp;str,&nbsp;direccion:&nbsp;str)<br>
 &nbsp;<br>
 Clase&nbsp;base&nbsp;para&nbsp;representar&nbsp;un&nbsp;establecimiento.<br>
 &nbsp;<br>
+:param&nbsp;id_establecimiento:&nbsp;ID&nbsp;único&nbsp;del&nbsp;establecimiento.<br>
 :param&nbsp;nombre:&nbsp;Nombre&nbsp;del&nbsp;establecimiento.<br>
-:param&nbsp;direccion:&nbsp;Dirección&nbsp;del&nbsp;establecimiento.<br>
-:param&nbsp;localidad:&nbsp;<a href="#Localidad">Localidad</a>&nbsp;del&nbsp;establecimiento.<br>&nbsp;</span></td></tr>
+:param&nbsp;direccion:&nbsp;Dirección&nbsp;del&nbsp;establecimiento.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn">Methods defined here:<br>
-<dl><dt><a name="Establecimiento-__init__"><strong>__init__</strong></a>(self, nombre: str, direccion: str, localidad: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Establecimiento-__init__"><strong>__init__</strong></a>(self, id_establecimiento: int, nombre: str, direccion: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <dl><dt><a name="Establecimiento-mostrar_informacion"><strong>mostrar_informacion</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;del&nbsp;establecimiento.</span></dd></dl>
 
@@ -149,15 +166,14 @@ Data descriptors defined here:<br>
 <td class="section-title" colspan=3>&nbsp;<br><a name="Habitacion">class <strong>Habitacion</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Habitacion">Habitacion</a>(numero:&nbsp;int,&nbsp;es_suite:&nbsp;bool&nbsp;=&nbsp;False)<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Habitacion">Habitacion</a>(numero:&nbsp;int)<br>
 &nbsp;<br>
 Clase&nbsp;que&nbsp;representa&nbsp;una&nbsp;habitación&nbsp;de&nbsp;hotel.<br>
 &nbsp;<br>
-:param&nbsp;numero:&nbsp;Número&nbsp;de&nbsp;la&nbsp;habitación.<br>
-:param&nbsp;es_suite:&nbsp;Indica&nbsp;si&nbsp;la&nbsp;habitación&nbsp;es&nbsp;una&nbsp;suite.<br>&nbsp;</span></td></tr>
+:param&nbsp;numero:&nbsp;Número&nbsp;de&nbsp;la&nbsp;habitación.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn">Methods defined here:<br>
-<dl><dt><a name="Habitacion-__init__"><strong>__init__</strong></a>(self, numero: int, es_suite: bool = False)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Habitacion-__init__"><strong>__init__</strong></a>(self, numero: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <dl><dt><a name="Habitacion-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;str(self).</span></dd></dl>
 
@@ -165,10 +181,10 @@ Clase&nbsp;que&nbsp;representa&nbsp;una&nbsp;habitación&nbsp;de&nbsp;hotel.<br>
 &nbsp;<br>
 :raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;la&nbsp;habitación&nbsp;ya&nbsp;está&nbsp;libre.</span></dd></dl>
 
-<dl><dt><a name="Habitacion-reservar"><strong>reservar</strong></a>(self, usuario: reserva.Usuario)</dt><dd><span class="code">Reserva&nbsp;la&nbsp;habitación&nbsp;para&nbsp;un&nbsp;usuario.<br>
+<dl><dt><a name="Habitacion-reservar"><strong>reservar</strong></a>(self, usuario: reserva.Usuario, fecha: str)</dt><dd><span class="code">Reserva&nbsp;la&nbsp;habitación&nbsp;para&nbsp;un&nbsp;usuario&nbsp;en&nbsp;una&nbsp;fecha&nbsp;específica.<br>
 &nbsp;<br>
 :param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la&nbsp;habitación.<br>
-:raises&nbsp;<a href="#BalconingException">BalconingException</a>:&nbsp;Si&nbsp;el&nbsp;usuario&nbsp;ha&nbsp;sido&nbsp;identificado&nbsp;por&nbsp;hacer&nbsp;balconing.<br>
+:param&nbsp;fecha:&nbsp;Fecha&nbsp;de&nbsp;la&nbsp;reserva.<br>
 :raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;la&nbsp;habitación&nbsp;ya&nbsp;está&nbsp;reservada.</span></dd></dl>
 
 <hr>
@@ -182,16 +198,59 @@ Data descriptors defined here:<br>
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Hostal">class <strong>Hostal</strong></a>(<a href="reserva.html#Establecimiento">Establecimiento</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Hostal">Hostal</a>(id_establecimiento:&nbsp;int,&nbsp;nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;categoria:&nbsp;int,&nbsp;num_habitaciones:&nbsp;int)<br>
+&nbsp;<br>
+Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;hostal.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="reserva.html#Hostal">Hostal</a></dd>
+<dd><a href="reserva.html#Establecimiento">Establecimiento</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="Hostal-__init__"><strong>__init__</strong></a>(self, id_establecimiento: int, nombre: str, direccion: str, categoria: int, num_habitaciones: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+
+<dl><dt><a name="Hostal-liberar_habitacion"><strong>liberar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Libera&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;reservadas&nbsp;por&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;libera&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;liberar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;el&nbsp;usuario&nbsp;no&nbsp;tiene&nbsp;suficientes&nbsp;habitaciones&nbsp;reservadas&nbsp;para&nbsp;liberar.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;liberación&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
+
+<dl><dt><a name="Hostal-mostrar_informacion"><strong>mostrar_informacion</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;del&nbsp;hotel.</span></dd></dl>
+
+<dl><dt><a name="Hostal-reservar_habitacion"><strong>reservar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Reserva&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;para&nbsp;un&nbsp;usuario.<br>
+&nbsp;<br>
+:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la(s)&nbsp;habitación(es).<br>
+:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;reservar.<br>
+:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;no&nbsp;hay&nbsp;suficientes&nbsp;habitaciones&nbsp;libres.<br>
+:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;reserva&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="reserva.html#Establecimiento">Establecimiento</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><a name="Hotel">class <strong>Hotel</strong></a>(<a href="reserva.html#Establecimiento">Establecimiento</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Hotel">Hotel</a>(nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;localidad:&nbsp;str,&nbsp;categoria:&nbsp;int,&nbsp;num_habitaciones:&nbsp;int)<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Hotel">Hotel</a>(id_establecimiento:&nbsp;int,&nbsp;nombre:&nbsp;str,&nbsp;direccion:&nbsp;str,&nbsp;categoria:&nbsp;int,&nbsp;num_habitaciones:&nbsp;int)<br>
 &nbsp;<br>
 Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;hotel.<br>
 &nbsp;<br>
+:param&nbsp;id_establecimiento:&nbsp;ID&nbsp;único&nbsp;del&nbsp;hotel.<br>
 :param&nbsp;nombre:&nbsp;Nombre&nbsp;del&nbsp;hotel.<br>
 :param&nbsp;direccion:&nbsp;Dirección&nbsp;del&nbsp;hotel.<br>
-:param&nbsp;localidad:&nbsp;<a href="#Localidad">Localidad</a>&nbsp;del&nbsp;hotel.<br>
 :param&nbsp;categoria:&nbsp;Categoría&nbsp;del&nbsp;hotel&nbsp;(estrellas).<br>
 :param&nbsp;num_habitaciones:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;del&nbsp;hotel.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
@@ -202,7 +261,7 @@ Clase&nbsp;que&nbsp;representa&nbsp;un&nbsp;hotel.<br>
 </dl>
 <hr>
 Methods defined here:<br>
-<dl><dt><a name="Hotel-__init__"><strong>__init__</strong></a>(self, nombre: str, direccion: str, localidad: str, categoria: int, num_habitaciones: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Hotel-__init__"><strong>__init__</strong></a>(self, id_establecimiento: int, nombre: str, direccion: str, categoria: int, num_habitaciones: int)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <dl><dt><a name="Hotel-liberar_habitacion"><strong>liberar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Libera&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;reservadas&nbsp;por&nbsp;un&nbsp;usuario.<br>
 &nbsp;<br>
@@ -213,20 +272,11 @@ Methods defined here:<br>
 
 <dl><dt><a name="Hotel-mostrar_informacion"><strong>mostrar_informacion</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;del&nbsp;hotel.</span></dd></dl>
 
-<dl><dt><a name="Hotel-mostrar_suites"><strong>mostrar_suites</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;todas&nbsp;las&nbsp;suites&nbsp;disponibles&nbsp;en&nbsp;el&nbsp;hotel.</span></dd></dl>
-
 <dl><dt><a name="Hotel-reservar_habitacion"><strong>reservar_habitacion</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Reserva&nbsp;una&nbsp;o&nbsp;más&nbsp;habitaciones&nbsp;para&nbsp;un&nbsp;usuario.<br>
 &nbsp;<br>
 :param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la(s)&nbsp;habitación(es).<br>
 :param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;a&nbsp;reservar.<br>
 :raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;no&nbsp;hay&nbsp;suficientes&nbsp;habitaciones&nbsp;libres.<br>
-:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;reserva&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
-
-<dl><dt><a name="Hotel-reservar_suite"><strong>reservar_suite</strong></a>(self, usuario: reserva.Usuario, cantidad: int = 1) -&gt; bool</dt><dd><span class="code">Reserva&nbsp;una&nbsp;o&nbsp;más&nbsp;suites&nbsp;para&nbsp;un&nbsp;usuario.<br>
-&nbsp;<br>
-:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;que&nbsp;reserva&nbsp;la(s)&nbsp;suite(s).<br>
-:param&nbsp;cantidad:&nbsp;Número&nbsp;de&nbsp;suites&nbsp;a&nbsp;reservar.<br>
-:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;no&nbsp;hay&nbsp;suficientes&nbsp;suites&nbsp;libres.<br>
 :return:&nbsp;True&nbsp;si&nbsp;la&nbsp;reserva&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
 
 <hr>
@@ -305,39 +355,6 @@ Data descriptors inherited from <a href="builtins.html#BaseException">builtins.B
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="Localidad">class <strong>Localidad</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
-    
-<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Localidad">Localidad</a>(nombre:&nbsp;str)<br>
-&nbsp;<br>
-Clase&nbsp;para&nbsp;gestionar&nbsp;información&nbsp;de&nbsp;localidades.<br>
-&nbsp;<br>
-:param&nbsp;nombre:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;localidad.<br>&nbsp;</span></td></tr>
-<tr><td>&nbsp;</td>
-<td class="singlecolumn">Methods defined here:<br>
-<dl><dt><a name="Localidad-__init__"><strong>__init__</strong></a>(self, nombre: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
-
-<dl><dt><a name="Localidad-agregar_hotel"><strong>agregar_hotel</strong></a>(self, hotel: reserva.Hotel)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;hotel&nbsp;a&nbsp;la&nbsp;localidad.<br>
-&nbsp;<br>
-:param&nbsp;hotel:&nbsp;<a href="#Hotel">Hotel</a>&nbsp;a&nbsp;agregar.</span></dd></dl>
-
-<dl><dt><a name="Localidad-habitaciones_libres"><strong>habitaciones_libres</strong></a>(self) -&gt; int</dt><dd><span class="code">Devuelve&nbsp;el&nbsp;número&nbsp;total&nbsp;de&nbsp;habitaciones&nbsp;libres&nbsp;en&nbsp;la&nbsp;localidad.<br>
-&nbsp;<br>
-:return:&nbsp;Número&nbsp;total&nbsp;de&nbsp;habitaciones&nbsp;libres.</span></dd></dl>
-
-<dl><dt><a name="Localidad-mostrar_hoteles"><strong>mostrar_hoteles</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;de&nbsp;todos&nbsp;los&nbsp;hoteles&nbsp;en&nbsp;la&nbsp;localidad.</span></dd></dl>
-
-<hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</span></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
-</dl>
-</td></tr></table> <p>
-<table class="section">
-<tr class="decor title-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><a name="ReservaException">class <strong>ReservaException</strong></a>(<a href="reserva.html#HotelException">HotelException</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
@@ -407,46 +424,18 @@ Data descriptors inherited from <a href="builtins.html#BaseException">builtins.B
 <td class="section-title" colspan=3>&nbsp;<br><a name="SistemaHoteles">class <strong>SistemaHoteles</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code">Sistema&nbsp;de&nbsp;gestión&nbsp;de&nbsp;hoteles&nbsp;y&nbsp;localidades.<br>&nbsp;</span></td></tr>
+<td class="decor title-decor" colspan=2><span class="code">Sistema&nbsp;de&nbsp;gestión&nbsp;de&nbsp;hoteles&nbsp;y&nbsp;otros&nbsp;establecimientos.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn">Methods defined here:<br>
 <dl><dt><a name="SistemaHoteles-__init__"><strong>__init__</strong></a>(self)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
-<dl><dt><a name="SistemaHoteles-agregar_hotel"><strong>agregar_hotel</strong></a>(self, hotel: reserva.Hotel)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;hotel&nbsp;al&nbsp;sistema.<br>
+<dl><dt><a name="SistemaHoteles-agregar_establecimiento"><strong>agregar_establecimiento</strong></a>(self, establecimiento: reserva.Establecimiento)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;establecimiento&nbsp;al&nbsp;sistema.<br>
 &nbsp;<br>
-:param&nbsp;hotel:&nbsp;<a href="#Hotel">Hotel</a>&nbsp;a&nbsp;agregar.</span></dd></dl>
+:param&nbsp;establecimiento:&nbsp;<a href="#Establecimiento">Establecimiento</a>&nbsp;a&nbsp;agregar.</span></dd></dl>
 
-<dl><dt><a name="SistemaHoteles-buscar_habitaciones_libres_en_localidad"><strong>buscar_habitaciones_libres_en_localidad</strong></a>(self, nombre_localidad: str) -&gt; int</dt><dd><span class="code">Busca&nbsp;el&nbsp;número&nbsp;de&nbsp;habitaciones&nbsp;libres&nbsp;en&nbsp;una&nbsp;localidad.<br>
-&nbsp;<br>
-:param&nbsp;nombre_localidad:&nbsp;Nombre&nbsp;de&nbsp;la&nbsp;localidad&nbsp;a&nbsp;buscar.<br>
-:return:&nbsp;Número&nbsp;de&nbsp;habitaciones&nbsp;libres&nbsp;en&nbsp;la&nbsp;localidad.</span></dd></dl>
+<dl><dt><a name="SistemaHoteles-agregar_usuario"><strong>agregar_usuario</strong></a>(self, usuario: reserva.Usuario)</dt><dd><span class="code">Agrega&nbsp;un&nbsp;usuario&nbsp;al&nbsp;sistema.</span></dd></dl>
 
-<dl><dt><a name="SistemaHoteles-buscar_hoteles_por_categoria"><strong>buscar_hoteles_por_categoria</strong></a>(self, categoria: int) -&gt; List[reserva.Hotel]</dt><dd><span class="code">Busca&nbsp;hoteles&nbsp;por&nbsp;su&nbsp;categoría.<br>
-&nbsp;<br>
-:param&nbsp;categoria:&nbsp;Categoría&nbsp;de&nbsp;los&nbsp;hoteles&nbsp;a&nbsp;buscar.<br>
-:return:&nbsp;Lista&nbsp;de&nbsp;hoteles&nbsp;que&nbsp;coinciden&nbsp;con&nbsp;la&nbsp;categoría.</span></dd></dl>
-
-<dl><dt><a name="SistemaHoteles-guardar_datos"><strong>guardar_datos</strong></a>(self, archivo: str)</dt><dd><span class="code">Guarda&nbsp;los&nbsp;datos&nbsp;del&nbsp;sistema&nbsp;en&nbsp;un&nbsp;archivo.<br>
-&nbsp;<br>
-:param&nbsp;archivo:&nbsp;Nombre&nbsp;del&nbsp;archivo&nbsp;donde&nbsp;guardar&nbsp;los&nbsp;datos.</span></dd></dl>
-
-<dl><dt><a name="SistemaHoteles-mostrar_hoteles"><strong>mostrar_hoteles</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;de&nbsp;todos&nbsp;los&nbsp;hoteles&nbsp;en&nbsp;el&nbsp;sistema.</span></dd></dl>
-
-<dl><dt><a name="SistemaHoteles-transferir_usuario"><strong>transferir_usuario</strong></a>(self, usuario: reserva.Usuario, hotel_origen: reserva.Hotel, hotel_destino: reserva.Hotel) -&gt; bool</dt><dd><span class="code">Transfiere&nbsp;un&nbsp;usuario&nbsp;de&nbsp;un&nbsp;hotel&nbsp;a&nbsp;otro.<br>
-&nbsp;<br>
-:param&nbsp;usuario:&nbsp;<a href="#Usuario">Usuario</a>&nbsp;a&nbsp;transferir.<br>
-:param&nbsp;hotel_origen:&nbsp;<a href="#Hotel">Hotel</a>&nbsp;de&nbsp;origen.<br>
-:param&nbsp;hotel_destino:&nbsp;<a href="#Hotel">Hotel</a>&nbsp;de&nbsp;destino.<br>
-:raises&nbsp;<a href="#ReservaException">ReservaException</a>:&nbsp;Si&nbsp;ocurre&nbsp;un&nbsp;error&nbsp;al&nbsp;liberar&nbsp;o&nbsp;reservar&nbsp;la&nbsp;habitación.<br>
-:raises&nbsp;<a href="#TransferenciaException">TransferenciaException</a>:&nbsp;Si&nbsp;ocurre&nbsp;un&nbsp;error&nbsp;en&nbsp;la&nbsp;transferencia.<br>
-:return:&nbsp;True&nbsp;si&nbsp;la&nbsp;transferencia&nbsp;se&nbsp;realizó&nbsp;correctamente.</span></dd></dl>
-
-<hr>
-Static methods defined here:<br>
-<dl><dt><a name="SistemaHoteles-cargar_datos"><strong>cargar_datos</strong></a>(archivo: str)</dt><dd><span class="code">Carga&nbsp;los&nbsp;datos&nbsp;del&nbsp;sistema&nbsp;desde&nbsp;un&nbsp;archivo.<br>
-&nbsp;<br>
-:param&nbsp;archivo:&nbsp;Nombre&nbsp;del&nbsp;archivo&nbsp;desde&nbsp;donde&nbsp;cargar&nbsp;los&nbsp;datos.<br>
-:return:&nbsp;Instancia&nbsp;del&nbsp;sistema&nbsp;cargado.</span></dd></dl>
+<dl><dt><a name="SistemaHoteles-mostrar_establecimientos"><strong>mostrar_establecimientos</strong></a>(self)</dt><dd><span class="code">Muestra&nbsp;la&nbsp;información&nbsp;de&nbsp;todos&nbsp;los&nbsp;establecimientos&nbsp;en&nbsp;el&nbsp;sistema.</span></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -459,83 +448,18 @@ Data descriptors defined here:<br>
 </td></tr></table> <p>
 <table class="section">
 <tr class="decor title-decor heading-text">
-<td class="section-title" colspan=3>&nbsp;<br><a name="TransferenciaException">class <strong>TransferenciaException</strong></a>(<a href="reserva.html#HotelException">HotelException</a>)</td></tr>
-    
-<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code">Excepción&nbsp;para&nbsp;errores&nbsp;en&nbsp;transferencias&nbsp;de&nbsp;usuarios&nbsp;entre&nbsp;hoteles.<br>&nbsp;</span></td></tr>
-<tr><td>&nbsp;</td>
-<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
-<dd><a href="reserva.html#TransferenciaException">TransferenciaException</a></dd>
-<dd><a href="reserva.html#HotelException">HotelException</a></dd>
-<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
-<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
-<dd><a href="builtins.html#object">builtins.object</a></dd>
-</dl>
-<hr>
-Data descriptors inherited from <a href="reserva.html#HotelException">HotelException</a>:<br>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</span></dd>
-</dl>
-<hr>
-Methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
-<dl><dt><a name="TransferenciaException-__init__"><strong>__init__</strong></a>(self, /, *args, **kwargs)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
-
-<hr>
-Static methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
-<dl><dt><a name="TransferenciaException-__new__"><strong>__new__</strong></a>(*args, **kwargs)<span class="grey"><span class="heading-text"> from <a href="builtins.html#type">builtins.type</a></span></span></dt><dd><span class="code">Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
-
-<hr>
-Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
-<dl><dt><a name="TransferenciaException-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><span class="code">Implement&nbsp;delattr(self,&nbsp;name).</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><span class="code">Return&nbsp;getattr(self,&nbsp;name).</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><span class="code">Helper&nbsp;for&nbsp;pickle.</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;repr(self).</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><span class="code">Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
-
-<dl><dt><a name="TransferenciaException-__str__"><strong>__str__</strong></a>(self, /)</dt><dd><span class="code">Return&nbsp;str(self).</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-add_note"><strong>add_note</strong></a>(...)</dt><dd><span class="code"><a href="builtins.html#Exception">Exception</a>.<a href="#TransferenciaException-add_note">add_note</a>(note)&nbsp;--<br>
-add&nbsp;a&nbsp;note&nbsp;to&nbsp;the&nbsp;exception</span></dd></dl>
-
-<dl><dt><a name="TransferenciaException-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><span class="code"><a href="builtins.html#Exception">Exception</a>.<a href="#TransferenciaException-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
-set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</span></dd></dl>
-
-<hr>
-Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
-<dl><dt><strong>__cause__</strong></dt>
-<dd><span class="code">exception&nbsp;cause</span></dd>
-</dl>
-<dl><dt><strong>__context__</strong></dt>
-<dd><span class="code">exception&nbsp;context</span></dd>
-</dl>
-<dl><dt><strong>__dict__</strong></dt>
-</dl>
-<dl><dt><strong>__suppress_context__</strong></dt>
-</dl>
-<dl><dt><strong>__traceback__</strong></dt>
-</dl>
-<dl><dt><strong>args</strong></dt>
-</dl>
-</td></tr></table> <p>
-<table class="section">
-<tr class="decor title-decor heading-text">
 <td class="section-title" colspan=3>&nbsp;<br><a name="Usuario">class <strong>Usuario</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
     
 <tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
-<td class="decor title-decor" colspan=2><span class="code"><a href="#Usuario">Usuario</a>(nombre:&nbsp;str)<br>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Usuario">Usuario</a>(id_usuario:&nbsp;int,&nbsp;nombre:&nbsp;str)<br>
 &nbsp;<br>
 Clase&nbsp;que&nbsp;representa&nbsp;a&nbsp;los&nbsp;usuarios&nbsp;del&nbsp;hotel.<br>
 &nbsp;<br>
+:param&nbsp;id_usuario:&nbsp;ID&nbsp;único&nbsp;del&nbsp;usuario.<br>
 :param&nbsp;nombre:&nbsp;Nombre&nbsp;del&nbsp;usuario.<br>&nbsp;</span></td></tr>
 <tr><td>&nbsp;</td>
 <td class="singlecolumn">Methods defined here:<br>
-<dl><dt><a name="Usuario-__init__"><strong>__init__</strong></a>(self, nombre: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
+<dl><dt><a name="Usuario-__init__"><strong>__init__</strong></a>(self, id_usuario: int, nombre: str)</dt><dd><span class="code">Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</span></dd></dl>
 
 <dl><dt><a name="Usuario-__str__"><strong>__str__</strong></a>(self)</dt><dd><span class="code">Return&nbsp;str(self).</span></dd></dl>
 

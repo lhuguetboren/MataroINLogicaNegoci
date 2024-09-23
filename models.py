@@ -386,7 +386,17 @@ class FechasAlojamientos(Base):
                 f"fecha={self.fecha}, libres={self.libres}, disponible={self.disponible}, "
                 f"precio={self.precio}, f_crea={self.f_crea}, f_mod={self.f_mod}, f_elim={self.f_elim})>")
 
+# Definir el modelo de la tabla 'Chat'
+class Chat(Base):
+    __tablename__ = 'chat'
 
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    usuario = Column(String(45))
+    consulta = Column(Text)
+    context_set = Column(String(45))
+    context_filter = Column(String(45))
+    fecha = Column(DateTime)
+    tag = Column(String(45))
 #conusltas
 
 
@@ -450,6 +460,7 @@ def get_db_session():
     return session
 def obtener_datos_hotel2(nombre_hotel):
     # Realizamos la consulta usando SQLAlchemy ORM
+    session=get_db_session()
     result = (
         session.query(Alojamientos, AlojamientosFechas, AlojamientosServicios, Servicios, Hoteles)
         .join(AlojamientosFechas, AlojamientosFechas.id_alojamiento == Alojamientos.id, isouter=True)

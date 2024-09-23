@@ -1,8 +1,19 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Documentation</title>
+    <link rel="stylesheet" type="text/css" href="pydoc.css">
+
+</head>
+<body>
+    <div class="container">
 <table class="heading">
 <tr class="heading-text decor">
 <td class="title">&nbsp;<br><strong class="title">app</strong></td>
-<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/app.py">/Users/llorenchuguet/Documents/Personal/educacio/CGPP/MataroIN/servidor/app.py</a></td></tr></table>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/llorenchuguet/Documents/GitHub/MataroINLogicaNegoci/app.py">/Users/llorenchuguet/Documents/GitHub/MataroINLogicaNegoci/app.py</a></td></tr></table>
     <p><span class="code">#&nbsp;Librerías&nbsp;comunes</span></p>
 <p>
 <table class="section">
@@ -12,14 +23,11 @@
 <tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
 <td class="singlecolumn"><table><tr><td class="multicolumn"><a href="CalculosNegocios.html">CalculosNegocios</a><br>
 <a href="aiohttp.html">aiohttp</a><br>
-<a href="cryptography.hazmat.primitives.hashes.html">cryptography.hazmat.primitives.hashes</a><br>
-</td><td class="multicolumn"><a href="json.html">json</a><br>
-<a href="os.html">os</a><br>
-<a href="cryptography.hazmat.primitives.asymmetric.padding.html">cryptography.hazmat.primitives.asymmetric.padding</a><br>
-</td><td class="multicolumn"><a href="pandas.html">pandas</a><br>
-<a href="pydoc.html">pydoc</a><br>
-<a href="cryptography.hazmat.primitives.asymmetric.rsa.html">cryptography.hazmat.primitives.asymmetric.rsa</a><br>
-</td><td class="multicolumn"><a href="cryptography.hazmat.primitives.serialization.html">cryptography.hazmat.primitives.serialization</a><br>
+</td><td class="multicolumn"><a href="chat.html">chat</a><br>
+<a href="json.html">json</a><br>
+</td><td class="multicolumn"><a href="os.html">os</a><br>
+<a href="pandas.html">pandas</a><br>
+</td><td class="multicolumn"><a href="pydoc.html">pydoc</a><br>
 <a href="socket_1.html">socket_1</a><br>
 </td></tr></table></td></tr></table><p>
 <table class="section">
@@ -78,6 +86,7 @@
  <dl><dt><a name="-get_locale"><strong>get_locale</strong></a>()</dt><dd><span class="code">Obtiene&nbsp;el&nbsp;idioma&nbsp;preferido&nbsp;del&nbsp;usuario.<br>
 &nbsp;<br>
 :return:&nbsp;Idioma&nbsp;preferido&nbsp;del&nbsp;usuario.</span></dd></dl>
+ <dl><dt><a name="-get_response"><strong>get_response</strong></a>()</dt><dd><span class="code">#&nbsp;Ruta&nbsp;para&nbsp;manejar&nbsp;las&nbsp;solicitudes&nbsp;del&nbsp;chatbot&nbsp;(AJAX)</span></dd></dl>
  <dl><dt><a name="-guarda_destinos"><strong>guarda_destinos</strong></a>()</dt><dd><span class="code">Guarda&nbsp;los&nbsp;datos&nbsp;de&nbsp;destinos&nbsp;(pendiente&nbsp;de&nbsp;implementación).<br>
 &nbsp;<br>
 :return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;está&nbsp;pendiente&nbsp;de&nbsp;implementación.</span></dd></dl>
@@ -95,22 +104,15 @@
 &nbsp;<br>
 :param&nbsp;id:&nbsp;ID&nbsp;de&nbsp;la&nbsp;imagen<br>
 :return:&nbsp;Template&nbsp;'videos.html'</span></dd></dl>
- <dl><dt><a name="-index"><strong>index</strong></a>()</dt><dd><span class="code">Página&nbsp;principal&nbsp;de&nbsp;administración&nbsp;para&nbsp;usuarios&nbsp;autenticados.<br>
+ <dl><dt><a name="-info_hotel"><strong>info_hotel</strong></a>(id)</dt><dd><span class="code">Recupera&nbsp;información&nbsp;del&nbsp;alojamiento<br>
 &nbsp;<br>
-:return:&nbsp;Mensaje&nbsp;de&nbsp;bienvenida&nbsp;al&nbsp;usuario.</span></dd></dl>
- <dl><dt><a name="-load_user"><strong>load_user</strong></a>(user_id)</dt><dd><span class="code">Carga&nbsp;un&nbsp;usuario&nbsp;basado&nbsp;en&nbsp;su&nbsp;ID.<br>
-&nbsp;<br>
-:param&nbsp;user_id:&nbsp;ID&nbsp;del&nbsp;usuario<br>
-:return:&nbsp;Instancia&nbsp;de&nbsp;User&nbsp;si&nbsp;el&nbsp;usuario&nbsp;existe,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;None.</span></dd></dl>
- <dl><dt><a name="-login"><strong>login</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;inicio&nbsp;de&nbsp;sesión&nbsp;de&nbsp;los&nbsp;usuarios.<br>
-&nbsp;<br>
-:return:&nbsp;Redirige&nbsp;al&nbsp;índice&nbsp;si&nbsp;el&nbsp;login&nbsp;es&nbsp;exitoso,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;renderiza&nbsp;el&nbsp;formulario&nbsp;de&nbsp;login.</span></dd></dl>
+:return:&nbsp;Datos&nbsp;del&nbsp;hotel</span></dd></dl>
+ <dl><dt><a name="-load_user"><strong>load_user</strong></a>(user_id)</dt></dl>
+ <dl><dt><a name="-login"><strong>login</strong></a>()</dt></dl>
  <dl><dt><a name="-loginhtml"><strong>loginhtml</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;login.<br>
 &nbsp;<br>
 :return:&nbsp;Template&nbsp;'login.html'</span></dd></dl>
- <dl><dt><a name="-logout"><strong>logout</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;cierre&nbsp;de&nbsp;sesión&nbsp;de&nbsp;los&nbsp;usuarios.<br>
-&nbsp;<br>
-:return:&nbsp;Redirige&nbsp;al&nbsp;formulario&nbsp;de&nbsp;login.</span></dd></dl>
+ <dl><dt><a name="-logout"><strong>logout</strong></a>()</dt></dl>
  <dl><dt><a name="-negocio"><strong>negocio</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;principal&nbsp;de&nbsp;negocio.<br>
 &nbsp;<br>
 :return:&nbsp;Template&nbsp;'admin/negocio.html'</span></dd></dl>
@@ -142,6 +144,7 @@
  <dl><dt><a name="-recupera_usabilidad"><strong>recupera_usabilidad</strong></a>()</dt><dd><span class="code">Recupera&nbsp;los&nbsp;datos&nbsp;de&nbsp;usabilidad&nbsp;(pendiente&nbsp;de&nbsp;implementación).<br>
 &nbsp;<br>
 :return:&nbsp;Mensaje&nbsp;indicando&nbsp;que&nbsp;está&nbsp;pendiente&nbsp;de&nbsp;implementación.</span></dd></dl>
+ <dl><dt><a name="-register"><strong>register</strong></a>()</dt></dl>
  <dl><dt><a name="-request_entity_too_large"><strong>request_entity_too_large</strong></a>(error)</dt><dd><span class="code">Manejo&nbsp;del&nbsp;error&nbsp;de&nbsp;archivo&nbsp;demasiado&nbsp;grande.<br>
 &nbsp;<br>
 :param&nbsp;error:&nbsp;Error&nbsp;capturado<br>
@@ -149,9 +152,6 @@
  <dl><dt><a name="-reservar"><strong>reservar</strong></a>()</dt><dd><span class="code">Maneja&nbsp;la&nbsp;reserva&nbsp;de&nbsp;un&nbsp;alojamiento.<br>
 &nbsp;<br>
 :return:&nbsp;Mensaje&nbsp;de&nbsp;éxito&nbsp;si&nbsp;hay&nbsp;disponibilidad,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;mensaje&nbsp;de&nbsp;error.</span></dd></dl>
- <dl><dt><a name="-signup"><strong>signup</strong></a>()</dt><dd><span class="code">Maneja&nbsp;el&nbsp;registro&nbsp;de&nbsp;nuevos&nbsp;usuarios.<br>
-&nbsp;<br>
-:return:&nbsp;Redirige&nbsp;al&nbsp;formulario&nbsp;de&nbsp;login&nbsp;si&nbsp;el&nbsp;registro&nbsp;es&nbsp;exitoso,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;renderiza&nbsp;el&nbsp;formulario&nbsp;de&nbsp;registro.</span></dd></dl>
  <dl><dt><a name="-traduccion"><strong>traduccion</strong></a>()</dt><dd><span class="code">Renderiza&nbsp;la&nbsp;página&nbsp;de&nbsp;traducción.<br>
 &nbsp;<br>
 :return:&nbsp;Template&nbsp;'traduccion.html'</span></dd></dl>
@@ -186,10 +186,14 @@
 <td class="singlecolumn"><strong>app</strong> = &lt;Flask 'app'&gt;<br>
 <strong>current_user</strong> = None<br>
 <strong>data_storage</strong> = []<br>
-<strong>log_df</strong> =      Pais Dispositivo            Timestamp    Ta...a          PC  2024-07-22 10:30:00  Playa    True<br>
+<strong>log_df</strong> = Empty DataFrame
+Columns: []
+Index: []<br>
 <strong>login_manager</strong> = &lt;flask_login.login_manager.LoginManager object&gt;<br>
-<strong>public_key</strong> = &lt;cryptography.hazmat.bindings._rust.openssl.rsa.RSAPublicKey object&gt;<br>
 <strong>request</strong> = &lt;LocalProxy unbound&gt;<br>
-<strong>session</strong> = &lt;sqlalchemy.orm.session.Session object&gt;<br>
-<strong>uploaded_files</strong> = []<br>
-<strong>users</strong> = {'1': {'password': 'hashed_password_1', 'type': 'cliente', 'username': 'cliente1'}, '2': {'password': 'hashed_password_2', 'type': 'proveedor', 'username': 'proveedor1'}}</td></tr></table>
+<strong>session</strong> = &lt;LocalProxy unbound&gt;<br>
+<strong>uploaded_files</strong> = []</td></tr></table>
+
+</div>
+</body>
+</html>

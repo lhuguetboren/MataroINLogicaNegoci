@@ -20,7 +20,7 @@ def buscar_alojamiento_por_criterios(criterios_busqueda):
     session = get_db_session()
 
     query = session.query(
-        Alojamientos.tipo,
+        Alojamientos.id,Alojamientos.tipo,
         Alojamientos.nombre,
         Localidades.nombre.label('localidad_nombre'),
         Hoteles.habitaciones.label('hotel_habitaciones'),
@@ -38,8 +38,8 @@ def buscar_alojamiento_por_criterios(criterios_busqueda):
     ).outerjoin(Hostales, Alojamientos.id == Hostales.id
     ).outerjoin(Campings, Alojamientos.id == Campings.id
     ).outerjoin(FechasAlojamientos, Alojamientos.id == FechasAlojamientos.id_alojamiento
-    ).outerjoin(Alojamientos_servicios, Alojamientos.id == Alojamientos_servicios.id_alojamientos
-    ).outerjoin(Servicios, Alojamientos_servicios.id_servicios == Servicios.id)
+    ).outerjoin(AlojamientosServicios, Alojamientos.id == AlojamientosServicios.id_alojamientos
+    ).outerjoin(Servicios, AlojamientosServicios.id_servicios == Servicios.id)
     
     # Ejecutar la consulta
     resultados = query.all()

@@ -5,56 +5,89 @@
 <main>
     <!-- Sección de presentación con imágenes cambiantes y formulario de búsqueda -->
 
-    <section class="presentacion">
+    <section class="presentacion" id="presentacion">
         <row>
-            <div class="img-fluid" id="presentacion">
-                <form id="search-form" class="form-group">
-                    <div class="row">
+
+            <form id="search-form" class="form-group" onsubmit="caracona(event)">
+                <div class="row">
+                    <div class="col-3">
                         <label for="destino">Destino:</label>
-                        <select id="destino">
-                        </select>
+                    </div>
+                    <div class="col-3"><select id="destino"></select></div>
+
+                    <div class="col-3">
                         <label for="hotel">Nombre del hotel:</label>
+
+                    </div>
+                    <div class="col-3">
                         <input type="text" id="nombreA" name="hotel" class="search-input"
                             placeholder="Nombre del hotel">
-
-                            <div class="selector" id="selector">
-                                <div style="width:50%;float:left">
-                                                            <label for="startDate">Fecha Llegada:</label>
-                        <input type="text" id="startDate" name="startDate">
-                        </div>
-                        <div style="width:50%;float:left">
-                        <label for="endDate">Fecha Salida:</label>
-                        <input type="text" id="endDate" name="endDate">
-</div>
-                        </div>
-                        <div class="price-range">Precio: <span id="price-values"></span> €</div>
-                        <div id="price-slider"></div>
-
-                        <div class="selector" id="selector">
-                            <div class="rating" style="width:30%;float:left"> Estrellas :<br>
-                                <span class="star" data-value="1">&#9733;</span>
-                                <span class="star" data-value="2">&#9733;</span>
-                                <span class="star" data-value="3">&#9733;</span>
-                                <span class="star" data-value="4">&#9733;</span>
-                                <span class="star" data-value="5">&#9733;</span>
-                            </div>
-                            <div style="width:20%;float:left">
-                                <label for="person-count">Personas:</label>
-                                <input type="number" id="person-count" value="1">
-                            </div>
-                            <div style="width:20%;float:left">
-                                <label for="room-count">Habitaciones:</label>
-                                <input type="number" id="room-count" value="1">
-                            </div>
-                        </div>
-
-                        <button type="submit" style="width: 100%;margin:10px; border-radius: 20px;">Buscar</button>
-                        <button type="button" style="width: 96%;margin-left: 12px;border-radius: 20px;margin-top: -6px;"
-                            onclick="resetSearchForm()">Borrar
-                            criterios
-                            de búsqueda</button>
                     </div>
-                </form>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="startDate">Fecha Llegada:</label>
+
+                    </div>
+                    <div class="col-3">
+                        <input type="text" id="startDate" name="startDate">
+                    </div>
+
+                    <div class="col-3">
+                        <label for="endDate">Fecha Salida:</label>
+                    </div>
+                    <div class="col-3">
+                        <input type="text" id="endDate" name="endDate">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="precio">Precio(€)
+                            <span id="price-values"></span>
+                        </label>
+                    </div>
+                    <div class="col-3">
+                        <div class="price-range"></div>
+                        <div id="price-slider"></div>
+                    </div>
+
+                    <div class="col-3">
+                        <label for="estrellas">Estrellas:</label>
+
+
+                    </div>
+                    <div class="col-3">
+                        <div class="rating" style="">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="person-count">Personas:</label>
+
+                    </div>
+                    <div class="col-3">
+                        <input type="number" id="person-count" value="1">
+                    </div>
+                    <div class="col-3">
+                        <label for="room-count">Habitaciones:</label>
+
+
+                    </div>
+                    <input type="number" id="room-count" value="1">
+                </div>
+                <button type="button" style="width: 96%;margin-left: 12px;border-radius: 20px;margin-top: -6px;"
+                    onclick="resetSearchForm()">Borrar
+                    criterios
+                    de búsqueda</button>
+            </form>
+            <button onclick="caracona();" style="width: 100%;margin:10px; border-radius: 20px;">Buscar</button>
+
             </div>
         </row>
     </section>
@@ -118,8 +151,8 @@
                 <div>
                     <a class="btn" style="margin:3px;" href="videos.html"><i
                             class="fas fa-map-marker-alt "></i>&nbsp;&nbsp;Todas las poblaciones</a>
-                    <a class="btn" style="margin:3px;" href="videos.html"><i
-                            class="fas fa-bed "></i>&nbsp;&nbsp;Todos los alojamientos</a>
+                    <a class="btn" style="margin:3px;" href="videos.html"><i class="fas fa-bed "></i>&nbsp;&nbsp;Todos
+                        los alojamientos</a>
                     <a class="btn" style="margin:3px;" href="videos.html"><i
                             class="fas fa-utensils "></i>&nbsp;&nbsp;Todos los restaurantes</a>
                 </div>
@@ -167,8 +200,8 @@
             <div class="col-sm-2 destino">
                 <!-- Iconos -->
                 <a class="btn" style="margin:3px;" href="videos.html"><i
-                    class="fas fa-map-marker-alt "></i>&nbsp;&nbsp;Otras playas</a>
-         
+                        class="fas fa-map-marker-alt "></i>&nbsp;&nbsp;Otras playas</a>
+
             </div>
         </div>
         <div class="row">
@@ -202,26 +235,26 @@
             <div class="col-sm-2 destino">
                 <!-- Iconos -->
                 <a class="btn" style="margin:3px;" href="videos.html"><i
-                    class="fas fa-map-marker-alt "></i>&nbsp;&nbsp;Todas las poblaciones</a>
-                </div>
+                        class="fas fa-map-marker-alt "></i>&nbsp;&nbsp;Todas las poblaciones</a>
+            </div>
         </div>
     </section>
     <section class="xarxes" style="background-color: #f79e31;">
         <div class="container mt-5">
             <div class="row justify-content-center" style="margin:2%;">
                 <row>
-                <h3 style="padding-top:10px;">Visita nuestras redes</h3>
-                <a href="https://www.instagram.com/" target="_blank" class="btnX">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/" target="_blank" class="btnX">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" class="btnX">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </row>
-        
+                    <h3 style="padding-top:10px;">Visita nuestras redes</h3>
+                    <a href="https://www.instagram.com/" target="_blank" class="btnX">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" class="btnX">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="btnX">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </row>
+
             </div>
         </div>
     </section>
@@ -340,7 +373,7 @@
                     <i class="bi bi-x"></i> <!-- Icono de cerrar -->
                 </span>
             </div>
-            
+
         </div>
         <div id="chat-log"></div>
         <div id="chat-input-container">
@@ -356,6 +389,89 @@
 {% block content2 %}
 
 <script>
+    function caracona() {
+
+        // Recoger los datos del formulario
+        const formData = new FormData(document.getElementById('search-form'));
+        console.log(formData);
+
+        A = {
+            "localidad": document.getElementById("destino").value,
+            "nombre": document.getElementById("nombreA").value,
+            "inicio": $("#startDate").datepicker('getDate').toLocaleDateString(),
+            "fin": $("#endDate").datepicker('getDate').toLocaleDateString(),
+            "estrellas": starsValue,
+            "preciomax": $("#price-slider").slider("values", 1),
+            "preciomin": $("#price-slider").slider("values", 0),
+            "personas": $("#person-count").val(),
+            "habitaciones": $("#room-count").val()
+
+
+
+        }
+        // Enviar los datos mediante Fetch API
+        fetch('/buscar', {
+            method: 'POST',
+            body: JSON.stringify(A)
+        })
+            .then(response => response.json()) // Asumimos que la respuesta es un JSON
+            .then(data => {
+                // Mostrar los datos en un div con id="resultado"
+
+                generateTableFromJson(data);
+
+            })
+            .catch(error => {
+                alert(error);
+
+                console.error('Error:', error);
+            });
+    }
+    function generateTableFromJson(jsonData) {
+        // Get the div where the table will be inserted
+        const tableContainer = document.getElementById('results');
+
+        // Create a new table element
+        const table = document.createElement('table');
+        table.setAttribute('border', '1');  // Add border for visibility
+
+        // Create the table header row
+        const header = table.insertRow();
+        const headers = ['Localidad', 'Nombre', 'Precio', 'Tipo', 'Acciones'];
+
+        headers.forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            header.appendChild(th);
+        });
+
+        // Populate the table with rows from the JSON data
+        jsonData.forEach((item, index) => {
+            const row = table.insertRow();
+
+            // Insert cells with the JSON data
+            row.insertCell().textContent = item.localidad_nombre;
+            row.insertCell().textContent = item.nombre;
+            row.insertCell().textContent = item.precio;
+            row.insertCell().textContent = item.tipo;
+
+            // Create the action button in the last column
+            const actionCell = row.insertCell();
+            const button = document.createElement('button');
+            button.textContent = 'Ir a Log';
+            button.setAttribute('onclick', `iraloj(${item.id})`);  // Call the iralog function with the id of the item
+            actionCell.appendChild(button);
+        });
+
+        // Clear the existing table (if any) and append the new table
+        tableContainer.innerHTML = '';  // Clear existing content
+        tableContainer.appendChild(table);  // Append the new table to the container
+    }
+
+    // Example function to be called when the button is clicked
+    function iraloj(id) {
+        console.log(`Button clicked for ID: ${id}`);
+    }
 
     //funcion de inicio de la página
     function main() {
@@ -436,15 +552,20 @@
         arrayAselect("idiomas", Idiomas.idioma);
         arrayAselect("destino", Municipios.pueblo);
         imagenCambiante();
-        document.getElementById("search-form").addEventListener("submit", function (event) {
+
+        /*document.getElementById("search-form").addEventListener("submit", function (event) {
             event.preventDefault();
             busquedaPrincipal();
-        });
+        });*/
+
     }
 
 
 
 
 
+
 </script>
+
+<script src="/static/script.js"></script>
 {% endblock %}
