@@ -484,9 +484,9 @@ footer {
 
     width: 100%;
     padding: 0px !important;
-    z-index: 1001;
+    z-index: 900;
     position:fixed;
-    bottom:30px;
+    bottom:25px;
     }
      
     footer div{

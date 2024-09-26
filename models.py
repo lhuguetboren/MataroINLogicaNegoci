@@ -24,7 +24,9 @@ def get_current_time_in_spain():
 
 # Configuración de la conexión a la base de datos
 try:
-    engine = create_engine("mysql+mysqlconnector://flask:flask2024@13.60.205.202/mataroin", echo=False)
+    #engine = create_engine("mysql+mysqlconnector://flask:flask2024@13.60.205.202/mataroin", echo=False)
+    engine = create_engine("mysql+mysqlconnector://flask:flask2024@localhost/mataroin", echo=False)
+
     logger.info("Conexión a la base de datos establecida correctamente.")
 except Exception as e:
     logger.error(f"Error al conectar a la base de datos: {e}")
@@ -212,14 +214,24 @@ class TagsRelacion(Base):
         session.add(self)
         session.commit()
 
+
+class Usab(Base):
+    """
+    Modelo de datos para la tabla 'usab_datos'.
+    """
+    __tablename__ = 'usab'
+    id = Column(Integer, primary_key=True)
+    nombre = Column(Text)
+    descripcion = Column(Text)
+   
+
 class UsabDatos(Base):
     """
     Modelo de datos para la tabla 'usab_datos'.
     """
     __tablename__ = 'usab_datos'
     id = Column(Integer, primary_key=True)
-    origen = Column(String(255))
-    id_origen = Column(Integer)
+    id_alojamientos = Column(Integer)
     id_usab = Column(Integer)
     media = Column(Float)
     mediana = Column(Float)
@@ -425,7 +437,7 @@ class Cliente(Base):
     comentarios = Column(String(240), nullable=True)
     fecha_nacimiento = Column(Date, nullable=True)
     direccion = Column(String(50), nullable=True)
-    id_pais = Column(Integer, ForeignKey('paises.id'), nullable=True)  # Clave foránea a la tabla `paises`
+    id_pais = Column(Integer)#, ForeignKey('paises.id'), nullable=True)  # Clave foránea a la tabla `paises`
     fecha_entrada = Column(Date, nullable=True)
     fecha_salida = Column(Date, nullable=True)
     precio = Column(Float, nullable=True)
@@ -458,66 +470,67 @@ def get_db_session():
     """Crea y retorna una nueva sesión para interactuar con la base de datos."""
     session = Session()
     return session
-def obtener_datos_hotel2(nombre_hotel):
+
+def obtener_datos_hotel2(id_alojamiento):
     # Realizamos la consulta usando SQLAlchemy ORM
-    session=get_db_session()
+    session = get_db_session()
+    
     result = (
         session.query(Alojamientos, AlojamientosFechas, AlojamientosServicios, Servicios, Hoteles)
-        .join(AlojamientosFechas, AlojamientosFechas.id_alojamiento == Alojamientos.id, isouter=True)
-        .join(AlojamientosServicios, AlojamientosServicios.id_alojamientos == Alojamientos.id, isouter=True)
-        .join(Servicios, Servicios.id == AlojamientosServicios.id_servicios, isouter=True)
-        .join(Hoteles, Hoteles.id == Alojamientos.id, isouter=True)
-        .filter(Alojamientos.tipo == 'hotel', Alojamientos.nombre == nombre_hotel)
+        .outerjoin(AlojamientosFechas, AlojamientosFechas.id_alojamiento == Alojamientos.id)
+        .outerjoin(AlojamientosServicios, AlojamientosServicios.id_alojamientos == Alojamientos.id)
+        .outerjoin(Servicios, Servicios.id == AlojamientosServicios.id_servicios)
+        .outerjoin(Hoteles, Hoteles.id == Alojamientos.id)
+        .filter(Alojamientos.id == id_alojamiento)
         .all()
     )
 
     # Convertimos el resultado en un diccionario
     data = []
-    #bucle servicios
+    serviciosA = []
 
-    serviciosA=[]
     for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
-        serviciosA.append(servicios.nombre)
+        if servicios:
+            serviciosA.append(servicios.nombre)
 
-    cadena1=[]
-    cadena2=[]
-    cadena3=[]
+    cadena1 = []
+    cadena2 = []
+    cadena3 = []
 
-    #bucle fechas
     for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
-        cadena1.append(fecha.fechasMes.replace("{","").replace("}",""))
-        cadena2.append(fecha.libresMes.replace("{","").replace("}",""))
-        cadena3.append(fecha.mes)
+        if fecha:
+            cadena1.append(fecha.fechasMes.replace("{", "").replace("}", ""))
+            cadena2.append(fecha.libresMes.replace("{", "").replace("}", ""))
+            cadena3.append(fecha.mes)
 
-
+    # Eliminar duplicados
     cadena1 = list(dict.fromkeys(cadena1))
     cadena2 = list(dict.fromkeys(cadena2))
     cadena3 = list(dict.fromkeys(cadena3))
 
-    #recuperar imagen
+    # Recuperar imagen (si se necesita)
     for alojamiento, fecha, servicio_alojamiento, servicios, hotel in result:
         data.append({
-                "nombre": alojamiento.nombre,
-                "direccion": alojamiento.direccion,
-                "imagen":"",#recuperar imagen
-                "descripcion": alojamiento.descripcion,
-                "correo":alojamiento.correo,
-                "telefono":alojamiento.telefono,
-                "servicios":",".join(serviciosA),
-                "meses":",".join(cadena3),
-                "fechas":",".join(cadena1),
-                "fechaxhabitaciones":",".join(cadena2),
-                "precio":fecha.precios, #recuperar precio (crear campo en alojamientos fechas),
-                "estrella":hotel.estrellas
-
-       
-            }
-        )
+            "nombre": alojamiento.nombre,
+            "direccion": alojamiento.direccion,
+            "imagen": "",  # Recuperar imagen
+            "descripcion": alojamiento.descripcion,
+            "correo": alojamiento.correo,
+            "telefono": alojamiento.telefono,
+            "servicios": ",".join(serviciosA),
+            "meses": ",".join(cadena3),
+            "fechas": ",".join(cadena1),
+            "fechaxhabitaciones": ",".join(cadena2),
+            "precio": fecha.precios if fecha else None,  # Recuperar precio
+            "estrella": hotel.estrellas if hotel else None  # Estrellas para hotel
+        })
 
     # Convertimos el diccionario a JSON
-    json_data = json.dumps(data[0], default=str)
-    #print(json_data)
+    json_data = json.dumps(data[0], default=str) if data else json.dumps({})
     return json_data
+
+# resultado_json = obtener_datos_hotel2(303) 
+# print(resultado_json)
 
 
 #(obtener_datos_hotel2('Hotel Barcelona'))

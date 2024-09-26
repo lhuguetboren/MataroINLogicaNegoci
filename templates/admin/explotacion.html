@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <main>
+    <div class="row">
+        <div class="col-md-2">Explotar datos</div>
+        <div class="col-md-2">Origen</div>
+        <div class="col-md-2">Calcular</div>
+        <div class="col-md-2">Ver resultados</div>
+        <div class="col-md-2">Descripción</div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">Cookies</div>
+        <div class="col-md-2"><button onclick="location.href='/admin/guarda_cookies';">Calcular</div>
+            <div class="col-md-2"><button onclick="location.href='/admin/recupera_Cookies';">Calcular</div>
+                <div class="col-md-2">Descripción</div>
+    </div>
+    <div class="row">
+
+    <div class="col-md-2"></div>
+    <div class="col-md-2">Destinos</div>
+    <div class="col-md-2"><button onclick="location.href='/admin/calcula_destinos';">Calcular</div>
+        <div class="col-md-2"><button onclick="location.href='/admin/recupera_destinos';">Calcular</div>
+            <div class="col-md-2">Descripción</div>
+</div>
+<div class="row">
+
+<div class="col-md-2"></div>
+<div class="col-md-2">Experiencia cliente</div>
+<div class="col-md-2"><button onclick="location.href='/admin/calcula_usabilidad';">Calcular</div>
+    <div class="col-md-2"><button onclick="location.href='/admin/recupera_usabilidad';">Calcular</div>
+        <div class="col-md-2">Descripción</div>
+</div>
+<div class="row">
+
+<div class="col-md-2"></div>
+<div class="col-md-2">Chat</div>
+<div class="col-md-2">Calcular</div>
+<div class="col-md-2">Ver resultados</div>
+<div class="col-md-2">Descripción</div>
+</div>
+    <!-- Pie de página -->
+    </main>
+ 
+{% endblock %}
+{% block content2 %}
+<script>
+    function main() {
+
+
+        setTimeout(function () {
+        $(document).ready(function () {
+            $('#cargando').fadeOut('slow');
+
+        });
+    }, 2000);
+
+    };  
+</script>
+{% endblock %}

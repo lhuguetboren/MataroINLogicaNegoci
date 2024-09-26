@@ -212,6 +212,15 @@ def quienessomos():
     """
     return render_template('quienessomos.html')
 
+@app.route('/admin/explotacion')
+def explotacion():
+    """
+    Renderiza la página de "Quiénes somos".
+
+    :return: Template 'quienessomos.html'
+    """
+    return render_template('admin/explotacion.html')
+
 # Bloque de mantenimiento de datos
 
 # Función para determinar la carpeta basada en el tipo de archivo
@@ -467,9 +476,9 @@ def visualizar():
         datajson = json.load(archivo)
 
     df = pd.DataFrame.from_dict(datajson, orient='index')
-    df.index = pd.MultiIndex.from_tuples([eval(i) for i in df.index], names=["Pais", "Ciudad"])
+    df.index = pd.MultiIndex.from_tuples([eval(i) for i in df.index], names=["Pais", "TAG"])
     df = df.reset_index()
-    df = df.sort_values(by=["Pais", "Ciudad"])
+    df = df.sort_values(by=["Pais", "TAG"])
 
     table_html = df.to_html(index=False)
     return render_template('admin/estadistica.html', table_html=table_html)
@@ -500,7 +509,7 @@ def recupera_usabilidad():
 
     :return: Mensaje indicando que está pendiente de implementación.
     """
-    return "pendiente"
+    return CalculosNegocios.devuelveUsabLocalidades()
 
 @app.route('/admin/recupera_destinos')
 def recupera_destinos():
@@ -528,6 +537,8 @@ def guarda_destinos():
     :return: Mensaje indicando que está pendiente de implementación.
     """
     return "pendiente"
+
+
 
 @app.route('/buscar', methods=['POST'])
 def buscar():
@@ -683,17 +694,6 @@ def read_socket_data():
 
 
 #bloque login
-# Ruta de inicio de sesión
-@app.route('/loginhtml')
-def loginhtml():
-    """
-    Renderiza la página de login.
-
-    :return: Template 'login.html'
-    """
-    return render_template('login.html')
-
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -768,7 +768,7 @@ def register():
         flash('Usuario creado con éxito. Ahora puedes iniciar sesión.')
         return redirect(url_for('login'))
 
-    return render_template('admin2/register.html')
+    return render_template('register.html')
 
 @app.route('/logout')
 @login_required  # Esto asegura que solo los usuarios logueados puedan hacer logout

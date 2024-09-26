@@ -433,7 +433,7 @@
 
         // Create a new table element
         const table = document.createElement('table');
-        table.classList.add('custom-table'); // Clase para la tabla
+        table.setAttribute('border', '1');  // Add border for visibility
 
         // Create the table header row
         const header = table.insertRow();
@@ -442,28 +442,24 @@
         headers.forEach(headerText => {
             const th = document.createElement('th');
             th.textContent = headerText;
-            th.classList.add('table-header'); // Clase para los encabezados
             header.appendChild(th);
         });
 
         // Populate the table with rows from the JSON data
-        jsonData.forEach((item) => {
+        jsonData.forEach((item, index) => {
             const row = table.insertRow();
-            row.classList.add('table-row'); // Clase para las filas
 
             // Insert cells with the JSON data
-            [item.localidad_nombre, item.nombre, item.precio, item.tipo].forEach((text) => {
-                const cell = row.insertCell();
-                cell.textContent = text;
-                cell.classList.add('table-cell'); // Clase para las celdas
-            });
+            row.insertCell().textContent = item.localidad_nombre;
+            row.insertCell().textContent = item.nombre;
+            row.insertCell().textContent = item.precio;
+            row.insertCell().textContent = item.tipo;
 
             // Create the action button in the last column
             const actionCell = row.insertCell();
             const button = document.createElement('button');
             button.textContent = 'Ir a Log';
             button.setAttribute('onclick', `iraloj(${item.id})`);  // Call the iralog function with the id of the item
-            button.classList.add('action-button'); // Clase para el botón
             actionCell.appendChild(button);
         });
 
@@ -472,10 +468,9 @@
         tableContainer.appendChild(table);  // Append the new table to the container
     }
 
-
+    // Example function to be called when the button is clicked
     function iraloj(id) {
-        // Navegar al endpoint con el id proporcionado
-        window.location.href = `/alojamiento/${id}`;
+        console.log(`Button clicked for ID: ${id}`);
     }
 
     //funcion de inicio de la página

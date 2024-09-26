@@ -1,11 +1,11 @@
 import pydoc
 from flask import jsonify
 from datetime import datetime
-from models import get_db_session, Alojamientos, Cookies, Paises, Dispositivos, Tags, UsabDatos, UsabRelacion, Destino
-from sqlalchemy import desc
+from models import get_db_session, Alojamientos, Localidades,Cookies, Paises, Dispositivos, Tags, UsabDatos, UsabRelacion, Destino, Usab
+from sqlalchemy import desc, distinct
 import numpy as np
 import pandas as pd
-
+from sqlalchemy import func
 
 def calcular_media(valores):
     """
@@ -56,8 +56,8 @@ def recuperaDatos():
 
     for cook, pai, dip, tac in results:
         result_dict = {
-            "Pais": pai.nombre,
-            "Dispositivo": dip.nombre,
+            "Pais": pai.nombre if pai.nombre is not None else '',
+            "cliente": cook.id_dispositivo,
             "Timestamp": cook.fecha_y_hora.strftime('%Y-%m-%d %H:%M:%S'),
             "Tag": tac.nombre,
             'Compra': cook.comprar
@@ -73,23 +73,29 @@ def calculaUsabilidad():
     """
     session = get_db_session()
 
-    ids_usab = session.query(UsabRelacion.id_usab).distinct()
+    ids_usab = session.query(
+        UsabRelacion.id_alojamientos,
+        UsabRelacion.id_usab,
+        func.group_concat(UsabRelacion.valor)
+    ).group_by(
+        UsabRelacion.id_alojamientos,
+        UsabRelacion.id_usab
+    ).all()
 
-    for id_usab in ids_usab:
-        valores = [val.valor for val in session.query(UsabRelacion.valor).filter_by(id_usab=id_usab[0])]
+    for alojt, ust, valort in ids_usab:
+        v = [int(x) for x in valort.split(',')]
+        media = float(calcular_media(v))
+        mediana = float(calcular_mediana(v))
 
-        media = float(calcular_media(valores))
-        mediana = float(calcular_mediana(valores))
-
-        usab_datos_entry = session.query(UsabDatos).filter_by(id_usab=id_usab[0]).first()
+        usab_datos_entry = session.query(UsabDatos).filter_by(id_usab=ust,id_alojamientos=alojt).first()
+        
         if usab_datos_entry:
             usab_datos_entry.media = media
             usab_datos_entry.mediana = mediana
         else:
             nuevo_usab_datos = UsabDatos(
-                origen='origen_desconocido',
-                id_origen=1,
-                id_usab=id_usab[0],
+                id_alojamientos=alojt,
+                id_usab=ust,
                 media=media,
                 mediana=mediana,
                 moda=0
@@ -124,11 +130,18 @@ def calcular_valor_promedio_destinos(info):
     if fecha_actual.month in [6, 7, 8]:
         a = 1
     elif fecha_actual.month in [3, 4, 5]:
-        ponderadores["temporada"] *= temporada.get("primavera", 4.0)
-        ponderadores["dextras"] *= dextras.get("primavera", 3.0)
+
+        ponderadores["temporada"] *= temporada.get("primavera", 4.0) if temporada.get("primavera", 4.0) is not None else 0
+        ponderadores["dextras"] *= dextras.get("primavera", 3.0) if dextras.get("primavera", 3.0) is not None else 0
+
+
+        
     else:
-        ponderadores["temporada"] *= temporada.get("especial", 2.0)
-        ponderadores["dextras"] *= dextras.get("resto", 5.0)
+        ponderadores["temporada"] *= temporada.get("especial", 2.0) if temporada.get("especial", 2.0) is not None else 0
+        ponderadores["dextras"] *= dextras.get("resto", 2.0) if dextras.get("resto", 2.0) is not None else 0
+
+        
+
 
     valor_promedio = 0
     try:
@@ -152,12 +165,82 @@ def devulvem3():
     """
     session = get_db_session()
 
-    consulta = session.query(Destino).order_by(desc(Destino.resultado)).limit(3).all()
-    respuesta = []
-    for desti in consulta:
-        respuesta.append({"ID": f"{desti.id}", "alojamiento": f"{desti.id_alojamiento}", "Resultados": f"{desti.resultado}"})
+    resultados = session.query(
+    Localidades.nombre.label('nombre_localidad'),
+    Alojamientos.nombre.label('nombre_alojamiento'),
+    Destino.resultado.label('resultado')
+).join(Alojamientos, Destino.id_alojamiento == Alojamientos.id, isouter=True)\
+ .join(Localidades, Destino.id_localidad == Localidades.id, isouter=True)\
+ .group_by(Localidades.nombre, Alojamientos.nombre, Destino.resultado).all()
 
-    return respuesta
+    resultados_json = [
+    {
+        "nombre_localidad": resultado.nombre_localidad,
+        "nombre_alojamiento": resultado.nombre_alojamiento,
+        "resultado": resultado.resultado
+    }
+    for resultado in resultados
+]
+
+    return resultados_json
+
+
+def devuelveUsabLocalidades ():
+    session = get_db_session()        
+    resultados = session.query(
+    Usab.nombre.label('nombre_usab'),
+    Localidades.nombre.label('nombre_localidad'),
+    func.round(func.avg(UsabDatos.media)).label('media_promedio'),
+    func.round(func.avg(UsabDatos.mediana)).label('mediana_promedio')
+        ).join(Alojamientos, UsabDatos.id_alojamientos == Alojamientos.id, isouter=True)\
+        .join(Localidades, Alojamientos.id_localidad == Localidades.id, isouter=True)\
+        .join(Usab, UsabDatos.id_usab == Usab.id, isouter=True)\
+        .group_by(Alojamientos.id_localidad, UsabDatos.id_usab).all()
+
+    
+    resultados_json = [
+    {
+         "nombre_usab": resultado.nombre_usab,
+         "nombre_localidad": resultado.nombre_localidad,
+        "media_promedio": resultado.media_promedio,
+        "media_promedio": resultado.mediana_promedio,
+
+    }
+    for resultado in resultados
+]
+
+    return resultados_json
+
+
+def devuelveUsabAlojamientos ():
+    session = get_db_session()        
+    resultados =session.query(
+    Usab.nombre.label('nombre_usab'),
+    Localidades.nombre.label('nombre_localidad'),
+    Alojamientos.nombre.label('nombre_alojamiento'),
+    func.round(func.avg(UsabDatos.media)).label('media_promedio'),
+    func.round(func.avg(UsabDatos.mediana)).label('mediana_promedio')
+        ).join(Alojamientos, UsabDatos.id_alojamientos == Alojamientos.id, isouter=True)\
+        .join(Localidades, Alojamientos.id_localidad == Localidades.id, isouter=True)\
+        .join(Usab, UsabDatos.id_usab == Usab.id, isouter=True)\
+        .group_by(Alojamientos.id, Alojamientos.id_localidad, UsabDatos.id_usab).all()
+    
+    resultados_json = [
+    {
+         "nombre_usab": resultado.nombre_usab,
+         "nombre_localidad": resultado.nombre_localidad,
+                  "nombre_localidad": resultado.nombre_alojamiento,
+
+        "media_promedio": resultado.media_promedio,
+        "media_promedio": resultado.mediana_promedio,
+
+    }
+    for resultado in resultados
+]
+
+    return resultados_json
+
+
 
 def calcula_destinos():
     """
@@ -184,3 +267,5 @@ def calcula_destinos():
     return jsonify({"calculo": "ok"})
 
 log_df = pd.DataFrame(recuperaDatos())
+
+#print(calcula_destinos())

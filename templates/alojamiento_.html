@@ -1,0 +1,285 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <style>
+
+        :root {
+    
+    --strong-color: #807115;
+    --stronger-color: #554900;
+    --light-color: #D4C66A;
+    --lighter-color: #FFF3AA;
+}
+        /* Estilos para las tablas */
+table {
+    width: 100%; /* Ajusta el ancho de la tabla */
+    border-collapse: collapse; /* Colapsa bordes */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+    border: 1px solid #ddd; /* Bordes */
+}
+
+tr{
+    background-color:#da7318;
+}
+th {
+    background-color:#593a0c; /* Color de fondo para encabezados */
+}
+
+tr:hover {
+    background-color: #807115; /* Color de fondo al pasar el mouse */
+}
+
+    </style>
+    <!-- Contenido principal -->
+    <section id="prueba">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1 style="text-align: left;" id="hotel">Hotel Alella</h1>
+                    <h2 style="text-align: left;" id="direccion"></h2>
+                </div>
+            </div>
+ 
+            <div class="row">
+                <div class="col-sm-6">
+                    <img id="imagen" class="img-fluid">
+                </div>
+                <div class="col-sm-3">
+                    <div id="fechas"></div>
+                    <table id="tabla"></table>
+                </div>
+                <div class="col-sm-3">
+                    <div id="precio"></div>
+                    <div id="ofertas"></div>
+                </div>
+            </div>
+ 
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="servicios"></div>
+ 
+ 
+                    <div id="mensaje"
+                        style="display: none; position: absolute; background-color: #fff; padding: 10px; border: 1px solid #000;">
+                        aaa
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="row">
+                <div class="col-sm-6">
+                    <style>
+                        .desplazar-texto {
+                            margin-top: 25px;
+                            /* Ajusta el valor según sea necesario */
+                        }
+                    </style>
+                    <div class="desplazar-texto"></div>
+                    <div id="hotel"></div>
+                    <div id="imagen"></div>
+                    <div id="direccion"></div>
+                    <div id="descripcion"></div>
+ 
+ 
+                    <img class="logo" src="assets/imagenes/telefono.jpg" />
+                    <div id="telefono"></div>
+                    <img class="logo" src="assets/imagenes/correo.png" />
+                    <div id="correo"></div>
+                </div>
+ 
+                <div class="col-sm-6">
+                    <div id="map"></div>
+ 
+                </div>
+            </div>
+ 
+        </div>
+ 
+    </section>
+    <!-- Sección de presentación con imágenes cambiantes y formulario de búsqueda -->
+ 
+ 
+    <div id="hotel-info">
+        <!-- Aquí se mostrará la información del hotel -->
+    </div>
+</main>
+
+  
+
+{% endblock %}
+{% block content2 %}
+<script>
+    function main() {
+            //CargaAlojamiento('{{ id }}');
+ 
+            function obtenerDatosHotel(id) {
+                // Construimos la URL con el ID del hotel
+                const url = `/info/hotel/${id}`;
+ 
+                // Hacemos la solicitud GET al servidor
+                fetch(url)
+                    .then(response => {
+                        // Comprobamos si la respuesta es correcta (status 200-299)
+                        if (!response.ok) {
+                            throw new Error(`Error en la solicitud: ${response.status}`);
+                        }
+                        // Parseamos el cuerpo de la respuesta como JSON
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Aquí manejamos los datos JSON recibidos del servidor
+ 
+                        // Por ejemplo, podrías mostrar los datos en el HTML
+                        mostrarDatosHotel(data);
+                    })
+                    .catch(error => {
+                        // Manejamos cualquier error que haya ocurrido
+                        console.error("Hubo un problema con la solicitud Fetch:", error);
+                    });
+            }
+ 
+            // Función para mostrar los datos del hotel en el HTML (opcional)
+            function mostrarDatosHotel(data) {
+                console.log(data.nombre);
+            }
+ 
+            obtenerDatosHotel('{{ id }}');
+ 
+            function mostrarDatosHotel(hotelData)
+{
+ 
+//presentacion
+RecuperaCadena("hotel", hotelData.nombre, 'html');
+RecuperaCadena("direccion", hotelData.direccion, 'html');
+RecuperaCadena("imagen", hotelData.imagen, 'img');
+RecuperaCadena("descripcion", hotelData.descripcion, 'html');
+RecuperaCadena("correo", hotelData.correo, 'html');
+RecuperaCadena("telefono", hotelData.telefono, 'html');
+ 
+ 
+ 
+ 
+document.getElementById("servicios").innerHTML = '<h2>Servicios</h2>';
+// Ejemplo de arreglo que contiene las claves del mapa
+ 
+asservicios=hotelData.servicios.split(',');
+ 
+let cadena = "";
+ 
+for (let i = 0; i < asservicios.length; i++) {
+ 
+  cadena += `<img id="`+asservicios[i].trim()+`" class="icono" src="/static/`+serviciosIMG.get(asservicios[i].trim())+`" width="20px" height="20px"
+  onmouseover="mostrarMensaje (this.id)" onmouseout="ocultarMensaje()">`
+}
+ 
+document.getElementById("servicios").innerHTML=cadena;
+/*img source=
+console.log(cadena); // Imprime la cadena con las rutas de las imágenes
+ 
+//AJUSTE 3
+//Presentar por mes los dias libres
+ 
+/*Inserto por texto en el contendio del div un título*/
+ 
+ 
+document.getElementById("fechas").innerHTML = '<h2>Fechas</h2>';
+ 
+ 
+ 
+//Obtengo del objeto javascript las cadena de los meses
+//creo un array temporal
+var arrayMeses = []
+/*let claves= Object.keys(hotelData.fechas)
+for (i = 0; i <claves.length; i++) {
+    //inserto en el array la cadena del mes, la i recorre los registros existentes, el 0 indica que es el primer elemento de fecha
+    arrayMeses.push(claves[i]);
+}*/
+arrayMeses=hotelData.meses.split(',');
+ 
+console.log(arrayMeses)
+//inserto un child en el div fechas con un desplegable con los meses existentes
+document.getElementById("fechas").appendChild(crearSelect(arrayMeses));
+//inserto un child en el div fechas con los datos de dias y plaas libres de enero
+document.getElementById("fechas").appendChild(crearTable(hotelData,0));
+ 
+ 
+ 
+// Definir el valor constante
+let Precio = hotelData.precio;
+document.getElementById("precio").innerHTML = '<h2>Precios</h2>';
+document.getElementById("precio").innerHTML += '<p> El precio de una plaza por persona es ' + Precio + '</p><h3>Ofertas</h3>';
+document.getElementById("precio").innerHTML += '<p><div style="width:35%;float:left;">Descuento</div>';
+document.getElementById("precio").innerHTML += '<div style="width:25%;float:left;">Noches</div>';
+document.getElementById("precio").innerHTML += '<div style="width:25%;float:left;">Total</div></p>';
+ 
+ 
+let objetoOfertas = document.getElementById("ofertas")
+ 
+// Bucle que va desde 1 hasta 4
+for (let i = 2; i <= 4; i++) {
+    linea = document.createElement('p');
+    linea.style.width = "100%";
+    linea.style.display = "flex";
+ 
+    elementoL = document.createElement('div');
+    elementoL.style.width = "35%";
+    //elementoL.style.display="block";
+    elementoL.innerHTML = (i * 10) + '%';
+    linea.appendChild(elementoL);
+    elementoL = document.createElement('div');
+    elementoL.style.width = "25%";
+    //elementoL.style.display="block";
+    elementoL.innerHTML = i;
+    linea.appendChild(elementoL);
+    elementoL = document.createElement('div');
+    //elementoL.style.width="25%";
+    //elementoL.style.display="block";
+    elementoL.innerHTML = Precio - (Precio * (i / 10));
+    linea.appendChild(elementoL);
+    objetoOfertas.appendChild(linea);
+}
+controlCargado=1;
+}
+            setTimeout(function () {
+                            $(document).ready(function () {
+                                $('#cargando').fadeOut('slow');
+ 
+                            });
+                        }, 1);
+        };
+ 
+    function initMap() {
+                // Dirección a geocodificar
+                const address = "Calle Valencia nº 3, Mataró, Barcelona, España";
+ 
+                // Crear una instancia del servicio de Geocoding
+                const geocoder = new google.maps.Geocoder();
+                // Ubicacion
+                // Geocodificar la dirección
+                geocoder.geocode({ 'address': address }, function (results, status) {
+                    if (status === 'OK') {
+                        // Obtener la ubicación geocodificada
+                        const location = results[0].geometry.location;
+ 
+                        // Crear un nuevo mapa y mostrarlo en el div con id "map"
+                        const map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 15,
+                            center: location
+                        });
+ 
+                        // Añadir un marcador en la ubicación geocodificada
+                        const marker = new google.maps.Marker({
+                            position: location,
+                            map: map
+                        });
+                    } else {
+                        alert('Geocoding falló debido a: ' + status);
+                    }
+                });
+            }
+            </script>
+{% endblock %}
