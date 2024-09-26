@@ -119,7 +119,8 @@
 //presentacion
 RecuperaCadena("hotel", hotelData.nombre, 'html');
 RecuperaCadena("direccion", hotelData.direccion, 'html');
-RecuperaCadena("imagen", hotelData.imagen, 'img');
+//RecuperaCadena("imagen", hotelData.imagen, 'img');
+document.getElementById("imagen").src="/static/biblioteca/fotos/alojamientos/hotel_{{ id }}.jpg"
 RecuperaCadena("descripcion", hotelData.descripcion, 'html');
 RecuperaCadena("correo", hotelData.correo, 'html');
 RecuperaCadena("telefono", hotelData.telefono, 'html');

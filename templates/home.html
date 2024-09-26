@@ -9,7 +9,74 @@
         <row>
 
             <form id="search-form" class="form-group" onsubmit="caracona(event)">
-                <div class="row">
+              
+                <div class="container buscador">
+                    <div class="search-container rounded mx-auto">
+                        <form id="search-form" class="form-group">
+                            <!-- Primera fila: Destino y Hotel -->
+                            <div class="row align-items-center mb-3">
+                                <div class="col-md-9">
+                                    <div class="input-group rounded search-fields colorForm1">
+                                        <input type="text" id="destino" class="form-control" placeholder="Destino">
+                                        <div class="line-separator"></div>
+                                        <input type="text" id="nombreA" class="form-control" placeholder="Nombre del hotel">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="precio">Precio (€)</label>
+                                    <div id="price-slider"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Segunda fila: Fechas, Personas, Habitaciones, Estrellas -->
+                            <div class="row align-items-center mb-3">
+                                <div class="col-md-5">
+                                    <label for="person-count">Fechas:</label>
+
+                                    <div class="input-group rounded search-fields colorForm1">
+                                        <input type="text" id="startDate" class="form-control" placeholder="Llegada">
+                                        <div class="line-separator"></div>
+                                        <input type="text" id="endDate" class="form-control" placeholder="Salida">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div>
+                                        <label for="person-count">Personas:</label>
+                                        <input type="number" id="person-count" class="form-control mb-2" value="1">
+                                    </div>
+                                </div>
+                                
+                                        <div class="col-md-2">
+                                    <div>        
+                                        <label for="room-count">Habitaciones:</label>
+                                        <input type="number" id="room-count" class="form-control mb-2" value="1">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="precio">Estrellas</label>
+                                    <div class="rating">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Botones: Buscar y Borrar -->
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <div class="btn-group rounded search-buttons">
+                                        <button type="button" onclick="caracona();" class="btn btn-search">Buscar</button>
+                                        <button type="button" class="btn btn-clear"><svg class="svg-inline--fa fa-eraser" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="eraser" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M290.7 57.4L57.4 290.7c-25 25-25 65.5 0 90.5l80 80c12 12 28.3 18.7 45.3 18.7H288h9.4H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H387.9L518.6 285.3c25-25 25-65.5 0-90.5L381.3 57.4c-25-25-65.5-25-90.5 0zM297.4 416H288l-105.4 0-80-80L227.3 211.3 364.7 348.7 297.4 416z"></path></svg><!-- <i class="fa-solid fa-eraser"></i> Font Awesome fontawesome.com --></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+                <!--div class="row">
                     <div class="col-3">
                         <label for="destino">Destino:</label>
                     </div>
@@ -84,12 +151,13 @@
                 <button type="button" style="width: 96%;margin-left: 12px;border-radius: 20px;margin-top: -6px;"
                     onclick="resetSearchForm()">Borrar
                     criterios
-                    de búsqueda</button>
+                    de búsqueda</button!-->
             </form>
-            <button onclick="caracona();" style="width: 100%;margin:10px; border-radius: 20px;">Buscar</button>
 
             </div>
         </row>
+
+
     </section>
 
     <section id="resultados">
@@ -461,7 +529,7 @@
             // Create the action button in the last column
             const actionCell = row.insertCell();
             const button = document.createElement('button');
-            button.textContent = 'Ir a Log';
+            button.textContent = 'Ver el alojamiento';
             button.setAttribute('onclick', `iraloj(${item.id})`);  // Call the iralog function with the id of the item
             button.classList.add('action-button'); // Clase para el botón
             actionCell.appendChild(button);
